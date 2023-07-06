@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
 @font-face {
     font-family: 'Fixel';
     src        :
@@ -27,3 +28,20 @@
     font-style  : normal;
     font-display: swap;
 }
+@font-face {
+    font-family: 'SourceSansPro';
+    src        :
+        url('~assets/fonts/SourceSansPro-Semibold.otf') format('opentype');
+    font-weight : 600;
+    font-style  : normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'SourceSansPro';
+    src        :
+        url('~assets/fonts/SourceSansPro-Regular.otf') format('opentype');
+    font-weight : 400;
+    font-style  : normal;
+    font-display: swap;
+}
+  
