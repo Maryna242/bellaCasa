@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col items-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+    <div class="flex flex-col items-center absolute w-full max-w-[800px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
         <h1 class="text-white font-semibold text-8xl font-sourcesans">
             Bella Casa
         </h1>
@@ -22,12 +22,9 @@
                 Салони: Київ, Дніпро, Кам’янське
             </p>
         </form>
-        <div>
-            <p class="text-white font-sourcesans font-normal text-lg rotate-180">
-                в і д е о д и в и т и с ь
-            </p>
+        <div class="mt-12">
             <a href="#">
-                <img src="../static/img/Polygon.png" width="25px" height="25px" alt="play"> 
+                <img src="../static/img/btnVideo.svg" width="125px" height="125px" alt="play"> 
             </a>
         </div>
     </div>
