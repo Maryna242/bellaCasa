@@ -7,7 +7,8 @@ export default {
             'sourcesans': ['SourceSansPro'],
         },
         backgroundImage:{
-            'mosaic': "url('~/static/img/orn3.png')"
+            'mosaic': "url('~/static/img/orn3.png')",
+            'qoute': "url('~/static/img/q_icon.png')"
         }
     }
 }
