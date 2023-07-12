@@ -5,6 +5,7 @@
         <the-subtitle/>
         <the-advantages/>
         <the-best-offers/>
+        <the-variants/>
     </div>
 </template>
 
@@ -12,8 +13,9 @@
 import TheAdvantages from '../components/TheAdvantages.vue'
 import TheBestOffers from '../components/TheBestOffers.vue'
 import TheSubtitle from '../components/TheSubtitle.vue'
+import TheVariants from '../components/TheVariants.vue'
 export default {
-  components: { TheSubtitle, TheAdvantages, TheBestOffers },
+  components: { TheSubtitle, TheAdvantages, TheBestOffers, TheVariants },
     name: 'IndexPage'
 }
 </script>
