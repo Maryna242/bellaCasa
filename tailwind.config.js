@@ -8,7 +8,8 @@ export default {
         },
         backgroundImage:{
             'mosaic': "url('~/static/img/orn3.png')",
-            'qoute': "url('~/static/img/q_icon.png')"
+            'qoute': "url('~/static/img/q_icon.png')",
+            'big-logo': "url('~/static/img/big_logo.png')"
         }
     }
 }
