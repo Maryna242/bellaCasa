@@ -34,13 +34,13 @@
                             КОНТАКТИ
                         </a>
                     </li>
-                    <li>
+                    <li class="">
                         <a href="#" class="flex">
                             <img src="../static/img/smartphone.png" width="24px" height="24px">
                             +38 096 1353 553
                         </a>
                     </li>
-                    <li>
+                    <li class="">
                         <a href="#">
                             UA |
                         </a>

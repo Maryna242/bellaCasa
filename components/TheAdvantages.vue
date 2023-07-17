@@ -5,7 +5,7 @@
                 <div class="flex">
                     <img src="~/static/img/photo_2023-06-27_20-01-58.png" class=" object-cover" width="357px" height="619px" alt="img">
                 </div>
-                <div class="bg-[#0B3B60] flex flex-col px-[58px] relative before:content-[''] before:bg-mosaic before:absolute before:right-0 before:top-0 before:bottom-0 before:w-full before:max-w-[250px] before:bg-no-repeat before:bg-cover w-3/4 flex">
+                <div class="bg-[#0B3B60] flex-col px-[58px] relative before:content-[''] before:bg-mosaic before:absolute before:right-0 before:top-0 before:bottom-0 before:w-full before:max-w-[250px] before:bg-no-repeat before:bg-cover w-3/4 flex">
                     <h2 class="text-white text-[32px] font-[montserrat] font-semibold z-10 pt-[80px]">
                         Важливі переваги, або чому ми найкращі
                     </h2>

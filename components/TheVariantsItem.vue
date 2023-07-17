@@ -24,7 +24,7 @@
                 :space-between="20"
                 :slidesPerView="2.5"
                 :initialSlide="isEven ? slides.length - 1 : 0"
-                nextEl=".next"
+                @swiper="onSwiper"
             >
                 <swiper-slide
                     v-for="(slide, index) in slides"
@@ -34,8 +34,16 @@
                     <img :src="slide.url" :alt="index" width="400px" height="380px" class=" object-cover">
                 </swiper-slide>
                 <div class="flex gap-[10px] p-2 justify-center">
-                    <div class="custom-prev flex w-[50px] h-[50px] items-center border rounded-full justify-center -scale-x-100"></div>
-                    <div class="custom-next flex w-[50px] h-[50px] items-center border rounded-full justify-center"></div>
+                    <div
+                        :id="`custom-prev-${index}`"
+                        class="custom-prev flex w-[50px] h-[50px] items-center border rounded-full justify-center -scale-x-100"
+                        @click="slidePrev"
+                    />
+                    <div
+                        :id="`custom-next-${index}`"
+                        class="custom-next flex w-[50px] h-[50px] items-center border rounded-full justify-center"
+                        @click="slideNext"
+                    />
                 </div>
             </swiper>
         </div>
@@ -45,10 +53,12 @@
 </template>
 
 <script>
-import { Swiper, SwiperSlide } from 'swiper-vue2';
+import { Swiper, SwiperSlide, SwiperCore } from 'swiper-vue2';
 
 // Import Swiper styles
 import 'swiper/swiper-bundle.css'
+
+
 export default {
     name: 'TheVariants',
     props: {
@@ -63,11 +73,44 @@ export default {
         isEven: {
             type: Boolean,
             required: true,
+        },
+        index: {
+            type: Number,
+            required: true,
         }
     },
     components: {
         Swiper,
-        SwiperSlide
+        SwiperSlide,
+    },
+    data() {
+        return {
+            swiper: null,
+            currIndex: 0
+        }
+    },
+    methods: {
+        onSwiper (swiper) {
+            console.log(swiper)
+            this.swiper = swiper;
+            this.currIndex = swiper.activeIndex;
+        },
+        slideNext() {
+            if (this.currIndex === this.slides.length - 2) {
+                this.currIndex = 0
+            } else {
+                this.currIndex += 1
+            }
+            this.swiper?.slideTo(this.currIndex) 
+        },
+        slidePrev() {
+            if (this.currIndex === 0) {
+                this.currIndex = this.slides.length - 2
+            } else {
+                this.currIndex -= 1
+            }
+            this.swiper?.slideTo(this.currIndex) 
+        }
     }
 }
 </script>

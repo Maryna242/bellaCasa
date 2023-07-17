@@ -11,6 +11,7 @@
                 :key="index"
                 :slides="item.slides"
                 :info="item.initialInfo"
+                :index="index"
                 :is-even="(index + 1) % 2 === 0"
             />
         </div>
@@ -20,6 +21,8 @@
 <script>
 import TheVariantsItem from './TheVariantsItem.vue'
 import TestImg from '~/static/img/hui.png'
+import TestImg2 from '~/static/img/IMG_0978.png'
+import TestImg3 from '~/static/img/orn3.png'
 export default {
     components: { TheVariantsItem },
     name: 'TheVariants',
@@ -32,11 +35,14 @@ export default {
                             url: TestImg
                         },
                         {
-                            url: TestImg
+                            url: TestImg2
                         },
                         {
-                            url: TestImg
-                        }
+                            url: TestImg3
+                        },
+                        {
+                            url: TestImg2
+                        },
                     ],
                     initialInfo: {
                         title: 'Автоматичні штори',

@@ -1,6 +1,6 @@
 <template>
-    <div class="w-full max-w-[1440px] relative my-0 mx-auto bg-[#0B3B60] before:content-[''] before:bg-mosaic before:z-10 before:absolute before:right-0 before:top-0 before:bottom-0 before:w-full before:max-w-[295px]  before:bg-cover before:bg-no-repeat after:content-[''] after:bg-big-logo after:w-[223px] after:h-[269px] after:bg-contain after:absolute after:right-[100px] after:bottom-20 after:z-10">
-        <div class="max-w-[1240px] my-0 mx-auto py-2 px-[106px]">
+    <div class="w-full p-2 max-w-[1440px] relative my-0 mx-auto bg-[#0B3B60] before:content-[''] before:bg-mosaic before:z-10 before:absolute before:right-0 before:top-0 before:bottom-0 before:w-full before:max-w-[295px]  before:bg-cover before:bg-no-repeat after:content-[''] after:bg-big-logo after:w-[223px] after:h-[269px] after:bg-contain after:absolute after:right-[100px] after:bottom-20 after:z-10">
+        <div class="max-w-[1240px] my-0 mx-auto px-[106px]">
             <div class="flex mb-20">
                 <div class=" max-w-[435px]">
                     <h2 class="text-white text-[32px] font-semibold font-[montserrat] pt-20">

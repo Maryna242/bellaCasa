@@ -7,17 +7,22 @@
         <the-best-offers/>
         <the-variants/>
         <the-steps/>
+        <the-projects/>
+        <the-questions/>
+        <the-contacts/>
     </div>
 </template>
 
 <script>
 import TheAdvantages from '../components/TheAdvantages.vue'
 import TheBestOffers from '../components/TheBestOffers.vue'
+import TheProjects from '../components/TheProjects.vue'
+import TheQuestions from '../components/TheQuestions.vue'
 import TheSteps from '../components/TheSteps.vue'
 import TheSubtitle from '../components/TheSubtitle.vue'
 import TheVariants from '../components/TheVariants.vue'
 export default {
-  components: { TheSubtitle, TheAdvantages, TheBestOffers, TheVariants, TheSteps },
+  components: { TheSubtitle, TheAdvantages, TheBestOffers, TheVariants, TheSteps, TheProjects, TheQuestions },
     name: 'IndexPage'
 }
 </script>
