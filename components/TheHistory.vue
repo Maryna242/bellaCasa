@@ -4,9 +4,9 @@
             <div class="flex gap-[128px]">
                 <div class="flex relative">
                     <img src="../static/img/photo_2023-06-07_19-31-49.png" alt="photo" width="400px" height="552px" class=" object-cover max-h-[552px]">
-                    <a href="#" class="play flex w-[115px] h-[115px] items-center border border-[#F8B1AB] bg-[#F8B1AB] rounded-full justify-center absolute">
+                    <button href="#" class="play flex w-[115px] h-[115px] hover:bg-white hover:border-4 hover:border-[#F8B1AB] active:border-[#F28B82] items-center border border-[#F8B1AB] bg-[#F8B1AB] rounded-full justify-center absolute left-[85%] top-[10%]">
 
-                    </a>
+                    </button>
                 </div>
                 <div class="max-w-[500px]">
                     <h2 class=" font-[montserrat] font-semibold text-[32px] text-[#4E4747] mb-6">
@@ -53,13 +53,25 @@ export default {
 }
 </script>
 <style lang="scss">
-    .play::before{
-        content: "";
-        display: block;
-        mask-image: url('~/static/img/Polygon.png');
-        width: 22.29px;
-        height: 26px;
-        mask-size: contain;
-        background: #FFF;
+    .play{
+        &::before{
+            content: "";
+            display: block;
+            mask-image: url('~/static/img/Polygon.png');
+            width: 22.29px;
+            height: 26px;
+            mask-size: contain;
+            background: #FFF;
+        }
+        &:hover{
+            &::before {
+                background: #F8B1AB;
+            }
+        }
+        &:active{
+            &::before {
+                background: #F28B82;
+            }
+        }
     }
 </style>

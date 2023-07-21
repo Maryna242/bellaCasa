@@ -36,12 +36,12 @@
                 <div class="flex gap-[10px] p-2 justify-center">
                     <div
                         :id="`custom-prev-${index}`"
-                        class="custom-prev flex w-[50px] h-[50px] items-center border rounded-full justify-center -scale-x-100"
+                        class="custom-prev hover:bg-[#D9D9D9] active:bg-[#BCBCBC] cursor-pointer flex w-[50px] h-[50px] items-center border rounded-full justify-center -scale-x-100"
                         @click="slidePrev"
                     />
                     <div
                         :id="`custom-next-${index}`"
-                        class="custom-next flex w-[50px] h-[50px] items-center border rounded-full justify-center"
+                        class="custom-next hover:bg-[#D9D9D9] active:bg-[#BCBCBC] cursor-pointer flex w-[50px] h-[50px] items-center border rounded-full justify-center"
                         @click="slideNext"
                     />
                 </div>
@@ -115,22 +115,37 @@ export default {
 }
 </script>
 <style lang="scss">
-    .custom-next::before{
-        content: "";
-        display: block;
-        mask-image: url('~/static/img/arrow-right.png');
-        width: 34px;
-        height: 24px;
-        background: #D9D9D9;
-        mask-size: contain;
+    .custom-next{
+        &::before{
+            content: "";
+            display: block;
+            mask-image: url('~/static/img/arrow-right.png');
+            width: 34px;
+            height: 24px;
+            background: #D9D9D9;
+            mask-size: contain;
+        }
+        
+        &:hover{
+            &::before {
+                background: #FFF;
+            }
+        }
     }
-    .custom-prev::before{
-        content: "";
-        display: block;
-        mask-image: url('~/static/img/arrow-right.png');
-        width: 34px;
-        height: 24px;
-        background: #D9D9D9;
-        mask-size: contain;
+    .custom-prev{
+            &::before{
+            content: "";
+            display: block;
+            mask-image: url('~/static/img/arrow-right.png');
+            width: 34px;
+            height: 24px;
+            background: #D9D9D9;
+            mask-size: contain;
+        }
+        &:hover{
+            &::before {
+                background: #FFF;
+            }
+        }
     }
 </style>
