@@ -15,6 +15,8 @@
         <the-text/>
         <the-customers/>
         <the-shape/>
+        <the-instagram/>
+        <the-footer/>
     </div>
 </template>
 
@@ -32,8 +34,11 @@ import TheContacts from '../components/TheContacts.vue'
 import TheHistory from '../components/TheHistory.vue'
 import TheText from '../components/TheText.vue'
 import TheShape from '../components/TheShape.vue'
+import TheInstagram from '../components/TheInstagram.vue'
+import TheFooter from '../components/TheFooter.vue'
+
 export default {
-  components: { TheSubtitle, TheAdvantages, TheBestOffers, TheVariants, TheSteps, TheProjects, TheQuestions, TheConsultation, TheCustomers, TheContacts, TheHistory, TheText, TheShape },
+  components: { TheSubtitle, TheAdvantages, TheBestOffers, TheVariants, TheSteps, TheProjects, TheQuestions, TheConsultation, TheCustomers, TheContacts, TheHistory, TheText, TheShape, TheInstagram, TheFooter },
     name: 'IndexPage'
 }
 </script>

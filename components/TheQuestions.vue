@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full my-[100px] p-2 max-w-[1440px] relative mx-auto bg-[#0B3B60] before:content-[''] before:bg-mosaic before:z-10 before:absolute before:right-0 before:top-0 before:bottom-0 before:w-full before:max-w-[320px]  before:bg-cover before:bg-no-repeat">
+    <div class="w-full my-[100px] p-2 max-w-[1440px] mx-auto relative bg-[#0B3B60] before:content-[''] before:bg-mosaic before:z-10 before:absolute before:right-0 before:top-0 before:bottom-0 before:w-full before:max-w-[320px]  before:bg-cover before:bg-no-repeat">
         <div class="max-w-[1240px] my-0 mx-auto px-[111px]">
             <div class="">
                 <h2 class="text-white font-semibold font-[montserrat] text-[32px] text-center mt-20 mb-[60px]">

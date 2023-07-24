@@ -24,7 +24,7 @@
         </form>
         <div class="mt-12">
             <a href="#">
-                <img src="../static/img/btnVideo.svg" width="125px" height="125px" alt="play"> 
+                <img src="~/static/img/btnVideo.svg" width="125px" height="125px" alt="play" class=" hover:bg-[#F28B82]"> 
             </a>
         </div>
     </div>

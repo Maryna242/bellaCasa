@@ -119,7 +119,7 @@ export default {
         display: block;
         mask-image: url('~/static/img/facebook.png');
         width: 13.5px;
-        height: 27px;
+        height: 26px;
         mask-size: contain;
         background: #F8B1AB;
     }
