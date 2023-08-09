@@ -1,17 +1,17 @@
 <template>
     <div
-        class="flex gap-5"
-        :class=" isEven ? 'pr-[100px]' : 'pl-[100px]'"
+        class="flex gap-5 lg:flex-row flex-col "
+        :class=" isEven ? ' lg:pr-[100px]' : 'lg:pl-[100px]'"
     >
         <div 
-            class="w-1/4 flex items-center"
-            :class=" isEven ? ' order-1' : '' "
+            class="lg:w-1/4 flex items-center"
+            :class=" isEven ? ' -order-1' : '' "
         >
-            <div class="flex flex-col gap-6">
+            <div class="flex flex-col gap-6 md:max-w-[520px] lg:max-w-full">
                 <h3 class="font-fixel text-[32px] text-[#4E4747] font-extralight">
                     {{ info.title }}
                 </h3>
-                <p class="font-fixel text-[15px] text-[#2B2B2B] font-light border-b pb-5">
+                <p class="font-fixel text-[15px] text-[#2B2B2B] font-light border-b pb-5 ">
                     {{ info.paragraph }}
                 </p>
                 <span class="font-fixel text-[#2B2B2B] font-medium text-lg">
@@ -19,28 +19,27 @@
                 </span>
             </div>
         </div>
-        <div class="w-3/4">
+        <div class=" lg:w-3/4">
             <swiper
-                :space-between="20"
-                :slidesPerView="2.5"
                 :initialSlide="isEven ? slides.length - 1 : 0"
+                :breakpoints="breakpoints"
                 @swiper="onSwiper"
             >
                 <swiper-slide
                     v-for="(slide, index) in slides"
                     :key="index"
-                    class="!h-[380px] flex"
+                    class="!h-[380px] flex w-[342px]"
                 >
                     <img :src="slide.url" :alt="index" width="400px" height="380px" class=" object-cover">
                 </swiper-slide>
-                <div class="flex gap-[10px] p-2 justify-center">
+                <div v-if="showNavigation(slides.length)" class="flex gap-[10px] p-2 lg:justify-center justify-end">
                     <div
-                        :id="`custom-prev-${index}`"
+                        :id="`custom-prev`"
                         class="custom-prev hover:bg-[#D9D9D9] active:bg-[#BCBCBC] cursor-pointer flex w-[50px] h-[50px] items-center border rounded-full justify-center -scale-x-100"
                         @click="slidePrev"
                     />
                     <div
-                        :id="`custom-next-${index}`"
+                        :id="`custom-next`"
                         class="custom-next hover:bg-[#D9D9D9] active:bg-[#BCBCBC] cursor-pointer flex w-[50px] h-[50px] items-center border rounded-full justify-center"
                         @click="slideNext"
                     />
@@ -83,10 +82,33 @@ export default {
         Swiper,
         SwiperSlide,
     },
+    computed:{
+        breakpoints() {
+            return {
+                375: {
+                    slidesPerView: 1,
+                    spaceBetween: 10
+                },
+                440: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 20
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                900: {
+                    spaceBetween: 20,
+                    slidesPerView: 2.5
+                }
+            }
+        }
+    },
     data() {
         return {
             swiper: null,
-            currIndex: 0
+            currIndex: 0,
+            width: 0
         }
     },
     methods: {
@@ -110,7 +132,31 @@ export default {
                 this.currIndex -= 1
             }
             this.swiper?.slideTo(this.currIndex) 
+        },
+        updateWidth(){
+            this.width = window.innerWidth
+            console.log(this.width);
+            
+        },
+        showNavigation(length){
+            if(this.width < 440){
+                return length > 1.5
+            } else if(this.width < 768){
+                return length > 1
+            } else if (this.width < 900) {
+                return length > 2
+            }
+            else{
+               return length > 2.5
+            }
         }
+    },
+    mounted(){
+        this.updateWidth()
+        window.addEventListener('resize', this.updateWidth)
+    },
+    beforeDestroy() {
+        window.removeEventListener('resize', this.updateWidth)
     }
 }
 </script>
@@ -119,7 +165,7 @@ export default {
         &::before{
             content: "";
             display: block;
-            mask-image: url('~/static/img/arrow-right.png');
+            mask-image: url('~/static/img/arrow-right.webp');
             width: 34px;
             height: 24px;
             background: #D9D9D9;
@@ -136,7 +182,7 @@ export default {
             &::before{
             content: "";
             display: block;
-            mask-image: url('~/static/img/arrow-right.png');
+            mask-image: url('~/static/img/arrow-right.webp');
             width: 34px;
             height: 24px;
             background: #D9D9D9;

@@ -1,9 +1,8 @@
 <template>
-    <div class=" w-full max-w-[1440px] my-0 mx-auto mt-[140px]">
-        <div class="">
-            <h2 class="text-center font-[montserrat] text-[32px] font-semibold text-[#4E4747] mb-16">
+    <div class=" w-full max-w-[1440px] my-0 mx-auto mt-[60px] lg:mt-[140px]">
+        <div class="px-4 md:px-8">
+            <h2 class=" md:px-[50px] lg:px-0 md:text-center font-[montserrat] text-2xl md:text-[28px] lg:text-[32px] lg:max-w-full font-semibold text-[#4E4747] mb-5 lg:mb-16">
                 Наш світ штор.
-                <br>
                 Вибір найкращих варіантів для вашого інтер'єру
             </h2>
             <the-variants-item
@@ -21,8 +20,8 @@
 <script>
 import TheVariantsItem from './TheVariantsItem.vue'
 import TestImg from '~/static/img/hui.png'
-import TestImg2 from '~/static/img/IMG_0978.png'
-import TestImg3 from '~/static/img/orn3.png'
+import TestImg2 from '~/static/img/IMG_0978.webp'
+import TestImg3 from '~/static/img/orn3.webp'
 export default {
     components: { TheVariantsItem },
     name: 'TheVariants',
@@ -151,9 +150,6 @@ export default {
                 },
                 {
                     slides: [
-                        {
-                            url: TestImg
-                        },
                         {
                             url: TestImg
                         },

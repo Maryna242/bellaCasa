@@ -16,7 +16,7 @@
 
 <script>
 import TheProjectsItem from './TheProjectsItem.vue'
-import TestImg from '~/static/img/img_left.png'
+import TestImg from '~/static/img/img_left.webp'
 export default {
     components: { TheProjectsItem },
     name: 'TheProjects',

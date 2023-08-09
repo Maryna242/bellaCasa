@@ -10,7 +10,7 @@
                 :key="index"
             >
                 <img :src="item.url" :alt="index" width="400px" height="380px" class=" object-cover relative" />
-                <button v-if="item.type === 'video'" href="#" class="play hover:bg-white hover:border-4 hover:border-[#F8B1AB] active:border-[#F28B82] top-0 right-1/2 translate-x-1/2 translate-y-[150%] flex w-[115px] h-[115px] items-center border border-[#F8B1AB] bg-[#F8B1AB] rounded-full justify-center absolute" />
+                <button v-if="item.type === 'video'" href="#" class="play hover:bg-white hover:border-4 hover:border-[#F8B1AB] active:border-[#F28B82] top-0 right-1/2 translate-x-1/2 translate-y-[150%] flex w-[115px] h-[115px] items-center border border-[#F8B1AB] bg-[#F8B1AB] rounded-full justify-center absolute transition-colors" />
                 <div
                     v-if="item.review"
                     class="union absolute bg-[#F5F5F5] rounded-[32px] top-[287px] px-3 py-4 max-w-[360px] left-[15px]"
@@ -22,12 +22,12 @@
             <div class="flex gap-[10px] p-2 justify-center">
                 <div
                     :id="`custom-prev-${index}`"
-                    class="button-prev hover:bg-[#D9D9D9] active:bg-[#BCBCBC] cursor-pointer flex w-[50px] h-[50px] items-center border rounded-full justify-center -scale-x-100"
+                    class="button-prev hover:bg-[#D9D9D9] active:bg-[#BCBCBC] cursor-pointer flex w-[50px] h-[50px] items-center border rounded-full justify-center -scale-x-100 transition-colors"
                     @click="slidePrev"
                 />
                 <div
                     :id="`custom-next-${index}`"
-                    class="button-next hover:bg-[#D9D9D9] active:bg-[#BCBCBC] cursor-pointer flex w-[50px] h-[50px] items-center border rounded-full justify-center"
+                    class="button-next hover:bg-[#D9D9D9] active:bg-[#BCBCBC] cursor-pointer flex w-[50px] h-[50px] items-center border rounded-full justify-center transition-colors"
                     @click="slideNext"
                 />
             </div>
@@ -89,11 +89,12 @@ export default {
         &::before{
             content: "";
             display: block;
-            mask-image: url('~/static/img/arrow-right.png');
+            mask-image: url('~/static/img/arrow-right.webp');
             width: 34px;
             height: 24px;
             background: #D9D9D9;
             mask-size: contain;
+            transition: background 0.150s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
         &:hover{
@@ -106,11 +107,12 @@ export default {
         &::before{
             content: "";
             display: block;
-            mask-image: url('~/static/img/arrow-right.png');
+            mask-image: url('~/static/img/arrow-right.webp');
             width: 34px;
             height: 24px;
             background: #D9D9D9;
             mask-size: contain;
+            transition: background 0.150s cubic-bezier(0.4, 0, 0.2, 1);
         }
         &:hover{
             &::before {
@@ -122,11 +124,12 @@ export default {
         &::before{
             content: "";
             display: block;
-            mask-image: url('~/static/img/Polygon.png');
+            mask-image: url('~/static/img/Polygon.webp');
             width: 22.29px;
             height: 26px;
             mask-size: contain;
             background: #FFF;
+            transition: background 0.150s cubic-bezier(0.4, 0, 0.2, 1);
         }
         &:hover{
             &::before {
@@ -142,7 +145,7 @@ export default {
     .union{
         &::after{
             content: "";
-            background-image: url('~/static/img/Frame_217.png');
+            background-image: url('~/static/img/Frame_217.webp');
             width: 26px;
             height: 23px;
             display: block;

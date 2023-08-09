@@ -1,11 +1,11 @@
 <template>
-    <div class="my-[100px]">
-        <div class="grid grid-cols-3 gap-[72px]">
+    <div class=" mt-[60px] md:mt-[80px] lg:mt-[100px]">
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-x-[72px] md:gap-y-10 lg:grid-cols-3 lg:gap-x-[72px] lg:gap-y-12">
             <div class="flex flex-col gap-6">
-                <h2 class=" font-[montserrat] font-semibold text-[32px] text-[#4E4747]">
+                <h2 class=" font-[montserrat] font-semibold text-2xl md:text-[28px] lg:text-[32px] text-[#4E4747]">
                     Найкрутіші творці затишку та стилю
                 </h2>
-                <p class=" font-fixel font-normal text-[#2B2B2B]">
+                <p class=" font-fixel font-normal text-sm md:text-base text-[#2B2B2B]">
                     Наші експерти з дизайну, шиття та монтажу штор об'єднали свої сили, щоб надати вам найкращі послуги 
                     і зробити ваш інтер'єр неповторним.
                 </p>
@@ -14,8 +14,10 @@
             class=""
             :key="index"
             >
-                <li class="text-center font-fixel">
-                    <img :src="item.url" alt="photo" width="295px" height="340px">
+                <li class="text-center font-fixel flex flex-col items-center">
+                    <div class="flex sm:max-h-[340px] max-h-[215px] max-w-[343px]">
+                        <img :src="item.url" alt="photo" class="object-cover object-top w-full h-auto" width="295" height="340">
+                    </div>
                     <div class=" mt-3 mb-1 font-medium text-lg text-[#2B2B2B]">
                         {{ item.name }}
                     </div>
@@ -32,11 +34,11 @@
 </template>
 
 <script>
-import Oksana from '~/static/img/Oksana.png'
-import Maryna from '~/static/img/Maryna.png'
-import Inna_Lilia from '~/static/img/Inna_Lilia.png'
-import Lyuda from '~/static/img/Lyuda.png'
-import Olga from '~/static/img/Olga.png'
+import Oksana from '~/static/img/Oksana.webp'
+import Maryna from '~/static/img/Maryna.webp'
+import Inna_Lilia from '~/static/img/Inna_Lilia.webp'
+import Lyuda from '~/static/img/Lyuda.webp'
+import Olga from '~/static/img/Olga.webp'
 export default {
     name: 'TheEmployees',
     data(){
