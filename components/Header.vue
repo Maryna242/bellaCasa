@@ -9,12 +9,12 @@
                 <ul class="hidden lg:flex gap-x-9 font-semibold font-fixel text-white flex-wrap cursor-pointer ">
                     <li class="hover:border-b hover:border-white border-b border-white/0">
                         <a href="#">
-                            ШТОРИ
+                            ПРОЕКТИ
                         </a>
                     </li>
                     <li class="hover:border-b hover:border-white border-b border-white/0">
                         <a href="#">
-                            ПРОЕКТИ
+                            ШТОРИ
                         </a>
                     </li>
                     <li class="hover:border-b hover:border-white border-b border-white/0">
@@ -80,12 +80,12 @@
                     <ul class="flex flex-col gap-8 pb-10 items-center text-center gap-x-9 font-semibold font-fixel text-white flex-wrap cursor-pointer ">
                         <li class="hover:border-b hover:border-white">
                             <a href="#">
-                                ШТОРИ
+                                ПРОЕКТИ
                             </a>
                         </li>
                         <li class="hover:border-b hover:border-white">
                             <a href="#">
-                                ПРОЕКТИ
+                                ШТОРИ
                             </a>
                         </li>
                         <li class="hover:border-b hover:border-white">

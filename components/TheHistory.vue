@@ -45,7 +45,9 @@
 import TheEmployees from './TheEmployees.vue'
 export default {
     name: 'TheHistory',
-    components: { TheEmployees },
+    components: { 
+        TheEmployees 
+    },
 }
 </script>
 <style lang="scss">

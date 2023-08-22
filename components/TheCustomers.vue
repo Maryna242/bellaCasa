@@ -1,6 +1,6 @@
 <template>
-    <div class="w-full max-w-[1440px] my-0 mx-auto p-2 ">
-        <div class=" max-w-[1240px] my-0 mx-auto">
+    <div class="w-full max-w-[1440px] my-0 mx-auto ">
+        <div class=" max-w-[1240px] my-0 mx-auto md:px-8 px-4 lg:px-2">
             <h2 class=" font-[montserrat] font-semibold text-[32px] text-[#4E4747] text-center mb-[46px]">
                 Наші клієнти про нас
             </h2>
@@ -17,37 +17,46 @@
 <script>
 
 import TheCustomersSlider from './TheCustomersSlider.vue'
-import Item from '~/static/img/customers_1.png'
-import Item1 from '~/static/img/customers_2.png'
-import Item2 from '~/static/img/customers_3.png'
+
     export default {
         name: 'TheCustomers',
-        components: { TheCustomersSlider },
+        components: { 
+            TheCustomersSlider 
+        },
         data() {
             return {
                 slides:[
                     {
-                        url: Item,
+                        url: '/img/customers_1.webp',
                         type: 'video',
                         review: ''
                     },
                     {
-                        url: Item1,
+                        url: '/img/customers_2.webp',
                         review: "Ми не могли бути щасливішими з нашими новими шторами! <br/> Кожного ранку, коли сонце проникає крізь них, наша кімната заповнюється приємним м'яким світлом. Дякуємо безмежно❤️"
                     },
                     {
-                        url: Item2,
+                        url: '/img/customers_3.webp',
                         review: 'Завдяки вам наша мрія стала реальністю! Те, що ми бачили на картинках - тепер бачимо щодня! '
                     },
                     {
-                        url: Item
+                        url: '/img/16_screen/4.webp'
                     },
                     {
-                        url: Item1
+                        url: '/img/16_screen/5.webp'
                     },
                     {
-                        url: Item2
-                    }
+                        url: '/img/16_screen/6.webp'
+                    },
+                    {
+                        url: '/img/16_screen/7.webp'
+                    },
+                    {
+                        url: '/img/16_screen/8.webp'
+                    },
+                    {
+                        url: '/img/16_screen/9.webp'
+                    },
 
                 ]
             }

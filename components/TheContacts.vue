@@ -1,6 +1,6 @@
 <template>
     <div class="w-full max-w-[1440px] my-0 mx-auto">
-        <div class="max-w-[1240px] my-0 mx-auto px-4 md:px-8 lg:pl-[113px]">
+        <div class="max-w-[1240px] my-0 mx-auto px-4 md:px-8 lg:pl-[113px] lg:mb-[80px] md:mb-[60px] mb-5">
             <div class="my-contacts">
                 <h2 class="my-contacts-title font-[montserrat] font-semibold text-2xl md:text-[28px] lg:text-[32px] text-[#4E4747]">
                     Контакти
@@ -17,7 +17,7 @@
                         <span class="font-fixel font-normal text-[#4E4747]">
                             {{ item.street }}
                         </span>
-                        <a v-if="item.map" :href="item.mapLink" class="font-fixel text-sm md:text-base font-normal text-[#757575] flex">
+                        <a v-if="item.map" :href="item.mapLink" class="font-fixel text-sm md:text-base font-normal text-[#757575] flex cursor-pointer border-b border-white/0 hover:text-[#4E4747] hover:border-b hover:border-[#4E4747] hover:max-w-[186px]">
                             {{ item.map }} <img src="~/static/img/arrow-up-right.webp" alt="img" width="24px" height="24px">
                         </a>
 
@@ -33,11 +33,11 @@
                     Запрошуємо до нас в салон переглянути зразки тканей, отримати консультацію спеціаліста та 
                     прорахувати вартість готового виробу.
                 </p>
-                <div class="my-contacts-photofirst flex">
-                    <img src="~/static/img/Rectangle_left.webp" class=" object-cover" alt="img" width="400px" height="400px">
+                <div class="my-contacts-photofirst flex max-h-[400px]">
+                    <img src="~/static/img/Rectangle_left.webp" class=" w-full object-cover" alt="img" width="400px" height="400px">
                 </div>
-                <div class="my-contacts-photosecond flex">
-                    <img src="~/static/img/Rectangle_right.webp" class=" object-cover" alt="img" width="400px" height="400px">
+                <div class="my-contacts-photosecond flex max-h-[400px]">
+                    <img src="~/static/img/Rectangle_right.webp" class=" w-full object-cover" alt="img" width="400px" height="400px">
                 </div>
                 <div class="flex flex-col justify-start mt-2 my-contacts-callback">
                     <span class=" font-fixel font-medium text-lg text-[#2B2B2B]">
@@ -55,79 +55,7 @@
 
                     </a>
                 </div>
-                <!-- <ul class="flex flex-col gap-10 lg:gap-[47px]">
-                    <template v-for="(item, index) in ourContacts">
-                        <li v-if="index === ourContacts.length - 1"
-                            :key="index"
-                            class="flex flex-col"
-                        >
-                            <span class="font-fixel text-lg text-[#2B2B2B] font-medium">
-                            {{ item.city }}
-                            </span>
-                            <span class="font-fixel font-normal text-[#4E4747]">
-                                {{ item.street }}
-                            </span>
-                            <span class="font-fixel text-sm md:text-base font-normal text-[#4E4747]">
-                                {{ item.telephone }}
-                            </span>
-                        </li>
-                        <li
-                            v-else
-                            :key="index"
-                            class="flex flex-col"
-                        >
-                            <span class="font-fixel text-lg text-[#2B2B2B] font-medium">
-                            {{ item.city }}
-                            </span>
-                            <span class="font-fixel text-lg text-[#2B2B2B] font-medium">
-                                {{ item.street }}
-                            </span>
-                            <span class="font-fixel text-sm md:text-base font-normal text-[#4E4747]">
-                                {{ item.telephone }}
-                            </span>
-                            <a href="#" class="font-fixel text-sm md:text-base font-normal text-[#757575] flex">
-                                {{ item.map }} <img src="../static/img/arrow-up-right.png" alt="img" width="24px" height="24px">
-                            </a>
-                        </li>
-                    </template>
-                </ul> -->
             </div>
-            <!-- <div class="flex flex-col">
-                <div class="hidden md:flex md:justify-end">
-                    <p class="font-fixel text-[#2B2B2B] font-normal max-w-[400px] mb-6 pt-1">
-                        Запрошуємо до нас в салон переглянути зразки тканей, отримати консультацію спеціаліста та 
-                        прорахувати вартість готового виробу.
-                    </p>
-                </div>
-                <div class="flex md:flex-col md:gap-5 gap-4 relative bottom-[70px]">
-                    <div>
-                        <img src="~/static/img/Rectangle_left.png" class="" alt="img" width="400px" height="400px">
-                    </div>
-                    <div>
-                        <img src="~/static/img/Rectangle_right.png" class="" alt="img" width="400px" height="400px">
-                    </div>
-                </div>
-                <div
-                class="flex md:flex-col justify-between mt-auto md:order-last -order-last"
-                >
-                    <div class="flex flex-col justify-start mt-2">
-                        <span class=" font-fixel font-medium text-lg text-[#2B2B2B]">
-                            Зв’язатись з нами:
-                        </span>
-                        <a href="mailto:bellacasa.kyiv@gmail.com">
-                            bellacasa.kyiv@gmail.com
-                        </a>
-                    </div>
-                    <div class="flex flex-col md:flex-row gap-5 relative bottom-[126px]">
-                        <a href="#" class="facebook flex w-[88px] h-[88px] items-center border border-[#F8B1AB] rounded-full justify-center">
-
-                        </a>
-                        <a href="#" class="instagram flex w-[88px] h-[88px] items-center border border-[#F8B1AB] rounded-full justify-center">
-
-                        </a>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </div>
 </template>
@@ -153,7 +81,7 @@ export default {
                     telephone:'+38 067 9714 864',
                     phoneLink:'+380679714864',
                     map:'подивитись на карті',
-                    mapLink: '#',
+                    mapLink: 'https://goo.gl/maps/gC6U9MmdghQSXMyJA',
                     class: 'contact-2'
                 },
                 {
@@ -162,7 +90,7 @@ export default {
                     telephone:'+38 097 2883 648',
                     phoneLink:'+380972883648',
                     map:'подивитись на карті',
-                    mapLink: '# ',
+                    mapLink: 'https://goo.gl/maps/x81Xv8kGKpEiAFhg6 ',
                     class: 'contact-3'
                 },
                 {
@@ -254,7 +182,8 @@ export default {
                 'contact-3 contact-3 contact-3 contact-3 contact-3 contact-3'
                 'contact-4 contact-4 contact-4 contact-4 socials socials'
                 'callback callback callback callback socials socials'
-                'photofirst photofirst photofirst photosecond photosecond photosecond';
+                'photofirst photofirst photofirst photosecond photosecond photosecond'
+                'description description description description description description';
             }
         
         &-title {
@@ -262,9 +191,6 @@ export default {
         }
         &-description {
             grid-area: description;
-            @media (max-width: 640px) {
-                display: none;
-            }
         }
         &-contact-1 {
             grid-area: contact-1;

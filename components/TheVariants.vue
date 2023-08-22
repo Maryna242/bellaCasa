@@ -1,9 +1,13 @@
 <template>
     <div class=" w-full max-w-[1440px] my-0 mx-auto mt-[60px] lg:mt-[140px]">
-        <div class="px-4 md:px-8">
-            <h2 class=" md:px-[50px] lg:px-0 md:text-center font-[montserrat] text-2xl md:text-[28px] lg:text-[32px] lg:max-w-full font-semibold text-[#4E4747] mb-5 lg:mb-16">
-                Наш світ штор.
-                Вибір найкращих варіантів для вашого інтер'єру
+        <div class="px-4 md:px-8 lg:px-0">
+            <h2 class=" lg:flex lg:flex-col lg:gap-1 block lg:px-0 md:text-center font-[montserrat] text-2xl md:text-[28px] lg:text-[32px] lg:max-w-full font-semibold text-[#4E4747] mb-5 lg:mb-16">
+                <span>
+                    Наш світ штор.
+                </span>
+                <span>
+                    Вибір найкращих варіантів для вашого інтер'єру
+                </span>
             </h2>
             <the-variants-item
                 v-for="(item, index) in items"
@@ -19,9 +23,12 @@
 
 <script>
 import TheVariantsItem from './TheVariantsItem.vue'
-import TestImg from '~/static/img/hui.png'
-import TestImg2 from '~/static/img/IMG_0978.webp'
-import TestImg3 from '~/static/img/orn3.webp'
+import automatic_video1 from '~/static/img/8_screen/1_automatic_curtains/1.mp4'
+import automatic_video2 from '~/static/img/8_screen/1_automatic_curtains/2.mp4'
+import automatic_video3 from '~/static/img/8_screen/1_automatic_curtains/3.mp4'
+import automatic_video4 from '~/static/img/8_screen/1_automatic_curtains/4.mp4'
+import automatic_video5 from '~/static/img/8_screen/1_automatic_curtains/5.mp4'
+import eaves_video from '~/static/img/8_screen/6_eaves/10000000_596616485881485_3106649247181283341_n.mp4'
 export default {
     components: { TheVariantsItem },
     name: 'TheVariants',
@@ -31,16 +38,24 @@ export default {
                 {
                     slides: [
                         {
-                            url: TestImg
+                            url: '/img/8_screen/1_automatic_curtains/1frame_at_0m1s.webp',
+                            video: automatic_video1
                         },
                         {
-                            url: TestImg2
+                            url: '/img/8_screen/1_automatic_curtains/2_frame_at_0m0s.webp',
+                            video: automatic_video2
                         },
                         {
-                            url: TestImg3
+                            url: '/img/8_screen/1_automatic_curtains/3frame_at_0m0s.webp',
+                            video: automatic_video3
                         },
                         {
-                            url: TestImg2
+                            url: '/img/8_screen/1_automatic_curtains/5frame_at_0m0s.webp',
+                            video: automatic_video4
+                        },
+                        {
+                            url: '/img/8_screen/1_automatic_curtains/6.webp',
+                            video: automatic_video5
                         },
                     ],
                     initialInfo: {
@@ -53,14 +68,23 @@ export default {
                 {
                     slides: [
                         {
-                            url: TestImg
+                            url: '/img/8_screen/2_curtains/1-1980x1300.webp'
                         },
                         {
-                            url: TestImg
+                            url: '/img/8_screen/2_curtains/2-1980x2970.webp'
                         },
                         {
-                            url: TestImg
-                        }
+                            url: '/img/8_screen/2_curtains/3.webp'
+                        },
+                        {
+                            url: '/img/8_screen/2_curtains/4.webp'
+                        },
+                        {
+                            url: '/img/8_screen/2_curtains/5.webp'
+                        },
+                        {
+                            url: '/img/8_screen/2_curtains/6_1080 X 1080 (2).webp'
+                        },
                     ],
                     initialInfo: {
                         title: 'Штори',
@@ -72,14 +96,23 @@ export default {
                 {
                     slides: [
                         {
-                            url: TestImg
+                            url: '/img/8_screen/3_roman/1.webp'
                         },
                         {
-                            url: TestImg
+                            url: '/img/8_screen/3_roman/2.webp'
                         },
                         {
-                            url: TestImg
-                        }
+                            url: '/img/8_screen/3_roman/3.webp'
+                        },
+                        {
+                            url: '/img/8_screen/3_roman/4.webp'
+                        },
+                        {
+                            url: '/img/8_screen/3_roman/5.webp'
+                        },
+                        {
+                            url: '/img/8_screen/3_roman/6.webp'
+                        },
                     ],
                     initialInfo: {
                         title: 'Римські штори',
@@ -92,14 +125,23 @@ export default {
                 {
                     slides: [  
                         {
-                            url: TestImg
+                            url: '/img/8_screen/4_wooden/1.webp'
                         },
                         {
-                            url: TestImg
+                            url: '/img/8_screen/4_wooden/2.webp'
                         },
                         {
-                            url: TestImg
-                        }
+                            url: '/img/8_screen/4_wooden/3.webp'
+                        },
+                        {
+                            url: '/img/8_screen/4_wooden/4.webp'
+                        },
+                        {
+                            url: '/img/8_screen/4_wooden/5.webp'
+                        },
+                        {
+                            url: '/img/8_screen/4_wooden/6.webp'
+                        },
                     ],
                     initialInfo: {
                         title: 'Дерев’яні жалюзі',
@@ -112,14 +154,23 @@ export default {
                 {
                     slides: [
                         {
-                            url: TestImg
+                            url: '/img/8_screen/5_roll/1.webp'
                         },
                         {
-                            url: TestImg
+                            url: '/img/8_screen/5_roll/2.webp'
                         },
                         {
-                            url: TestImg
-                        }
+                            url: '/img/8_screen/5_roll/3.webp'
+                        },
+                        {
+                            url: '/img/8_screen/5_roll/4.webp'
+                        },
+                        {
+                            url: '/img/8_screen/5_roll/5.webp'
+                        },
+                        {
+                            url: '/img/8_screen/5_roll/6.webp'
+                        },
                     ],
                     initialInfo: {
                         title: 'Рулонні штори',
@@ -132,13 +183,14 @@ export default {
                 {
                     slides: [
                         {
-                            url: TestImg
+                            url: '/img/8_screen/6_eaves/1.webp'
                         },
                         {
-                            url: TestImg
+                            url: '/img/8_screen/6_eaves/2.webp'
                         },
                         {
-                            url: TestImg
+                            url: '/img/8_screen/6_eaves/frame_at_0m0s.webp',
+                            video: eaves_video
                         }
                     ],
                     initialInfo: {
@@ -151,10 +203,10 @@ export default {
                 {
                     slides: [
                         {
-                            url: TestImg
+                            url: '/img/8_screen/7_carpet/1.webp'
                         },
                         {
-                            url: TestImg
+                            url: '/img/8_screen/7_carpet/2.webp'
                         }
                     ],
                     initialInfo: {

@@ -1,7 +1,7 @@
 <template>
     <div class="w-full mt-[40px]">
         <div class="max-w-[1440px] my-0 mx-auto">
-            <div class="flex lg:mb-[140px] mb-[60px] bg-[#0B3B60] relative md:pt-[176px] pt-[186px] lg:pt-0 before:content-[''] before:bg-bottom  before:bg-mosaic-mob md:before:bg-[initial] md:before:bg-mosaic md:before:top-0 md:before:left-[initial] md:before:bg-cover before:absolute before:right-0 before:top-0 before:bottom-0 before:w-full md:before:max-w-[250px] before:bg-no-repeat before:bg-contain ">
+            <div class="flex lg:mb-[120px] md:mb-[80px] mb-[60px] bg-[#0B3B60] relative md:pt-[176px] pt-[186px] lg:pt-0 before:content-[''] before:bg-bottom  before:bg-mosaic-mob md:before:bg-[initial] md:before:bg-mosaic md:before:top-0 md:before:left-[initial] md:before:bg-cover before:absolute before:right-0 before:top-0 before:bottom-0 before:w-full md:before:max-w-[250px] before:bg-no-repeat before:bg-contain ">
                 <div class="flex lg:w-1/4 w-[180px] h-[240px] -top-[67px] absolute lg:static lg:h-auto">
                     <img src="~/static/img/photo_2023-06-27_20-01-58.webp" class="object-cover  " width="357px" height="619px" alt="img">
                 </div>

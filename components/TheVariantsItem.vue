@@ -1,17 +1,17 @@
 <template>
     <div
-        class="flex gap-5 lg:flex-row flex-col "
+        class="flex gap-5 lg:flex-row flex-col mb-16"
         :class=" isEven ? ' lg:pr-[100px]' : 'lg:pl-[100px]'"
     >
         <div 
             class="lg:w-1/4 flex items-center"
-            :class=" isEven ? ' -order-1' : '' "
+            :class=" isEven ? ' lg:order-1' : '' "
         >
             <div class="flex flex-col gap-6 md:max-w-[520px] lg:max-w-full">
                 <h3 class="font-fixel text-[32px] text-[#4E4747] font-extralight">
                     {{ info.title }}
                 </h3>
-                <p class="font-fixel text-[15px] text-[#2B2B2B] font-light border-b pb-5 ">
+                <p class="font-fixel text-[15px] text-[#2B2B2B] font-light border-b pb-5 max-w-[400px]">
                     {{ info.paragraph }}
                 </p>
                 <span class="font-fixel text-[#2B2B2B] font-medium text-lg">
@@ -21,8 +21,9 @@
         </div>
         <div class=" lg:w-3/4">
             <swiper
-                :initialSlide="isEven ? slides.length - 1 : 0"
                 :breakpoints="breakpoints"
+                :pagination="{el: '.dots', clickable: true}"
+                :navigation="{nextEl: '.custom-next', prevEl: '.custom-prev'}"
                 @swiper="onSwiper"
             >
                 <swiper-slide
@@ -30,20 +31,45 @@
                     :key="index"
                     class="!h-[380px] flex w-[342px]"
                 >
+                    <video
+                        v-show="showVideo"
+                        id="video"
+                        controls
+                        preload="none"
+                        poster=""
+                    >
+                        <source
+                            :src="slide.video"
+                            type="video/mp4"
+                        />
+                    </video>
                     <img :src="slide.url" :alt="index" width="400px" height="380px" class=" object-cover">
                 </swiper-slide>
-                <div v-if="showNavigation(slides.length)" class="flex gap-[10px] p-2 lg:justify-center justify-end">
-                    <div
-                        :id="`custom-prev`"
-                        class="custom-prev hover:bg-[#D9D9D9] active:bg-[#BCBCBC] cursor-pointer flex w-[50px] h-[50px] items-center border rounded-full justify-center -scale-x-100"
-                        @click="slidePrev"
-                    />
-                    <div
-                        :id="`custom-next`"
-                        class="custom-next hover:bg-[#D9D9D9] active:bg-[#BCBCBC] cursor-pointer flex w-[50px] h-[50px] items-center border rounded-full justify-center"
-                        @click="slideNext"
-                    />
+                <div
+                    class="flex items-center flex-row-reverse gap-[30px]"
+                    :class=" isEven ? 'lg:pl-[200px] justify-end' : 'lg:pr-[200px]'"
+                >
+                    <div v-if="showNavigation(slides.length)" class="flex gap-[10px] pt-2 lg:justify-center justify-end">
+                        <div
+                            :id="`custom-prev`"
+                            class="custom-prev hover:bg-[#D9D9D9] active:bg-[#BCBCBC] cursor-pointer flex w-[50px] h-[50px] items-center border rounded-full justify-center -scale-x-100"
+                        />
+                        <div
+                            :id="`custom-next`"
+                            class="custom-next hover:bg-[#D9D9D9] active:bg-[#BCBCBC] cursor-pointer flex w-[50px] h-[50px] items-center border rounded-full justify-center"
+                        />
+                    </div>
+                    <div class="dots">
+                        <!-- <span
+                            v-for="(dot, index) in slides.length"
+                            :key="index"
+                            class="dot"
+                            :class="currIndex === index ? 'active' : ''"
+                            @click="clickDots(index)"
+                        /> -->
+                    </div>
                 </div>
+                
             </swiper>
         </div>
     </div>
@@ -52,12 +78,14 @@
 </template>
 
 <script>
-import { Swiper, SwiperSlide, SwiperCore } from 'swiper-vue2';
+import { Pagination, Navigation } from 'swiper'
+// import SwiperCore, { Controller } from 'swiper';
+import { SwiperCore, Swiper, SwiperSlide } from 'swiper-vue2';
 
 // Import Swiper styles
 import 'swiper/swiper-bundle.css'
 
-
+SwiperCore.use([Pagination, Navigation]);
 export default {
     name: 'TheVariants',
     props: {
@@ -107,36 +135,19 @@ export default {
     data() {
         return {
             swiper: null,
-            currIndex: 0,
-            width: 0
+            // currIndex: 0,
+            width: 0,
+            showVideo: false,
+            // dotsCount: 0,
         }
     },
     methods: {
         onSwiper (swiper) {
-            console.log(swiper)
             this.swiper = swiper;
-            this.currIndex = swiper.activeIndex;
-        },
-        slideNext() {
-            if (this.currIndex === this.slides.length - 2) {
-                this.currIndex = 0
-            } else {
-                this.currIndex += 1
-            }
-            this.swiper?.slideTo(this.currIndex) 
-        },
-        slidePrev() {
-            if (this.currIndex === 0) {
-                this.currIndex = this.slides.length - 2
-            } else {
-                this.currIndex -= 1
-            }
-            this.swiper?.slideTo(this.currIndex) 
+            // this.currIndex = swiper.activeIndex;
         },
         updateWidth(){
-            this.width = window.innerWidth
-            console.log(this.width);
-            
+            this.width = window.innerWidth      
         },
         showNavigation(length){
             if(this.width < 440){
@@ -149,11 +160,14 @@ export default {
             else{
                return length > 2.5
             }
-        }
+        },
     },
     mounted(){
         this.updateWidth()
         window.addEventListener('resize', this.updateWidth)
+        if (this.isEven) {
+            this.swiper?.slideTo(this.slides.length) 
+        }
     },
     beforeDestroy() {
         window.removeEventListener('resize', this.updateWidth)
@@ -194,4 +208,42 @@ export default {
             }
         }
     }
+.dots {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    >.swiper-pagination-bullet {
+        position: relative;
+        display: block;
+        width: 18px;
+        height: 18px;
+        background: transparent;
+        border-radius: 100px;
+        opacity: 1;
+        cursor: pointer;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+            background:#D9D9D9;
+            border-radius: 100px;
+        }
+        &-active {
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                border: 1px solid #D9D9D9;
+                border-radius: 100px;
+            }
+        }
+    }
+}
 </style>

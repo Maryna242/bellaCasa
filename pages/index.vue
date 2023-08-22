@@ -4,18 +4,18 @@
         <Intro/>
         <the-subtitle/>
         <the-advantages/>
-        <the-best-offers/>
-        <the-variants/>
+        <the-projects :width="width"/>
         <the-steps/>
-        <!-- <the-projects/> -->
+        <the-variants/>
         <the-questions/>
         <the-contacts/>
+        <the-best-offers :width="width"/>
         <the-consultation/>
         <the-history/>
         <the-text/>
         <the-customers/>
         <the-shape/>
-        <!-- <the-instagram/> -->
+        <the-instagram/>
         <the-footer/>   
     </div>
 </template>
@@ -24,10 +24,27 @@
 
 export default {
     name: 'IndexPage',
+    data() {
+        return {
+            width: 0,
+        }
+    },
+    mounted() {
+        this.updateWidth()
+        window.addEventListener('resize', this.updateWidth)
+    },
+    beforeDestroy() {
+        window.removeEventListener('resize', this.updateWidth)
+    },
     methods: {
         onScroll() {
             console.log('scroll');
-        }
+        },
+        updateWidth() {
+            this.$nextTick(() => {
+                this.width = window.innerWidth
+            })
+        },
     }
 }
 </script>

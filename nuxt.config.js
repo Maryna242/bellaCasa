@@ -53,6 +53,6 @@ export default {
     injectPosition: 'first',
     viewer: true,
   },
-  
+
 }
 
