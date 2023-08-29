@@ -8,7 +8,7 @@
             <nav class="flex lg:justify-between py-4 items-center flex-wrap">
                 <ul class="hidden lg:flex gap-x-9 font-semibold font-fixel text-white flex-wrap cursor-pointer ">
                     <li class="hover:border-b hover:border-white border-b border-white/0">
-                        <a href="#">
+                        <a href="#" class="">
                             ПРОЕКТИ
                         </a>
                     </li>

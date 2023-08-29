@@ -13,7 +13,11 @@
             <div class=" h-[480px] flex">
                 <img :src="item.url" :alt="index" width="400" height="480" class=" h-full w-full object-cover relative" />
             </div>
-                <button v-if="item.type === 'video'" href="#" class="play hover:bg-white hover:border-4 hover:border-[#F8B1AB] active:border-[#F28B82] top-0 right-1/2 translate-x-1/2 translate-y-[150%] flex w-[115px] h-[115px] items-center border border-[#F8B1AB] bg-[#F8B1AB] rounded-full justify-center absolute transition-colors" />
+                <button 
+                    v-if="item.type === 'video'" 
+                    href="#" 
+                    class="play top-0 right-1/2 translate-x-1/2 translate-y-[150%] flex w-[115px] h-[115px] items-center rounded-full justify-center absolute transition-colors"
+                 />
                 <div
                     v-if="item.review"
                     class="union absolute bg-[#F5F5F5] rounded-[32px] bottom-5 px-3 py-4 lg:max-w-[360px] left-[15px] right-[15px]"
@@ -150,7 +154,16 @@ export default {
         }
     }
     .play{
+        width: 115px;
+        min-width: 115px;
+        position: absolute;
+        transition: .3s ease-in-out;
+        background: #F8B1AB;
         &::before{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             content: "";
             display: block;
             mask-image: url('~/static/img/Polygon.webp');
@@ -158,16 +171,39 @@ export default {
             height: 26px;
             mask-size: contain;
             background: #FFF;
-            transition: background 0.150s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: .3s ease-in-out;
+            z-index: 1;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 4px solid #fff;
+            opacity: 0;
+            border-radius: inherit;
+            transform: scale(.8);
+            transition: .3s ease-in-out;
         }
         &:hover{
             &::before {
                 background: #F8B1AB;
             }
+            &::after {
+                opacity: 1;
+                transform: scale(1);
+                background-color: #fff;
+                border-color: #F8B1AB;
+            }
         }
         &:active{
             &::before {
                 background: #F28B82;
+            }
+            &::after {
+                border-color: #F28B82;
             }
         }
     }
@@ -208,41 +244,41 @@ export default {
         }
     }
     .dots {
-    display: flex;
-    gap: 4px;
-    align-items: center;
-    >.swiper-pagination-bullet {
-        position: relative;
-        display: block;
-        width: 18px;
-        height: 18px;
-        background: transparent;
-        border-radius: 100px;
-        opacity: 1;
-        cursor: pointer;
-        &::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 8px;
-            height: 8px;
-            background:#D9D9D9;
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        >.swiper-pagination-bullet {
+            position: relative;
+            display: block;
+            width: 18px;
+            height: 18px;
+            background: transparent;
             border-radius: 100px;
-        }
-        &-active {
-            &::after {
+            opacity: 1;
+            cursor: pointer;
+            &::before {
                 content: '';
                 position: absolute;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                border: 1px solid #D9D9D9;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 8px;
+                height: 8px;
+                background:#D9D9D9;
                 border-radius: 100px;
+            }
+            &-active {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    border: 1px solid #D9D9D9;
+                    border-radius: 100px;
+                }
             }
         }
     }
-}
 </style>

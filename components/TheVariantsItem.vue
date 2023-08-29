@@ -31,19 +31,10 @@
                     :key="index"
                     class="!h-[380px] flex w-[342px]"
                 >
-                    <video
-                        v-show="showVideo"
-                        id="video"
-                        controls
-                        preload="none"
-                        poster=""
-                    >
-                        <source
-                            :src="slide.video"
-                            type="video/mp4"
-                        />
-                    </video>
-                    <img :src="slide.url" :alt="index" width="400px" height="380px" class=" object-cover">
+                    <TheVariantsItemSlide
+                        :slide="slide"
+                        :index="index"
+                    />
                 </swiper-slide>
                 <div
                     class="flex items-center flex-row-reverse gap-[30px]"
@@ -59,15 +50,7 @@
                             class="custom-next hover:bg-[#D9D9D9] active:bg-[#BCBCBC] cursor-pointer flex w-[50px] h-[50px] items-center border rounded-full justify-center"
                         />
                     </div>
-                    <div class="dots">
-                        <!-- <span
-                            v-for="(dot, index) in slides.length"
-                            :key="index"
-                            class="dot"
-                            :class="currIndex === index ? 'active' : ''"
-                            @click="clickDots(index)"
-                        /> -->
-                    </div>
+                    <div class="dots"/>
                 </div>
                 
             </swiper>
@@ -81,7 +64,7 @@
 import { Pagination, Navigation } from 'swiper'
 // import SwiperCore, { Controller } from 'swiper';
 import { SwiperCore, Swiper, SwiperSlide } from 'swiper-vue2';
-
+import TheVariantsItemSlide from './TheVariantsItemSlide.vue';
 // Import Swiper styles
 import 'swiper/swiper-bundle.css'
 
@@ -109,6 +92,7 @@ export default {
     components: {
         Swiper,
         SwiperSlide,
+        TheVariantsItemSlide,
     },
     computed:{
         breakpoints() {
@@ -137,7 +121,7 @@ export default {
             swiper: null,
             // currIndex: 0,
             width: 0,
-            showVideo: false,
+            // showVideo: false,
             // dotsCount: 0,
         }
     },

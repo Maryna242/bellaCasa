@@ -23,12 +23,6 @@
 
 <script>
 import TheVariantsItem from './TheVariantsItem.vue'
-import automatic_video1 from '~/static/img/8_screen/1_automatic_curtains/1.mp4'
-import automatic_video2 from '~/static/img/8_screen/1_automatic_curtains/2.mp4'
-import automatic_video3 from '~/static/img/8_screen/1_automatic_curtains/3.mp4'
-import automatic_video4 from '~/static/img/8_screen/1_automatic_curtains/4.mp4'
-import automatic_video5 from '~/static/img/8_screen/1_automatic_curtains/5.mp4'
-import eaves_video from '~/static/img/8_screen/6_eaves/10000000_596616485881485_3106649247181283341_n.mp4'
 export default {
     components: { TheVariantsItem },
     name: 'TheVariants',
@@ -39,23 +33,28 @@ export default {
                     slides: [
                         {
                             url: '/img/8_screen/1_automatic_curtains/1frame_at_0m1s.webp',
-                            video: automatic_video1
+                            video: '/img/8_screen/1_automatic_curtains/1.mp4',
+                            type: 'video',
                         },
                         {
                             url: '/img/8_screen/1_automatic_curtains/2_frame_at_0m0s.webp',
-                            video: automatic_video2
+                            video: '/img/8_screen/1_automatic_curtains/2.mp4',
+                            type: 'video',
                         },
                         {
                             url: '/img/8_screen/1_automatic_curtains/3frame_at_0m0s.webp',
-                            video: automatic_video3
+                            video: '/img/8_screen/1_automatic_curtains/3.mp4',
+                            type:'video'
                         },
                         {
                             url: '/img/8_screen/1_automatic_curtains/5frame_at_0m0s.webp',
-                            video: automatic_video4
+                            video: '/img/8_screen/1_automatic_curtains/4.mp4',
+                            type:'video'
                         },
                         {
                             url: '/img/8_screen/1_automatic_curtains/6.webp',
-                            video: automatic_video5
+                            video: '/img/8_screen/1_automatic_curtains/5.mp4',
+                            type:'video'
                         },
                     ],
                     initialInfo: {
@@ -190,7 +189,8 @@ export default {
                         },
                         {
                             url: '/img/8_screen/6_eaves/frame_at_0m0s.webp',
-                            video: eaves_video
+                            video: '/img/8_screen/6_eaves/10000000_596616485881485_3106649247181283341_n.mp4',
+                            type:'video'
                         }
                     ],
                     initialInfo: {

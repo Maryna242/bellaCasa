@@ -1,5 +1,5 @@
 <template>
-    <div class=" w-full max-w-[1440px] my-0 mx-auto relative bg-[#0B3B60] before:content-[''] before:bg-mosaic before:z-10 before:absolute before:right-0 before:top-0 before:bottom-0 before:w-full before:max-w-[320px]  before:bg-cover before:bg-no-repeat">
+    <div class=" w-full max-w-[1440px] mt-[60px] md:mt-[80px] lg:mt-[100px] mx-auto relative bg-[#0B3B60] before:content-[''] before:bg-mosaic before:z-10 before:absolute before:right-0 before:top-0 before:bottom-0 before:w-full before:max-w-[320px]  before:bg-cover before:bg-no-repeat">
         <div class="md:px-8 px-4 max-w-[1240px] my-0 mx-auto pb-1 md:pb-3 pt-10 md:pt-[64px] relative z-10">
             <div class="grid lg:grid-cols-[150px,1fr] gap-10 "> 
                 <img src="~/static/img/logo.webp" width="150px" height="85px" alt="logo" class="w-auto h-auto max-w-[150px] self-start">

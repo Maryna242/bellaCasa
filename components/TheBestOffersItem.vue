@@ -26,7 +26,7 @@
             </span>
         </p>
         <div 
-            class="flex md:max-w-[368px] relative hover:after:content-[''] hover:after:absolute hover:after:top-0 hover:after:right-0 hover:after:bottom-0 hover:after:left-0 hover:after:bg-[#00000033]/20 hover:after:transition-opacity hover:before:content-[''] hover:before:absolute hover:before:-translate-y-1/2 hover:before:-translate-x-1/2 hover:before:top-[50%] hover:before:left-[50%] hover:before:bg-search hover:before:w-[24px] hover:before:h-[24px] hover:before:bg-cover hover:before:z-10" 
+            class="flex md:max-w-[368px] relative hover:after:content-[''] hover:after:absolute hover:after:top-0 hover:after:right-0 hover:after:bottom-0 hover:after:left-0 hover:after:bg-[#00000033]/20 hover:after:transition-opacity hover:before:content-[''] hover:before:absolute hover:before:-translate-y-1/2 hover:before:-translate-x-1/2 hover:before:top-[50%] hover:before:left-[50%] hover:before:bg-search hover:before:w-[24px] hover:before:h-[24px] hover:before:bg-cover hover:before:z-10 cursor-pointer" 
             @click="show"
         >
             <viewer 
@@ -36,7 +36,7 @@
                 @inited="inited"
             >
                 <template #default="scope">
-                    <img v-for="src in scope.images" :src="src" :key="src">
+                    <img v-for="src in scope.images" :src="src" :key="src" >
                     {{scope.options}}
                 </template>
             </viewer>

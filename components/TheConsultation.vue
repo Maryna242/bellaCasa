@@ -10,16 +10,47 @@
                 </p>
             </h3>
             <div class="flex justify-center mt-5 md:mt-3 lg:mt-[18px] lg:mb-20 md:mb-11 mb-20">
-                <button class="bg-[#F8B1AB] py-3 px-9 rounded text-white font-fixel font-semibold border-2 border-[#F8B1AB] hover:bg-white hover:text-[#F8B1AB] active:border-[#F28B82] active:bg-white active:text-[#F28B82] transition colors">
+                <button 
+                    class="bg-[#F8B1AB] py-3 px-9 rounded text-white font-fixel font-semibold border-2 border-[#F8B1AB] hover:bg-white hover:text-[#F8B1AB] active:border-[#F28B82] active:bg-white active:text-[#F28B82] transition colors"
+                    @click="onPopup"
+                    >
                     Хочу безкоштовну консультацію
                 </button>
             </div>
         </div>
+        <transition name="fade-popup">
+            <the-popup
+                v-if="showPopup"
+                @close="showPopup = false"
+                @successSend="$emit('successSend')"
+                @errorSend="$emit('errorSend')"
+            />
+        </transition>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'TheConsultation'
+    name: 'TheConsultation',
+    
+    data(){
+        return{
+            showPopup: false
+        }
+    },
+    methods:{
+        onPopup(){
+            this.showPopup = true
+        }
+    }
 }
 </script>
+
+<style lang="scss">
+.fade-popup-enter-active, .fade-popup-leave-active {
+    transition: opacity .3s ease-in-out;
+}
+.fade-popup-enter, .fade-popup-leave-to{
+    opacity: 0;
+}
+</style>

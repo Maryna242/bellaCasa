@@ -1,7 +1,12 @@
 <template>
     <div class="flex flex-col bg-[#F9F9FB]" @scroll="onScroll">
+        <the-main-animation />
         <Header />
-        <Intro/>
+        <Intro
+            @successSend="showThanks = true"
+            @errorSend="showError = true"  
+        />
+        
         <the-subtitle/>
         <the-advantages/>
         <the-projects :width="width"/>
@@ -10,23 +15,45 @@
         <the-questions/>
         <the-contacts/>
         <the-best-offers :width="width"/>
-        <the-consultation/>
+        <the-consultation
+            @successSend="showThanks = true"  
+            @errorSend="showError = true"  
+        />
         <the-history/>
         <the-text/>
-        <the-customers/>
-        <the-shape/>
+        <the-customers/>    
+        <the-shape
+            @successSend="showThanks = true"  
+            @errorSend="showError = true"  
+        />
         <the-instagram/>
-        <the-footer/>   
+        <the-footer/>  
+        <transition name="fade-popup">
+            <the-thanks
+                v-if="showThanks"
+                @close="showThanks = false"
+            />
+        </transition> 
+        <transition name="fade-popup">
+            <the-error
+                v-if="showError"
+                @close="showError = false"
+            />
+        </transition> 
     </div>
 </template>
 
 <script>
+import TheMainAnimation from '../components/TheMainAnimation.vue'
 
 export default {
+  components: { TheMainAnimation },
     name: 'IndexPage',
     data() {
         return {
             width: 0,
+            showThanks: false,
+            showError: false
         }
     },
     mounted() {
@@ -45,6 +72,12 @@ export default {
                 this.width = window.innerWidth
             })
         },
+        onThanks(){
+            this.showThanks = true
+        },
+        onError(){
+            this.showError = true
+        }
     }
 }
 </script>

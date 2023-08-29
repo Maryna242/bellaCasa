@@ -35,6 +35,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/composition-api/module',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -43,6 +44,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    transpile: [({ isLegacy }) => isLegacy && 'axios']
   },
 
   tailwindcss: {
@@ -53,6 +55,13 @@ export default {
     injectPosition: 'first',
     viewer: true,
   },
+
+  plugins: [
+    {
+      src: '~/plugins/lightbox.js',
+      ssr: false
+    }
+  ],
 
 }
 

@@ -1,12 +1,34 @@
 <template>
-    <div class="w-full max-w-[1440px] my-0 mx-auto">
-        <div class="max-w-[1240px] my-0 mx-auto px-[105px] max-[1024px]:px-8 max-[640px]:px-4">
-            <div class="my-history">
-                <div class="flex relative max-[640px]:pr-[63px] max-[768px]:pr-[10px] pr-[63px] my-history-photo max-[1024px]:mb-5">
-                    <img src="~/static/img/photo_2023-06-07_19-31-49.webp" alt="photo" width="400px" height="552px" class=" object-cover max-h-[552px] w-full">
-                    <button href="#" class="play flex w-[115px] h-[115px] hover:bg-white hover:border-4 hover:border-[#F8B1AB] active:border-[#F28B82] items-center border border-[#F8B1AB] bg-[#F8B1AB] rounded-full justify-center absolute right-0 top-[10%] transition-colors">
-
-                    </button>   
+        <div class="w-full max-w-[1440px] my-0 mx-auto">
+            <div class="max-w-[1240px] my-0 mx-auto px-[105px] max-[1024px]:px-8 max-[640px]:px-4">
+                <div class="my-history ">
+                    <div
+                        class="flex relative my-history-photo max-[1024px]:mb-5"
+                        :class="!showVideo && 'pr-[63px] max-[1024px]:pr-[10px] max-[640px]:pr-[63px]'"
+                    >
+                        <div 
+                            class="w-full h-full flex">
+                            <video
+                                v-show="showVideo"
+                                id="video"
+                                controls
+                                preload="none"
+                                poster=""
+                                class="w-full h-[550px]"
+                                ref="video"
+                            >
+                                <source
+                                    :src="item.video"
+                                    type="video/mp4"
+                                />
+                            </video>
+                            <img v-if="!showVideo" :src="item.url" alt="history" width="400" height="380" class="w-full object-cover">
+                        </div>
+                    <button
+                        v-if="item.type === 'video' && !showVideo"
+                        class="play flex w-[115px] h-[115px] items-center rounded-full justify-center absolute right-0 sm:bottom-[10%] top-[10%] sm:top-[initial] lg:bottom-[initial] lg:top-[10%] transition-colors"
+                        @click="onShowVideo"  
+                    />  
                 </div>
                 <h2 class=" my-history-title font-[montserrat] font-semibold max-[640px]:text-2xl max-[768px]:text-[28px] text-[32px] text-[#4E4747] mb-6">
                     Історія нашого бренду, або про гарантію
@@ -41,38 +63,33 @@
 
 
 <script>
-
 import TheEmployees from './TheEmployees.vue'
 export default {
     name: 'TheHistory',
     components: { 
         TheEmployees 
     },
+    
+    data() {
+        return {
+            item: 
+                {
+                    url: '/img/photo_2023-06-07_19-31-49.webp',
+                    video: '/video/IMG_0640.mp4',
+                    type:'video',
+                },
+            showVideo: false
+        }
+    },
+    methods: {
+        onShowVideo() {
+            this.showVideo = true
+            this.$refs.video.play()
+        }
+    }
 }
 </script>
 <style lang="scss">
-    .play{
-        &::before{
-            content: "";
-            display: block;
-            mask-image: url('~/static/img/Polygon.webp');
-            width: 22.29px;
-            height: 26px;
-            mask-size: contain;
-            background: #FFF;
-            transition: background 0.150s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        &:hover{
-            &::before {
-                background: #F8B1AB;
-            }
-        }
-        &:active{
-            &::before {
-                background: #F28B82;
-            }
-        }
-    }
     .my-history{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
