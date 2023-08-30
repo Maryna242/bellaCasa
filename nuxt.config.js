@@ -40,6 +40,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxt/image',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -62,6 +63,9 @@ export default {
       ssr: false
     }
   ],
+  image: {
+    inject: true
+  }
 
 }
 

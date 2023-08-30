@@ -2,7 +2,6 @@
     <div class="w-full my-0 lg:min-h-[900px]">
         <div class="max-w-[1440px] mx-auto flex max-h-full flex-col sm:flex-row">
             <div class="flex sm:w-1/2 w-full min-h-[644px] sm:min-h-[1027px]">
-                <!-- <img src="~/static/img/hui.png" alt="gif" class="w-full object-cover">   -->
                 <video
                     autoplay
                     loop 

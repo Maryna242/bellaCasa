@@ -13,10 +13,10 @@
                 :key="index"
                 class="flex object-contain lg:w-[240px] sm:w-[140px] w-[80px] lg:min-w-[240px] sm:min-w-[140px] min-w-[80px] lg:h-[240px] sm:h-[140px] h-[80px]"
             >
-                <img :src="item.url" alt="" class="w-full h-auto">
+                <img :src="item.url" alt="" class="w-full h-auto"/>
             </div>
         </div>
-        <img src="~/static/img/Frame_205_3.webp" alt="" class=" absolute top-0 md:left-[15%] sm:left-[5%] -left-[18px] lg:w-[291px] sm:w-[229px] w-[152px]">
+        <NuxtImg src="/img/Frame_205_3.webp" alt="" class=" absolute top-0 md:left-[15%] sm:left-[5%] -left-[18px] lg:w-[291px] sm:w-[229px] w-[152px]"/>
         <p class=" font-fixel font-extrabold text-[66px] text-[#DFDFE8] lg:pr-[100px] ml-auto text-end sm:pt-0 pt-[44px]">
             #bellacasa
         </p>

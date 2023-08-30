@@ -30,7 +30,7 @@
                     </p>
                 </div>
                 <div class="flex justify-end pb-5 mb-auto pt-[50px]">
-                    <img src="~/static/img/big_logo.webp" width="94" height="114" alt="img">
+                    <NuxtImg src="/img/big_logo.webp" width="94" height="114" alt="img"/>
                 </div>
             </div>
         </div>

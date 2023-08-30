@@ -1,5 +1,5 @@
 <template>
-    <div class=" w-full max-w-[1440px] my-0 mx-auto mt-[60px] lg:mt-[140px]">
+    <div class=" w-full max-w-[1440px] my-0 mx-auto mt-[60px] lg:mt-[140px]" id="variants-section">
         <div class="px-4 md:px-8 lg:px-0">
             <h2 class=" lg:flex lg:flex-col lg:gap-1 block lg:px-0 md:text-center font-[montserrat] text-2xl md:text-[28px] lg:text-[32px] lg:max-w-full font-semibold text-[#4E4747] mb-5 lg:mb-16">
                 <span>

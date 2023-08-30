@@ -22,7 +22,7 @@
                                     type="video/mp4"
                                 />
                             </video>
-                            <img v-if="!showVideo" :src="item.url" alt="history" width="400" height="380" class="w-full object-cover">
+                            <img v-if="!showVideo" :src="item.url" alt="history" width="400" height="380" class="w-full object-cover"/>
                         </div>
                     <button
                         v-if="item.type === 'video' && !showVideo"

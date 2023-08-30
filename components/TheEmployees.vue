@@ -16,7 +16,7 @@
             >
                 <li class="text-center font-fixel flex flex-col items-center">
                     <div class="flex sm:max-h-[340px] max-h-[215px] max-w-[343px]">
-                        <img :src="item.url" alt="photo" class="object-cover object-top w-full h-auto" width="295" height="340">
+                        <img :src="item.url" alt="photo" class="object-cover object-top w-full h-auto" width="295" height="340"/>
                     </div>
                     <div class=" mt-3 mb-1 font-medium text-lg text-[#2B2B2B]">
                         {{ item.name }}

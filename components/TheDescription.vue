@@ -4,7 +4,7 @@
             <h2 class=" max-w-[400px] font-[montserrat] text-[24px] md:text-[28px] lg:text-[32px] font-semibold text-[#4E4747]">
                 Унікальні рішення для вашого інтер’єру
             </h2>
-            <img src="~/static/img/img_left.webp" width="505px" height="420px" alt="img">
+            <NuxtImg src="/img/img_left.webp" width="505px" height="420px" alt="img"/>
         </div>
         <div class=" p-2 flex flex-col">
             <p class="font-fixel text-sm md:text-base font-normal text-[#2B2B2B] w-full max-w-[505px]">
@@ -16,10 +16,10 @@
             </p>
             <div class="flex gap-3 mt-6 ">
                 <div>
-                    <img src="~/static/img/IMG_0978.webp" class="" width="250px" height="370px" alt="img">
+                    <NuxtImg src="/img/IMG_0978.webp" class="" width="250px" height="370px" alt="img"/>
                 </div>
                 <div>
-                    <img src="~/static/img/img_right.webp" class="" width="250px" height="370px" alt="img">
+                    <NuxtImg src="/img/img_right.webp" class="" width="250px" height="370px" alt="img"/>
                 </div>
             </div>
         </div>

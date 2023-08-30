@@ -3,7 +3,7 @@
         <div class=" md:rounded-xl overflow-auto max-h-screen max-w-[912px] w-full my-0 mx-auto fixed md:top-1/2 md:left-1/2 md:bottom-[initial] md:-translate-x-1/2 md:-translate-y-1/2 left-0 top-0 bottom-0 h-full md:h-auto">
             <div class="flex h-full w-full bg-white">
                 <div class="w-1/3 hidden md:flex">
-                    <img src="~/static/img/IMG_0973.webp" width="320" height="712" alt="img" class=" object-cover w-full">
+                    <NuxtImg src="/img/IMG_0973.webp" width="320" height="712" alt="img" class=" object-cover w-full"/>
                 </div>
                 <div class="grow flex flex-col min-h-max overflow-auto py-4 md:py-0">
                     <div class="flex justify-end md:mt-3 md:mr-3">

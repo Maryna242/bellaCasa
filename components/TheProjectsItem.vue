@@ -25,7 +25,7 @@
                         :key="index"
                         class="!h-[310px] flex"
                     >
-                        <img :src="slide.url" :alt="index" width="400px" height="380px" class="w-full object-cover">
+                        <NuxtImg :src="slide.url" :alt="index" width="400px" height="380px" class="w-full object-cover"/>
                     </swiper-slide>
                     <div class="absolute top-1/2 left-0 right-0 -translate-y-1/2 flex justify-between z-10">
                         <div
@@ -52,10 +52,10 @@
                         :key="index"
                         class="flex !max-h-[90px] lg:!w-[85px] lg:mb-5 mr-5 lg:mr-0 z-50"
                     >
-                        <img
+                        <NuxtImg
                             :src="slide.url" :alt="index" width="85" height="90" class="w-full object-cover"
                             @click="onClickSecondSwiper(index)"
-                        >
+                        />
                     </swiper-slide>
                 </swiper>
             </div>

@@ -48,7 +48,7 @@
                 </button>
             </div>
             <p class="flex text-white text-sm gap-1 md:ml-[50px]">
-                <img src="~/static/img/map-pin.webp" width="24px" height="24px" alt="map-pin">
+                <NuxtImg src="/img/map-pin.webp" width="24px" height="24px" alt="map-pin"/>
                 Салони: Київ, Дніпро, Кам’янське
             </p>
         </form>
@@ -57,7 +57,7 @@
                 class="btn-video"
                 @click="$emit('showVideo')"  
             >
-                <img src="~/static/img/Group_text.webp" width="125" height="125" alt="play" class="" > 
+                <NuxtImg src="/img/Group_text.webp" width="125" height="125" alt="play" class=""/> 
             </button>
         </div>
     </div>

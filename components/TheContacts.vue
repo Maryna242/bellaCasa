@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full max-w-[1440px] my-0 mx-auto">
+    <div class="w-full max-w-[1440px] my-0 mx-auto" id="contacts-section">
         <div class="max-w-[1240px] my-0 mx-auto px-4 md:px-8 lg:pl-[113px] lg:mb-[80px] md:mb-[60px] mb-5">
             <div class="my-contacts">
                 <h2 class="my-contacts-title font-[montserrat] font-semibold text-2xl md:text-[28px] lg:text-[32px] text-[#4E4747]">
@@ -18,7 +18,7 @@
                             {{ item.street }}
                         </span>
                         <a v-if="item.map" :href="item.mapLink" class="font-fixel text-sm md:text-base font-normal text-[#757575] flex cursor-pointer border-b border-white/0 hover:text-[#4E4747] hover:border-b hover:border-[#4E4747] hover:max-w-[186px]">
-                            {{ item.map }} <img src="~/static/img/arrow-up-right.webp" alt="img" width="24px" height="24px">
+                            {{ item.map }} <NuxtImg src="/img/arrow-up-right.webp" alt="img" width="24px" height="24px"/>
                         </a>
 
                         <a v-if="item.telephone" :href="`tel:${item.phoneLink}`" class="font-fixel text-sm md:text-base font-normal text-[#4E4747]">
@@ -34,10 +34,10 @@
                     прорахувати вартість готового виробу.
                 </p>
                 <div class="my-contacts-photofirst flex max-h-[400px]">
-                    <img src="~/static/img/Rectangle_left.webp" class=" w-full object-cover" alt="img" width="400px" height="400px">
+                    <NuxtImg src="/img/Rectangle_left.webp" class=" w-full object-cover" alt="img" width="400px" height="400px"/>
                 </div>
                 <div class="my-contacts-photosecond flex max-h-[400px]">
-                    <img src="~/static/img/Rectangle_right.webp" class=" w-full object-cover" alt="img" width="400px" height="400px">
+                    <NuxtImg src="/img/Rectangle_right.webp" class=" w-full object-cover" alt="img" width="400px" height="400px"/>
                 </div>
                 <div class="flex flex-col justify-start mt-2 my-contacts-callback">
                     <span class=" font-fixel font-medium text-lg text-[#2B2B2B]">
@@ -48,10 +48,10 @@
                     </a>
                 </div>
                 <div class="flex gap-5 my-contacts-socials">
-                    <a href="#" class="facebook flex w-[88px] h-[88px] items-center border border-[#F8B1AB] rounded-full justify-center hover:bg-[#F8B1AB] active:bg-[#F28B82] transition-colors">
+                    <a href="https://www.facebook.com/viktoriya.burbyga/" class="facebook flex w-[88px] h-[88px] items-center border border-[#F8B1AB] rounded-full justify-center hover:bg-[#F8B1AB] active:bg-[#F28B82] transition-colors">
 
                     </a>
-                    <a href="#" class="instagram flex w-[88px] h-[88px] items-center border border-[#F8B1AB] rounded-full justify-center hover:bg-[#F8B1AB] active:bg-[#F28B82] transition-colors">
+                    <a href="https://www.instagram.com/salon_bella_casa" class="instagram flex w-[88px] h-[88px] items-center border border-[#F8B1AB] rounded-full justify-center hover:bg-[#F8B1AB] active:bg-[#F28B82] transition-colors">
 
                     </a>
                 </div>

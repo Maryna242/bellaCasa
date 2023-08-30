@@ -3,7 +3,7 @@
         <div v-if="showContainer" class="fixed top-0 left-0 right-0 bottom-0 z-[100] w-full bg-[#0B3B60] h-full flex items-center justify-center">
             <transition name="fade-main-anim">
                 <div v-if="showMainLogo" class="mx-auto my-auto">
-                    <img src="~/static/img/logo.webp" width="290" height="163" alt="logo">
+                    <NuxtImg src="/img/logo.webp" width="290" height="163" alt="logo"/>
                 </div>
             </transition>
         </div>

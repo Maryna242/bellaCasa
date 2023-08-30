@@ -8,46 +8,68 @@
             <nav class="flex lg:justify-between py-4 items-center flex-wrap">
                 <ul class="hidden lg:flex gap-x-9 font-semibold font-fixel text-white flex-wrap cursor-pointer ">
                     <li class="hover:border-b hover:border-white border-b border-white/0">
-                        <a href="#" class="">
+                        <a 
+                            href="javascript:void(0)" 
+                            class=""
+                            @click.prevent="scrollToSection('#projects-section')"
+                        >
                             ПРОЕКТИ
                         </a>
                     </li>
                     <li class="hover:border-b hover:border-white border-b border-white/0">
-                        <a href="#">
+                        <a 
+                            href="javascript:void(0)"
+                            @click.prevent="scrollToSection('#variants-section')"
+                        >
                             ШТОРИ
                         </a>
                     </li>
                     <li class="hover:border-b hover:border-white border-b border-white/0">
-                        <a href="#">
+                        <a 
+                            href="javascript:void(0)"   
+                            @click.prevent="scrollToSection('#advantages-section')"
+                        >
                             ПРО НАС
                         </a>
                     </li>
                     <li class="hover:border-b hover:border-white border-b border-white/0">
-                        <a href="#">
+                        <a 
+                            href="javascript:void(0)"
+                            @click.prevent="scrollToSection('#customers-section')"
+                        >
                             ВІДГУКИ
                         </a>
                     </li>
                 </ul>
                 <span class="lg:px-4 ">
-                    <img src="~/static/img/logo_white.webp" width="90px" height="50px" alt="logo" class="w-[73px] h-[41px] md:w-[90px] md:h-[50px]">
+                    <NuxtImg 
+                        src="/img/logo_white.webp" 
+                        width="90px" 
+                        height="50px" 
+                        alt="logo" 
+                        class="w-[73px] h-[41px] md:w-[90px] md:h-[50px]"
+                    />
                 </span>
                 <ul class="font-fixel flex gap-x-[34px] text-white font-semibold ml-auto lg:ml-0">
                     <li class="hidden lg:flex border-b border-white/0 hover:border-b hover:border-white">
-                        <a href="#">
+                        <a 
+                            href="javascript:void(0)"
+                            @click.prevent="scrollToSection('#contacts-section')"  
+                        >
                             КОНТАКТИ
                         </a>
                     </li>
                     <li class="">
-                        <a href="#" class="flex hover:text-[#F8B1AB]">
-                            <img src="~/static/img/smartphone.webp" width="24px" height="24px">
+                        <a href="tel:+38 096 1353 553" class="flex hover:text-[#F8B1AB]">
+                            <NuxtImg src="/img/smartphone.webp" width="24px" height="24px"/>
                             +38 096 1353 553
                         </a>
                     </li>
                     <li class="hidden sm:block">
-                        <a href="#" class="hover:text-[#F8B1AB] before:content-[''] after:border-r after:border-white">
+                        <a href="javascript:void(0)" class="hover:text-[#F8B1AB] before:content-[''] after:border-r after:border-white">
                             UA 
                         </a>
-                        <a href="#" class="hover:text-[#F8B1AB] pl-1">
+                        <a href="javascript:void(0)" class="hover:text-[#F8B1AB] pl-1">
                             EN
                         </a>
                     </li>
@@ -145,6 +167,15 @@
             window.removeEventListener('scroll', () => {
                 this.bg = window.scrollY > 100
             })
+        },
+        methods: {
+            scrollToSection(targetId){
+                const target = document.querySelector(targetId);
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
         }
     }
 </script>

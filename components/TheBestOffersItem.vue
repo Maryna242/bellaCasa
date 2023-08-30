@@ -36,7 +36,7 @@
                 @inited="inited"
             >
                 <template #default="scope">
-                    <img v-for="src in scope.images" :src="src" :key="src" >
+                    <img v-for="src in scope.images" :src="src" :key="src" />
                     {{scope.options}}
                 </template>
             </viewer>

@@ -11,7 +11,7 @@
                 :key="index"
             >
             <div class=" h-[480px] flex">
-                <img :src="item.url" :alt="index" width="400" height="480" class=" h-full w-full object-cover relative" />
+                <NuxtImg :src="item.url" :alt="index" width="400" height="480" class=" h-full w-full object-cover relative" />
             </div>
                 <button 
                     v-if="item.type === 'video'" 
