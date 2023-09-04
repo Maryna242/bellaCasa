@@ -1,5 +1,5 @@
 <template>
-    <div class=" lg:my-[140px] my-20 text-center flex flex-col  md:mx-auto">
+    <div class=" lg:my-[140px] my-20 text-center flex flex-col  md:mx-auto" data-aos="fade-up" data-aos-delay="100">
         <h2 class="text-[#4E4747] font-[montserrat] font-semibold text-2xl md:text-[28px] lg:text-[32px]">
             Наші результати в числах
         </h2>
@@ -18,36 +18,42 @@
             </li>
         </ul>
     </div>
+    
 </template>
 
 <script>
+
 export default {
     name: 'TheResults',
-        data() {
-            return {
-                ourResults: [
-                    {
-                        title: '50 000',
-                        symbol: '',
-                        description: 'Каталог тканин'
-                    },
-                    {
-                        title: '13',
-                        symbol: '+',
-                        description: 'Років на ринку'
-                    },
-                    {
-                        title: '4 500',
-                        symbol: '+',
-                        description: 'Реалізованих проектів'
-                    },
-                    {
-                        title: '80',
-                        symbol: '%',
-                        description: 'Співпраця з архітекторами'
-                    }
-                ]
-            }
+    data() {
+        return {
+            block: { 
+                content: '',
+                isVisible: false
+            },
+            ourResults: [
+                {
+                    title: '50 000',
+                    symbol: '',
+                    description: 'Каталог тканин'
+                },
+                {
+                    title: '13',
+                    symbol: '+',
+                    description: 'Років на ринку'
+                },
+                {
+                    title: '4 500',
+                    symbol: '+',
+                    description: 'Реалізованих проектів'
+                },
+                {
+                    title: '80',
+                    symbol: '%',
+                    description: 'Співпраця з архітекторами'
+                }
+            ]
         }
-    }
+    },
+}
 </script>

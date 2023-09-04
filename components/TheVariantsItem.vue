@@ -1,5 +1,6 @@
 <template>
     <div
+        data-aos="fade-up" data-aos-delay="100"
         class="flex gap-5 lg:flex-row flex-col mb-16"
         :class=" isEven ? ' lg:pr-[100px]' : 'lg:pl-[100px]'"
     >

@@ -1,18 +1,16 @@
 <template>
-    <div class="flex items-center flex-col md:flex-row md:items-end md:justify-between">
+    <div data-aos="fade-up" data-aos-delay="100" class="flex items-center flex-col md:flex-row md:items-end md:justify-between">
         <div class=" p-2 md:flex md:flex-col  md:gap-12">
             <h2 class=" max-w-[400px] font-[montserrat] text-[24px] md:text-[28px] lg:text-[32px] font-semibold text-[#4E4747]">
-                Унікальні рішення для вашого інтер’єру
+                {{$t('description.title')}}
             </h2>
-            <NuxtImg src="/img/img_left.webp" width="505px" height="420px" alt="img"/>
+            <NuxtImg src="/img/img_left.webp" width="505" height="420" alt="img"/>
         </div>
         <div class=" p-2 flex flex-col">
             <p class="font-fixel text-sm md:text-base font-normal text-[#2B2B2B] w-full max-w-[505px]">
-                Bella Casa - одна з лідируючих компаній на українському ринку виробництва дизайнерських штор та 
-                унікальних рішень інтер'єру.
+                {{ $t('description.text1') }}
                 <br><br>
-                Наша компанія спеціалізується на виробництві штор на замовлення, а також ми співпрацюємо із відомими 
-                українськими дизайнерами.
+                {{ $t('description.text2') }}
             </p>
             <div class="flex gap-3 mt-6 ">
                 <div>

@@ -4,21 +4,21 @@
             Bella Casa
         </h1>
         <h2 class="text-white font-semibold font-[montserrat] md:text-[32px] text-2xl md:mb-[30px] text-center ">
-            Штори. Жалюзі. Карнизи. Текстильний дизайн
+            {{ $t('intro.title') }}
         </h2>
         <form
             class="bg-[#D9D9D942]/20 border-[1px] border-[#DFDFE84D] rounded-xl border-solid px-4 py-6 md:px-3 backdrop-blur-xl w-full max-w-[825px] order-1 md:order-none mt-[78px] md:mt-[30px]"
             @submit.prevent="onSubmit"
         >
             <p class="text-white font-fixel font-medium text-center">
-                Безкоштовна консультація декоратора вже сьогодні!
+                {{ $t('form.title') }}
             </p>
             <div class="gap-2 grid sm:grid-cols-3 grid-cols-1 py-3  max-w-[690px] align-top mx-auto">
                 <div class="flex flex-col">
                     <input
                         v-model="state.name" 
                         type="text"
-                        placeholder="Ваше ім’я"
+                        :placeholder=" $t('form.placeholderName')"
                         name="name"
                         class="p-3 rounded focus:border-[#728A9C] border border-[#DFDFE8] h-[50px] outline-none"
                         :class="{
@@ -44,12 +44,12 @@
                     type="submit"
                     class="bg-[#F8B1AB] p-3 rounded border-2 border-[#F8B1AB] text-white font-fixel hover:bg-white hover:border-2 hover:border-[#F8B1AB] hover:text-[#F8B1AB] active:bg-white active:border-2 active:border-[#F28B82] active:text-[#F28B82] h-[50px]"
                 >
-                    Замовити дзвінок
+                {{ $t('form.button') }}
                 </button>
             </div>
             <p class="flex text-white text-sm gap-1 md:ml-[50px]">
                 <NuxtImg src="/img/map-pin.webp" width="24px" height="24px" alt="map-pin"/>
-                Салони: Київ, Дніпро, Кам’янське
+                {{ $t('form.addres') }}
             </p>
         </form>
         <div class=" md:mt-12">

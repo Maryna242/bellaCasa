@@ -43,29 +43,29 @@
 
 <script>
 import TheForm from './TheForm.vue'
-import VueEasyLightbox from 'vue-easy-lightbox'
 
 export default {
     components: { 
         TheForm,
-        VueEasyLightbox
     },
     name: 'Intro',
     data() {
         return {
             visible: false,
-            media: [{
-                type: 'video',
-                sources: [
+            media: [
                 {
-                    src: '/video/Bella Casa_v2.mp4',
-                    type: 'video/mp4'
+                    type: 'video',
+                    sources: [
+                    {
+                        src: '/video/Bella Casa_v2.mp4',
+                        type: 'video/mp4'
+                    }
+                    ],
+                    width: 1920, // Required
+                    height: 1080, // Required
+                    autoplay: true,
                 }
-                ],
-                width: 1920, // Required
-                height: 1080, // Required
-                autoplay: true,
-            }]
+            ]
         }
     },
     mounted() {

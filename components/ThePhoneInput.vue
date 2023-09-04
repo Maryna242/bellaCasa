@@ -4,7 +4,7 @@
             v-model="phoneNumber"
             id="phone"
             v-mask="'+38 (0##) ###-##-##'"
-            placeholder="Введите телефон"
+            :placeholder="$t('form.placeholderPhone')"
             class="p-3 rounded focus:border-[#728A9C] border border-[#DFDFE8] outline-none h-[50px]"
             :class="{
                 '!border-[#F43F30]': error,

@@ -1,9 +1,9 @@
 <template>
-    <div class="w-full max-w-[1440px] my-0 mx-auto" id="contacts-section">
+    <div data-aos="fade-up" data-aos-delay="100" class="w-full max-w-[1440px] my-0 mx-auto" id="contacts-section">
         <div class="max-w-[1240px] my-0 mx-auto px-4 md:px-8 lg:pl-[113px] lg:mb-[80px] md:mb-[60px] mb-5">
             <div class="my-contacts">
                 <h2 class="my-contacts-title font-[montserrat] font-semibold text-2xl md:text-[28px] lg:text-[32px] text-[#4E4747]">
-                    Контакти
+                    {{ $t('contacts.title') }}
                 </h2>
                 <template v-for="(item, index) in ourContacts">
                     <div
@@ -27,11 +27,13 @@
                         <span v-if="item.content" class="font-fixel text-sm md:text-base font-normal text-[#4E4747]">
                             {{ item.content }}
                         </span>
+                        <span v-if="item.content" class="font-fixel text-sm md:text-base font-normal text-[#4E4747]">
+                            {{ item.closed }}
+                        </span>
                     </div>
                 </template>
                 <p class="font-fixel text-[#2B2B2B] font-normal max-w-[400px] pt-1 my-contacts-description">
-                    Запрошуємо до нас в салон переглянути зразки тканей, отримати консультацію спеціаліста та 
-                    прорахувати вартість готового виробу.
+                    {{ $t('contacts.paragraph') }}
                 </p>
                 <div class="my-contacts-photofirst flex max-h-[400px]">
                     <NuxtImg src="/img/Rectangle_left.webp" class=" w-full object-cover" alt="img" width="400px" height="400px"/>
@@ -67,36 +69,37 @@ export default {
         return{
             ourContacts:[
                 {
-                    city:'м. Київ ',
-                    street:'вул. Передславинська 55А',
+                    city: this.$t('contacts.city1'),
+                    street:this.$t('contacts.street1'),
                     telephone:'+38 096 1353 553',
                     phoneLink:'+380961353553',
-                    map:'подивитись на карті',
+                    map:this.$t('contacts.map'),
                     mapLink: 'https://goo.gl/maps/Hd2haJLxeWaZR3aDA',
                     class: 'contact-1'
                 },
                 {
-                    city:'м. Дніпро',
-                    street:'вул. Михайла Грушевського 12 ',
+                    city:this.$t('contacts.city2'),
+                    street:this.$t('contacts.street2'),
                     telephone:'+38 067 9714 864',
                     phoneLink:'+380679714864',
-                    map:'подивитись на карті',
+                    map:this.$t('contacts.map'),
                     mapLink: 'https://goo.gl/maps/gC6U9MmdghQSXMyJA',
                     class: 'contact-2'
                 },
                 {
-                    city:'м. Кам’янське',
-                    street:'пр. Тараса Шевченка 20',
+                    city:this.$t('contacts.city3'),
+                    street:this.$t('contacts.street3'),
                     telephone:'+38 097 2883 648',
                     phoneLink:'+380972883648',
-                    map:'подивитись на карті',
+                    map:this.$t('contacts.map'),
                     mapLink: 'https://goo.gl/maps/x81Xv8kGKpEiAFhg6 ',
                     class: 'contact-3'
                 },
                 {
-                    city:'Графік роботи:',
-                    street:'Пн - Пт 10:00 - 19:00',
-                    content:'Сб 10:00 - 17:00',
+                    city:this.$t('contacts.time'),
+                    street:this.$t('contacts.monday'),
+                    content:this.$t('contacts.saturday'),
+                    closed:this.$t('contacts.sunday'),
                     class: 'contact-4'
                 },
             ]

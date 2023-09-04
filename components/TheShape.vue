@@ -1,11 +1,10 @@
 <template>
-    <div class=" w-full max-w-[1440px] mt-[60px] md:mt-[80px] lg:mt-[120px] mx-auto">
+    <div data-aos="fade-up" data-aos-delay="100" class=" w-full max-w-[1440px] mt-[60px] md:mt-[80px] lg:mt-[120px] mx-auto">
         <div class=" max-w-[1240px] my-0 mx-auto px-4 md:px-8 lg:px-[104px]">
             <div class="flex flex-col md:flex-row gap-5 lg:gap-[126px]">
                 <div class="lg:max-w-[400px] md:max-w-[340px]">
                     <h3 class=" font-fixel font-extralight text-xl md:text-[28px] lg:text-[32px] md:leading-10 text-[#2B2B2B]">
-                        Бажаєте стати нашим щасливим клієнтом?
-                        Ми вже чекаємо вашого повідомлення!
+                        {{ $t('shape.title') }}
                     </h3>
                 </div>
                 <form 
@@ -16,7 +15,7 @@
                     <input 
                         v-model="state.name" 
                         type="text"
-                        placeholder="Ваше ім’я"
+                        :placeholder="$t('shape.name')"
                         name="name"
                         class="p-3 w-full rounded focus:border-[#728A9C] border border-[#DFDFE8] h-[50px] outline-none"
                         :class="{
@@ -41,7 +40,7 @@
                         <input 
                             v-model="state.city" 
                             type="text"
-                            placeholder="Ваше місто"
+                            :placeholder="$t('shape.city')"
                             name="city"
                             class="p-3 w-full rounded focus:border-[#728A9C] border border-[#DFDFE8] h-[50px] outline-none"
                             :class="{
@@ -60,7 +59,7 @@
                         <input 
                             v-model="state.mail" 
                             type="@mail"
-                            placeholder="Пошта"
+                            :placeholder="$t('shape.mail')"
                             name="mail"
                             class="p-3 w-full rounded focus:border-[#728A9C] border border-[#DFDFE8] h-[50px] outline-none"
                             :class="{
@@ -79,7 +78,7 @@
                         <textarea 
                             v-model="state.text" 
                             type="text"
-                            placeholder="Якщо бажаєте - напишіть, що саме цікавить" 
+                            :placeholder="$t('shape.text')" 
                             rows="5" 
                             name="text"
                             class="p-3 w-full rounded focus:border-[#728A9C] border border-[#DFDFE8] р-агдд outline-none"

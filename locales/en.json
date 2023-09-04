@@ -1,0 +1,171 @@
+{
+    "header": {
+        "list1": "PROJECTS",
+        "list2": "CURTAINS",
+        "list3": "ABOUT US",
+        "list4": "REVIEWS",
+        "list5": "CONTACT"
+    },
+    "intro": {
+        "title": "Curtains. Blinds. Curtain rods. Textile Design"
+    },
+    "form": {
+        "title": "Free decorator consultation today!",
+        "placeholderName": "Your name",
+        "placeholderPhone": "Phone",
+        "button": "Request a сall",
+        "addres": "Showrooms: Kyiv, Dnipro, Kamyanske"
+    },
+    "subtitle":{
+        "title": "Revive your home with our exquisite curtains: welcome to our showroom!"
+    },
+    "description": {
+        "title": "Unique interior solutions",
+        "text1": "Bella Casa is one of the leading companies in the Ukrainian market for designer curtains and unique interior solutions.",
+        "text2": "Our company specializes in custom-made curtain production, and we also collaborate with renowned Ukrainian designers."
+        
+    },
+    "advantages": {
+        "title": "Key advantages, or why we're the best",
+        "subtitle1": "Experience",
+        "subtitle2": "Quality",
+        "subtitle3": "Cleanliness",
+        "subtitle4": "Professionalism",
+        "paragraph1": "We have the best designers with years of experience. Individual approach tailored to your interior style and your creative preferences!",
+        "paragraph2": "We collaborate exclusively with top suppliers and utilize high-quality materials. Fabrics with unique textures and patterns, available only with us.",
+        "paragraph3": "Our installers provide complete cleaning. You can rely on us with confidence that your premises will remain clean and tidy!",
+        "paragraph4": "We understand that every customer has unique needs and requirements. We will tailor our products to fit any window type."
+    },
+    "projects": {
+        "titleProjects": "Projects",
+        "title1": "Functional aesthetics",
+        "subtitle1": "Elegant window solutions",
+        "paragraph1": "Practicality is a crucial criterion for our clients. Thanks to our experience, we have created a harmonious blend of functionality and style.",
+        "title2": "Style and modernity",
+        "subtitle2": "Automated bedroom curtains",
+        "paragraph2": "In this project, we've merged elegant design with cutting-edge technology to create an automated system that brings a new level of convenience and functionality to your space.",
+        "title3": "Comfort and relaxation",
+        "subtitle3": "Bathroom solutions",
+        "paragraph3": "Roman shades are the perfect choice to subtly add decor and maintain the practicality of the space.",
+        "title4": "Dream drapery",
+        "subtitle4": "Cozy living room",
+        "paragraph4": "We developed and executed original design concepts, employing various techniques and decorative elements. Our team takes pride in the results of this project!",
+        "title5": "The power of place",
+        "subtitle5": "Natural fabrics in interior design",
+        "paragraph5": "In the creation of this project, only natural materials and textures were used, creating a sense of comfort and harmony with nature.",
+        "title6": "Dasha Space",
+        "subtitle6": "Textiles for the children's room",
+        "paragraph6": "Curtains in a children's room are not always about bold fabrics. Our main goal was to support a vibrant design while preserving a sense of tranquility.",
+        "title7": "Style and functionality",
+        "subtitle7": "Impressive curtains",
+        "paragraph7": "The color palette of light shades was guided by the wallpaper, furniture, and the room's purpose. White curtains simply blend into the interior, providing a sense of lightness and freshness.",
+        "title8": "Textile classic",
+        "subtitle8": "The magic of recor",
+        "paragraph8": "When creating textile design, it's crucial to maintain a cohesive concept. In this project, to support a subdued mood, we, together with the architect, chose the classic option of portieres.",
+        "button1": "Show more",
+        "button2": "hide"
+    },
+    "questions": {
+        "title": "Frequently asked questions from our clients",
+        "subtitle1": "How can I order curtains?",
+        "paragraph1": "You can order curtains by contacting our team via phone or email, or even better, by visiting our showroom.",
+        "subtitle2": "How long does it take for the curtains to be made?",
+        "paragraph12": "Typically, it takes 3-5 days to make curtains. We always meet the discussed deadlines for your convenience.",
+        "subtitle3": "Do you install the curtains?",
+        "paragraph3": "Yes, we provide professional curtain installation services. Our experts will ensure the curtains are properly installed to look flawless!",
+        "subtitle4": "What if I don't understand design at all, how do I order curtains?",
+        "paragraph4": "Our team has a background in design, so you can confidently rely on us! ",
+        "subtitle5": "In which cities do you operate, and do you provide a warranty?",
+        "paragraph5": "We operate throughout Ukraine 🇺🇦 We offer a 12-month warranty on automatic mechanisms.",
+        "subtitle6": "Do the installers clean up after themselves?",
+        "paragraph6": "Absolutely. Our staff works with white gloves and cleans up thoroughly after the installation. "
+    },
+    "contacts": {
+        "title": "Contact information",
+        "paragraph": "We invite you to visit our showroom to view fabric samples, receive expert consultation, and calculate the cost of the finished product.",
+        "city1": "Kyiv",
+        "street1": "55A Peredslavynska street",
+        "map": "view on the map",
+        "city2": "Dnipro",
+        "street2": "12 Mykhaila Hrushevskoho street",
+        "city3": "Kamyanske",
+        "street3": "20 Tarasa Shevchenka avenue",
+        "time": "Working hours:",
+        "monday": "Mon - Fri: 10:00 AM - 7:00",
+        "saturday": "Sat: 10:00 AM - 5:00 PM",
+        "sunday": "Sun: Closed"
+    },
+	"theBestOffers": {
+		"title": "Happy customers adore these models",
+		"subtitle": "Curtain set",
+        "price": "Price for curtains",
+        "text": "We can confidently say that Bella Casa is all about the individual approach. That's why we're looking forward to welcoming you to our showroom, where our top specialists will fulfill your wishes!",
+        "span5-7": "Made to order: 5-7 days",
+        "spanKS": "Curtain rod KS",
+        "paragraph":{
+            "span1": "Turkey fabric",
+            "span2": "Size (w/h) - 3 х 2,75 meters",
+            "span3": "Netherlands fabric",
+            "span4": "Size (w/h) - 3 х 2,75 meters",
+            "span5": "Turkey fabric",
+            "span6": "Size (w/h) - 3 х 2,75 meters",
+            "span7": "Germany fabric",
+            "span8": "Size (w/h) - 3 х 2,75 meters"
+        }
+	},
+    "consultation": {
+        "title1": "Design, Comfort, Quality.",
+        "title2": "Your perfect blend in our showroom!",
+        "button": "I want a free consultation"
+    },
+    "history": {
+        "title": "The history of our brand or about warranty",
+        "paragraph1": "Bella Casa Curtain Salon stands out with unparalleled style and elegance. Thanks to our experience and expertise, we provide professional consultation on fabric selection, individual design development, and curtain hardware configuration.",
+        "paragraph2": "Simply give us a call, share your story, and we offer a comprehensive service from initial consultation to curtain installation. We take care of all stages of the process, so you can enjoy your new curtains hassle-free.",
+        "paragraph3": "We employ cutting-edge technologies in curtain manufacturing and control, offering automated control systems that allow you to conveniently adjust lighting and privacy in your space. We excel in this!",
+        "paragraph4": "When you turn to our salon, you can be confident that you will receive the highest quality service, design, and curtain manufacturing. I personally oversee it. Contact us today to experience the perfect blend of design, comfort, and quality!",
+        "subtitle": "Victoria Anders, Founder of the Bella Casa Brand."
+    },
+    "employees": {
+        "title": "The coolest creators of comfort and style",
+        "subtitle": "Our design, tailoring, and curtain installation experts have come together to provide you with the best services and make your interior unique.",
+        "name": {
+            "title1": "Oksana",
+            "subtitle1": "manager, project coordinator ",
+            "city1": "Kamyanske",
+            "title2": "Marina",
+            "subtitle2": "head designer decorator",
+            "title3": "Inna and Liliya",
+            "subtitle3": "designer decorators",
+            "city2": "Kyiv",
+            "title4": "Ludmila",
+            "subtitle4": "chief technologist",
+            "title5": "Olga",
+            "city3": "Dnipro"
+        }
+    },
+    "text": {
+        "title": "Professional. With pleasure."
+    },
+    "customers": {
+        "title": "Our clients about us",
+        "reviews": {
+            "title1": "We couldn't be happier with our new curtains! Every morning when the sun shines through them, our room fills with pleasant, soft light. Thank you endlessly ❤️",
+            "title2": "Thanks to you, our dream became a reality! What we saw in the pictures, we now see every day!",
+            "title3": "Our new curtains simply enchanted us from the first sight, thank you sincerely! 🙂❤️ We feel like happy owners of such a beautiful interior!",
+            "title4": "This beauty is now mine! The girls did such a great job! Service at the highest level 👌🏼👌🏼👌🏼",
+            "title5": "We are incredibly happy that we turned to Bella Casa! Thank you, salon, for the excellent service experience and the high quality of your products.",
+            "title6": "The kitchen of my dreams 🥰 Solved the problem with the strong morning light - perfect! Love you guys)",
+            "title7": "Thank you for your help, roller blinds were the perfect choice for us! The result is incredible, and we want to decorate our living room as well, so we already know who to call! Only Bella Casa 👍🏻",
+            "title8": "I am very satisfied with my new curtains and recommend your salon to everyone looking for quality and professionalism!"
+        }
+    },
+    "shape": {
+        "title": "Do you want to become our happy customer? We are already waiting for your message!",
+        "name": "Your name",
+        "city": "City",
+        "mail": "Email",
+        "text": "If you wish, please write what specifically interests you"
+    }
+}
+

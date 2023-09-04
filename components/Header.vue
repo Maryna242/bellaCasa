@@ -6,6 +6,7 @@
     >
         <div class="max-w-[1240px] my-0 mx-auto p-2 md:px-[32px] px-4 z-10 relative">
             <nav class="flex lg:justify-between py-4 items-center flex-wrap">
+                <p></p>
                 <ul class="hidden lg:flex gap-x-9 font-semibold font-fixel text-white flex-wrap cursor-pointer ">
                     <li class="hover:border-b hover:border-white border-b border-white/0">
                         <a 
@@ -13,7 +14,7 @@
                             class=""
                             @click.prevent="scrollToSection('#projects-section')"
                         >
-                            ПРОЕКТИ
+                            {{ $t('header.list1') }}
                         </a>
                     </li>
                     <li class="hover:border-b hover:border-white border-b border-white/0">
@@ -21,7 +22,7 @@
                             href="javascript:void(0)"
                             @click.prevent="scrollToSection('#variants-section')"
                         >
-                            ШТОРИ
+                        {{ $t('header.list2') }}
                         </a>
                     </li>
                     <li class="hover:border-b hover:border-white border-b border-white/0">
@@ -29,7 +30,7 @@
                             href="javascript:void(0)"   
                             @click.prevent="scrollToSection('#advantages-section')"
                         >
-                            ПРО НАС
+                        {{ $t('header.list3') }}
                         </a>
                     </li>
                     <li class="hover:border-b hover:border-white border-b border-white/0">
@@ -37,15 +38,13 @@
                             href="javascript:void(0)"
                             @click.prevent="scrollToSection('#customers-section')"
                         >
-                            ВІДГУКИ
+                        {{ $t('header.list4') }}
                         </a>
                     </li>
                 </ul>
                 <span class="lg:px-4 ">
                     <NuxtImg 
                         src="/img/logo_white.webp" 
-                        width="90px" 
-                        height="50px" 
                         alt="logo" 
                         class="w-[73px] h-[41px] md:w-[90px] md:h-[50px]"
                     />
@@ -56,7 +55,7 @@
                             href="javascript:void(0)"
                             @click.prevent="scrollToSection('#contacts-section')"  
                         >
-                            КОНТАКТИ
+                        {{ $t('header.list5') }}
                         </a>
                     </li>
                     <li class="">
@@ -102,27 +101,27 @@
                     <ul class="flex flex-col gap-8 pb-10 items-center text-center gap-x-9 font-semibold font-fixel text-white flex-wrap cursor-pointer ">
                         <li class="hover:border-b hover:border-white">
                             <a href="#">
-                                ПРОЕКТИ
+                                {{ $t('header.list1') }}
                             </a>
                         </li>
                         <li class="hover:border-b hover:border-white">
                             <a href="#">
-                                ШТОРИ
+                                {{ $t('header.list2') }}
                             </a>
                         </li>
                         <li class="hover:border-b hover:border-white">
                             <a href="#">
-                                ПРО НАС
+                                {{ $t('header.list3') }}
                             </a>
                         </li>
                         <li class="hover:border-b hover:border-white">
                             <a href="#">
-                                ВІДГУКИ
+                                {{ $t('header.list4') }}
                             </a>
                         </li>
                         <li class="hidden lg:flex hover:border-b hover:border-white">
                             <a href="#">
-                                КОНТАКТИ
+                                {{ $t('header.list5') }}
                             </a>
                         </li>
                         <li class="block sm:hidden">

@@ -22,12 +22,17 @@
                 >
                     <swiper-slide
                         v-for="(slide, index) in photo"
-                        :key="index"
+                        :key="`slide-${index}`"
                         class="!h-[310px] flex"
                     >
-                        <NuxtImg :src="slide.url" :alt="index" width="400px" height="380px" class="w-full object-cover"/>
+                        <NuxtImg
+                            :src="slide.url"
+                            :alt="`${index}`" 
+                            class="w-full object-cover"
+                            @click="openLightBox(index)"
+                        />
                     </swiper-slide>
-                    <div class="absolute top-1/2 left-0 right-0 -translate-y-1/2 flex justify-between z-10">
+                    <div class="absolute top-1/2 left-0 right-0 -translate-y-1/2 flex justify-between z-10 items-center h-0">
                         <div
                             :id="`item-prev`"
                             class="item-prev cursor-pointer -scale-x-100"
@@ -49,17 +54,30 @@
                 >
                     <swiper-slide
                         v-for="(slide, index) in photo"
-                        :key="index"
+                        :key="`slide-${index}`"
                         class="flex !max-h-[90px] lg:!w-[85px] lg:mb-5 mr-5 lg:mr-0 z-50"
                     >
                         <NuxtImg
-                            :src="slide.url" :alt="index" width="85" height="90" class="w-full object-cover"
+                            :src="slide.url" :alt="`${index}`"  class="w-full object-cover"
                             @click="onClickSecondSwiper(index)"
                         />
                     </swiper-slide>
                 </swiper>
             </div>
         </div>
+        <!-- <div class="fixed top-0 left-0 right-0 bottom-0 z-[2000] bg-slate-400"></div> -->
+            <!-- this component will only be rendered on client-side -->
+        <LightBox
+            v-if="visible"
+            :media="media"
+            :start-at="startAt"
+            :show-caption="false"
+            @onClosed="handleHide"
+        >
+            <template slot="footer">
+                <div class=" !h-0 !p-0"></div>
+            </template>
+        </LightBox>
     </div>
 </template>
 
@@ -92,20 +110,37 @@ export default {
     computed: {
         swiperDirection(){
             return this.width < 1024 ? 'horizontal': 'vertical'
+        },
+        media() {
+            return this.photo.map((item) => {
+                return {
+                    src: item.url,
+                    type: 'image',
+                    thumb: item.url
+                }
+            })
         }
     },
     data() {
         return {
+            visible: false,
             firstSwiper: null,
-            secondSwiper: null
+            secondSwiper: null,
+            startAt: 0,
         };
     },
     methods: {
         onFirstSliderChange(e) {
-            this.secondSwiper?.slideTo(e.activeIndex)
+            if (this.secondSwiper) {
+                this.secondSwiper.slideTo(e.activeIndex)
+            }
+            this.activeSlideIndex = e.activeIndex;
         },
         onSecondSliderChange(e) {
-            this.firstSwiper?.slideTo(e.activeIndex)
+            if (this.firstSwiper) {
+                this.firstSwiper.slideTo(e.activeIndex);
+            }
+            this.activeSlideIndex = e.activeIndex;
         },
         onFirstSwiper(swiper) {
             this.firstSwiper = swiper;
@@ -116,6 +151,13 @@ export default {
         onClickSecondSwiper(index) {
             this.firstSwiper?.slideTo(index)
         },
+        handleHide() {
+            this.visible = false
+        },
+        openLightBox(index) {
+            this.visible = true
+            this.startAt = index
+        }
     },
 }
 </script>

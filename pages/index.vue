@@ -44,6 +44,8 @@
 </template>
 
 <script>
+import AOS from "aos";
+import "aos/dist/aos.css";
 import TheMainAnimation from '../components/TheMainAnimation.vue'
 
 export default {
@@ -59,6 +61,7 @@ export default {
     mounted() {
         this.updateWidth()
         window.addEventListener('resize', this.updateWidth)
+        this.aosInit()
     },
     beforeDestroy() {
         window.removeEventListener('resize', this.updateWidth)
@@ -77,6 +80,15 @@ export default {
         },
         onError(){
             this.showError = true
+        },
+        aosInit() {
+            new AOS.init({ 
+                disable: window.innerWidth < 640,
+                // offset: 200,
+                duration: 600,
+                easing: 'ease-in-out-cubic',
+                once: true
+            })
         }
     }
 }

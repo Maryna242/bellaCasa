@@ -1,10 +1,10 @@
 <template>
-    <div class="w-full max-w-[1440px] my-0 mx-auto">
+    <div data-aos="fade-up" data-aos-delay="100" class="w-full max-w-[1440px] my-0 mx-auto">
         <div class="max-w-[1240px] my-0 mx-auto py-2 lg:px-[106px] md:px-8 px-4 border-t pt-[60px] md:pt-[80px] lg:pt-[100px]">
             <div class="grid md:grid-cols-2 grid-cols-1 lg:gap-10 gap-5">
                 <div class="lg:gap-10 gap-5 flex flex-col">
                     <h2 class="text-[#4E4747] font-[montserrat] font-semibold text-2xl md:text-[28px] lg:text-[32px]">
-                        Щасливі клієнти обожнюють ці моделі
+                        {{ $t('theBestOffers.title') }}
                     </h2>
                     <template v-if="!mobileViewPort">
                         <the-best-offers-item
@@ -49,7 +49,7 @@
                         />
                     </template>
                     <p class="font-fixel text-sm lg:text-[15px] font-normal text-[#2B2B2B] mt-auto   ">
-                        Ми впевнено можемо сказати, що Bella Casa - це про індивідуальний підхід. Тому чекаємо Вас в нашому шоурумі, де наші найкращі спеціалісти здійснять ваші побажання!
+                        {{ $t('theBestOffers.text') }}
                     </p>
                 </div>
             </div>
@@ -61,10 +61,6 @@
 import { Navigation } from 'swiper'
 import { Swiper, SwiperSlide, SwiperCore  } from 'swiper-vue2';
 import TheBestOffersItem from './TheBestOffersItem.vue'
-import offers_1 from '~/static/img/img_left1.webp'
-import offers_2 from '~/static/img/Rectangle_12.webp'
-import offers_3 from '~/static/img/img_right1.webp'
-import offers_4 from '~/static/img/Rectangle-12.webp'
 
 SwiperCore.use([Navigation]);
 
@@ -90,44 +86,44 @@ export default {
         return{
             ourBestOffers: [
                 {
-                    title: 'Комплект порт`єри',
-                    text1:'Тканина Туреччина',
-                    text2:'Карниз KS',
-                    text3:'Розмір м (ш/в) - 3 х 2,75',
-                    text4:'Під замовлення 5 - 7 днів',
-                    text5:'Ціна за штори',
+                    title: this.$t('theBestOffers.subtitle'),
+                    text1:this.$t('theBestOffers.paragraph.span1'),
+                    text2:this.$t('theBestOffers.spanKS'),
+                    text3:this.$t('theBestOffers.paragraph.span2'),
+                    text4:this.$t('theBestOffers.span5-7'),
+                    text5:this.$t('theBestOffers.price'),
                     price:'4218 ₴',
-                    url: offers_1
+                    url: '/img/img_left1.webp'
                 },
                 {
-                    title: 'Комплект порт`єри',
-                    text1:'Тканина Голландія',
-                    text2:'Карниз KS',
-                    text3:'Розмір м (ш/в) - 3 х 2,75',
-                    text4:'Під замовлення 5 - 7 днів',
-                    text5:'Ціна за штори',
+                    title: this.$t('theBestOffers.subtitle'),
+                    text1:this.$t('theBestOffers.paragraph.span3'),
+                    text2:this.$t('theBestOffers.spanKS'),
+                    text3:this.$t('theBestOffers.paragraph.span4'),
+                    text4:this.$t('theBestOffers.span5-7'),
+                    text5:this.$t('theBestOffers.price'),
                     price:'8958 ₴',
-                    url: offers_2
+                    url: '/img/Rectangle_12.webp'
                 },
                 {
-                    title: 'Комплект порт`єри',
-                    text1:'Тканина blackout Туреччина',
-                    text2:'Карниз KS',
-                    text3:'Розмір м (ш/в) - 3 х 2,75',
-                    text4:'Під замовлення 5 - 7 днів',
-                    text5:'Ціна за штори',
+                    title: this.$t('theBestOffers.subtitle'),
+                    text1:this.$t('theBestOffers.paragraph.span5'),
+                    text2:this.$t('theBestOffers.spanKS'),
+                    text3:this.$t('theBestOffers.paragraph.span6'),
+                    text4:this.$t('theBestOffers.span5-7'),
+                    text5:this.$t('theBestOffers.price'),
                     price:'5682 ₴',
-                    url: offers_3
+                    url: '/img/img_right1.webp'
                 },
                 {
-                    title: 'Комплект порт`єри',
-                    text1:'Тканина Німеччина',
-                    text2:'Карниз KS',
-                    text3:'Розмір м (ш/в) - 3 х 2,75',
-                    text4:'Під замовлення 5 - 7 днів',
-                    text5:'Ціна за штори',
+                    title: this.$t('theBestOffers.subtitle'),
+                    text1:this.$t('theBestOffers.paragraph.span7'),
+                    text2:this.$t('theBestOffers.spanKS'),
+                    text3:this.$t('theBestOffers.paragraph.span8'),
+                    text4:this.$t('theBestOffers.span5-7'),
+                    text5:this.$t('theBestOffers.price'),
                     price:'11478 ₴',
-                    url: offers_4
+                    url: '/img/Rectangle-12.webp'
                 },
             ]
         }

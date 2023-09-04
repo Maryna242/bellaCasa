@@ -1,5 +1,6 @@
 <template>
     <div
+        data-aos="fade-up" data-aos-delay="100"
         class="border border-[#D9D9D9] hover:border-[#F9F9FB] hover:shadow lg:px-[63px] md:px-6 px-4 py-8 my-0 md:mx-0 mx-auto"
     >
         <span class="lg:text-lg text-base text-[#2B2B2B] font-fixel font-medium">
@@ -36,7 +37,7 @@
                 @inited="inited"
             >
                 <template #default="scope">
-                    <img v-for="src in scope.images" :src="src" :key="src" />
+                    <NuxtImg v-for="src in scope.images" :src="src" :key="src" />
                     {{scope.options}}
                 </template>
             </viewer>

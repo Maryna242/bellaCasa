@@ -2,7 +2,7 @@
     <div class="w-full max-w-[1440px] my-0 mx-auto md:px-8 px-4 mb-[60px] md:mb-10 lg:mb-[60px]" id="projects-section">
         <div class="max-w-[1240px] my-0 mx-auto ">
             <h2 class="text-[#4E4747] text-2xl md:text-[28px] lg:text-[32px] font-[montserrat] font-semibold text-center mb-[60px]">
-                Проекти
+                {{ $t('projects.titleProjects') }}
             </h2>
             <template 
                 v-if="width > 767"
@@ -56,7 +56,7 @@
                 class="md:block my-0 mx-auto bg-white hidden max-w-[213px] py-3 px-9 rounded text-[#F8B1AB] font-fixel font-semibold border-2 border-[#F8B1AB] transition colors hover:bg-[#F8B1AB] hover:text-white active:bg-[#F28B82] active:text-white"
                 @click="showMore"
             >
-                    {{per_page < items.length ? 'Показати більше' : 'Скрити'}}
+                    {{per_page < items.length ? $t('projects.button1') : $t('projects.button2') }}
             </button>
         </div>
     </div>
@@ -117,9 +117,9 @@ export default {
                         },
                     ],
                     information:{
-                        title:'Функціональна естетика',
-                        subtitle:'Елегантні рішення для вікон',
-                        paragraph:'Важливим критерієм для наших замовників є практичність. Завдяки нашому досвіду, ми створили гармонічне поєднання функціоналу та стилю.'
+                        title: this.$t('projects.title1'),
+                        subtitle: this.$t('projects.subtitle1'),
+                        paragraph: this.$t('projects.paragraph1')
                     }
                 },
                 {
@@ -159,9 +159,9 @@ export default {
                         },
                     ],
                     information:{
-                        title:'Стиль і сучасність',
-                        subtitle:'Автоматизовані штори для спальні',
-                        paragraph:'В цьому проекті ми поєднали елегантний дизайн з передовими технологіями, щоб створити автоматизовану систему, яка привнесла новий рівень зручності і функціональності в приміщення.'
+                        title: this.$t('projects.title2'),
+                        subtitle: this.$t('projects.subtitle2'),
+                        paragraph: this.$t('projects.paragraph2')
                     }
                 },
                 {
@@ -207,9 +207,9 @@ export default {
                         },
                     ],
                     information:{
-                        title:'Затишок та відпочинок',
-                        subtitle:'Рішення для ванної кімнати',
-                        paragraph:'Римська штора - ідеальний варіант, щоб делікатно додати декор та зберегти практичність простору.'
+                        title: this.$t('projects.title3'),
+                        subtitle: this.$t('projects.subtitle3'),
+                        paragraph: this.$t('projects.paragraph3')
                     }
                 },
                 {
@@ -267,9 +267,9 @@ export default {
                         },
                     ],
                     information:{
-                        title:'Драпірування мрій',
-                        subtitle:'Затишна вітальня',
-                        paragraph:'Ми розробляли та втілювали оригінальні концепції дизайну, використовуючи різні техніки і декоративні елементи. Наша команда пишається результатами цього проекту!'
+                        title: this.$t('projects.title4'),
+                        subtitle: this.$t('projects.subtitle4'),
+                        paragraph: this.$t('projects.paragraph4')
                     }
                 },
                 {
@@ -303,9 +303,9 @@ export default {
                         },
                     ],
                     information:{
-                        title:'Місце сили',
-                        subtitle:'Натуральні тканини в інтер`єрі',
-                        paragraph:'При створені цього проекта були використані тільки натуральні матеріали та текстури, що створюють затишок та відчуття гармонії з природою.'
+                        title: this.$t('projects.title5'),
+                        subtitle: this.$t('projects.subtitle5'),
+                        paragraph: this.$t('projects.paragraph5')
                     }
                 },
                 {
@@ -336,9 +336,9 @@ export default {
                         },
                     ],
                     information:{
-                        title:'Dasha Space',
-                        subtitle:'Текстиль для дитячої кімнати',
-                        paragraph:'Штори в дитячу - це не завжди про акцентні тканини. Нашою головною задачею було підтримати яскравий дизайн та зберегти відчуття спокою.'
+                        title: this.$t('projects.title6'),
+                        subtitle: this.$t('projects.subtitle6'),
+                        paragraph: this.$t('projects.paragraph6')
                     }
                 },
                 {
@@ -372,9 +372,9 @@ export default {
                         },
                     ],
                     information:{
-                        title:'Стиль і функціональність',
-                        subtitle:'Штори, які вражають',
-                        paragraph:'Кольорову палітру світлих відтінків підказали нам шпалери, меблі та призначення кімнати. Штори білого кольору - просто розчиняються в інте`єрі та надають відчуття легкості та свіжості.'
+                        title: this.$t('projects.title7'),
+                        subtitle: this.$t('projects.subtitle7'),
+                        paragraph: this.$t('projects.paragraph7')
                     }
                 },
                 {
@@ -405,9 +405,9 @@ export default {
                         },
                     ],
                     information:{
-                        title:'Текстильна класика',
-                        subtitle:'Магія декору',
-                        paragraph:'При створенні текстильного дизайну важливо витримати загальну концепцію. В цьому проекті для підтримки стриманого настрою, разом з архітектором  ми обрали класичний варіант порт`єр.'
+                        title: this.$t('projects.title8'),
+                        subtitle: this.$t('projects.subtitle8'),
+                        paragraph: this.$t('projects.paragraph8')
                     }
                 },
                 
