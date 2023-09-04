@@ -5,6 +5,7 @@ export default {
         fontFamily: {
             'fixel': ['Fixel'],
             'sourcesans': ['SourceSansPro'],
+            'montserrat': ['Montserrat'],
         },
         backgroundImage:{
             'mosaic': "url('~/static/img/orn3.webp')",

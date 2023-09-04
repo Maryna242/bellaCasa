@@ -1,7 +1,7 @@
 <template>
     <div data-aos="fade-up" data-aos-delay="100" class="flex items-center flex-col md:flex-row md:items-end md:justify-between">
         <div class=" p-2 md:flex md:flex-col  md:gap-12">
-            <h2 class=" max-w-[400px] font-[montserrat] text-[24px] md:text-[28px] lg:text-[32px] font-semibold text-[#4E4747]">
+            <h2 class=" max-w-[400px] font-montserrat text-[24px] md:text-[28px] lg:text-[32px] font-semibold text-[#4E4747]">
                 {{$t('description.title')}}
             </h2>
             <NuxtImg src="/img/img_left.webp" width="505" height="420" alt="img"/>

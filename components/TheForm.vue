@@ -3,7 +3,7 @@
         <h1 class="text-white font-semibold md:text-8xl text-[56px] font-sourcesans mt-[380px] sm:mt-[193px]  md:pb-2">
             Bella Casa
         </h1>
-        <h2 class="text-white font-semibold font-[montserrat] md:text-[32px] text-2xl md:mb-[30px] text-center ">
+        <h2 class="text-white font-semibold font-montserrat md:text-[32px] text-2xl md:mb-[30px] text-center ">
             {{ $t('intro.title') }}
         </h2>
         <form

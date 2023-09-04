@@ -2,7 +2,7 @@
     <div data-aos="fade-up" data-aos-delay="100" class="w-full my-[60px] md:my-[80px] lg:mt-[100px] lg:mb-[120px] p-2 max-w-[1440px] mx-auto relative bg-[#0B3B60] before:content-[''] before:bg-bottom before:bg-mosaic-mob md:before:bg-[initial] md:before:bg-mosaic md:before:bg-cover md:before:top-0 md:before:left-[initial] before:z-10 before:absolute before:right-0 before:top-0 before:bottom-0 before:w-full md:before:max-w-[320px]  before:bg-contain before:bg-no-repeat">
         <div class="max-w-[1240px] my-0 mx-auto px-5 md:px-[42px] lg:px-[111px]">
             <div class="">
-                <h2 class="text-white font-semibold font-[montserrat] text-2xl md:text-[28px] lg:text-[32px] text-center mt-10 md:mt-[60px] lg:mt-20 mb-[60px] z-10 relative">
+                <h2 class="text-white font-semibold font-montserrat text-2xl md:text-[28px] lg:text-[32px] text-center mt-10 md:mt-[60px] lg:mt-20 mb-[60px] z-10 relative">
                     {{ $t('questions.title') }}
                 </h2>
                 <div class=" mb-20">
@@ -12,7 +12,7 @@
                             :key="index"
                             class="flex flex-col border-2 border-[#234F70] z-10 p-6 gap-2 flex-wrap"
                         >
-                            <span class="font-[montserrat] font-semibold text-2xl md:text-[32px] text-[#F8B1AB]">
+                            <span class="font-montserrat font-semibold text-2xl md:text-[32px] text-[#F8B1AB]">
                                 0{{ index + 1 }}
                             </span>
                             <span class="font-display font-medium text-lg text-white">

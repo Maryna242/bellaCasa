@@ -1,7 +1,7 @@
 <template>
     <div data-aos="fade-up" data-aos-delay="100" class="w-full max-w-[1440px] my-0 mx-auto " id="customers-section">
         <div class=" max-w-[1240px] my-0 mx-auto md:px-8 px-4 lg:px-2">
-            <h2 class=" font-[montserrat] font-semibold text-[32px] text-[#4E4747] text-center mb-[46px]">
+            <h2 class=" font-montserrat font-semibold text-[32px] text-[#4E4747] text-center mb-[46px]">
                 {{ $t('customers.title') }}
             </h2>
             <the-customers-slider

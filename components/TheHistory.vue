@@ -30,7 +30,7 @@
                         @click="onShowVideo"  
                     />  
                 </div>
-                <h2 class=" my-history-title font-[montserrat] font-semibold max-[640px]:text-2xl max-[768px]:text-[28px] text-[32px] text-[#4E4747] mb-6">
+                <h2 class=" my-history-title font-montserrat font-semibold max-[640px]:text-2xl max-[768px]:text-[28px] text-[32px] text-[#4E4747] mb-6">
                     {{ $t('history.title') }}
                 </h2>
                 <p class="my-history-text-1 mb-6 font-fixel font-light text-[#2B2B2B] md:text-sm text-[15px]">

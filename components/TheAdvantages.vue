@@ -6,7 +6,7 @@
                     <NuxtImg src="/img/photo_2023-06-27_20-01-58.webp" class="object-cover" width="357px" height="619px" alt="img"/>
                 </div>
                 <div class=" flex-col lg:px-[58px] md:px-8 px-4 relative lg:w-3/4 flex">
-                    <h2 class="text-white lg:text-[32px] md:text-[28px] text-2xl font-[montserrat] font-semibold z-10 lg:pt-[80px] md:translate-y-[calc(-100%-10px)] lg:translate-y-0 md:pl-[170px] lg:pl-0">
+                    <h2 class="text-white lg:text-[32px] md:text-[28px] text-2xl font-montserrat font-semibold z-10 lg:pt-[80px] md:translate-y-[calc(-100%-10px)] lg:translate-y-0 md:pl-[170px] lg:pl-0">
                         {{ $t('advantages.title') }}
                     </h2>
                     <ul class="flex flex-col items-center z-20 lg:pt-12 pt-5 pb-[60px] ">
@@ -18,7 +18,7 @@
                         >
                             <div class="grid md:grid-cols-2 gap-5">
                                 <div class="flex gap-4  items-center">
-                                    <span class="text-[#F8B1AB] lg:text-[32px] md:text-[28px] text-xl font-[montserrat] font-semibold">
+                                    <span class="text-[#F8B1AB] lg:text-[32px] md:text-[28px] text-xl font-montserrat font-semibold">
                                         0{{ index + 1 }}
                                     </span>
                                     <span class="text-white lg:text-[32px] md:text-[28px] text-xl font-fixel font-extralight">

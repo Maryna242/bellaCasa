@@ -2,7 +2,7 @@
     <div data-aos="fade-up" data-aos-delay="100" class="w-full max-w-[1440px] my-0 mx-auto" id="contacts-section">
         <div class="max-w-[1240px] my-0 mx-auto px-4 md:px-8 lg:pl-[113px] lg:mb-[80px] md:mb-[60px] mb-5">
             <div class="my-contacts">
-                <h2 class="my-contacts-title font-[montserrat] font-semibold text-2xl md:text-[28px] lg:text-[32px] text-[#4E4747]">
+                <h2 class="my-contacts-title font-montserrat font-semibold text-2xl md:text-[28px] lg:text-[32px] text-[#4E4747]">
                     {{ $t('contacts.title') }}
                 </h2>
                 <template v-for="(item, index) in ourContacts">

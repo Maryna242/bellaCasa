@@ -21,7 +21,7 @@
                         </button>
                     </div>
                     <div class="md:px-10 px-4 max-w-[442px] mx-auto md:max-w-full md:mx-[initial] my-auto">
-                        <h2 class="text-[#4E4747] text-2xl pb-2 lg:text-[32px] md:text-[28px] font-semibold font-[montserrat] mt-auto">
+                        <h2 class="text-[#4E4747] text-2xl pb-2 lg:text-[32px] md:text-[28px] font-semibold font-montserrat mt-auto">
                             Заповніть форму
                         </h2>
                         <p class="text-[#4E4747] text-lg font-medium font-fixel pb-10">

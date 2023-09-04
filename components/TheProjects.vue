@@ -1,7 +1,7 @@
 <template>
     <div class="w-full max-w-[1440px] my-0 mx-auto md:px-8 px-4 mb-[60px] md:mb-10 lg:mb-[60px]" id="projects-section">
         <div class="max-w-[1240px] my-0 mx-auto ">
-            <h2 class="text-[#4E4747] text-2xl md:text-[28px] lg:text-[32px] font-[montserrat] font-semibold text-center mb-[60px]">
+            <h2 class="text-[#4E4747] text-2xl md:text-[28px] lg:text-[32px] font-montserrat font-semibold text-center mb-[60px]">
                 {{ $t('projects.titleProjects') }}
             </h2>
             <template 

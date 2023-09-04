@@ -41,7 +41,16 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxtjs/composition-api/module',
+    '@nuxtjs/google-fonts',
   ],
+  googleFonts: {
+    display: 'swap',
+    families: {
+      Montserrat: {
+        wght: [600],
+      },
+    }
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [

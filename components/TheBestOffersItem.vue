@@ -22,7 +22,7 @@
         </ul>
         <p class="font-fixel text-[15px] font-light text-[#2B2B2B] pb-4">
             {{ item.text5 }}
-            <span class="font-[montserrat] text-[#0B3B60] font-semibold lg:text-2xl">
+            <span class="font-montserrat text-[#0B3B60] font-semibold lg:text-2xl">
                 {{ item.price }}
             </span>
         </p>

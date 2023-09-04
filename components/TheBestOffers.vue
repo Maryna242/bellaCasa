@@ -3,7 +3,7 @@
         <div class="max-w-[1240px] my-0 mx-auto py-2 lg:px-[106px] md:px-8 px-4 border-t pt-[60px] md:pt-[80px] lg:pt-[100px]">
             <div class="grid md:grid-cols-2 grid-cols-1 lg:gap-10 gap-5">
                 <div class="lg:gap-10 gap-5 flex flex-col">
-                    <h2 class="text-[#4E4747] font-[montserrat] font-semibold text-2xl md:text-[28px] lg:text-[32px]">
+                    <h2 class="text-[#4E4747] font-montserrat font-semibold text-2xl md:text-[28px] lg:text-[32px]">
                         {{ $t('theBestOffers.title') }}
                     </h2>
                     <template v-if="!mobileViewPort">

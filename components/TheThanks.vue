@@ -20,7 +20,7 @@
                     </button>
                 </div>
                 <div class="flex flex-col mt-auto">
-                    <h2 class="text-[28px] font-semibold font-[montserrat] text-[#4E4747] mb-3">
+                    <h2 class="text-[28px] font-semibold font-montserrat text-[#4E4747] mb-3">
                         Дякую!
                         <br/>
                         Ми отримали Ваші контакти.

@@ -2,7 +2,7 @@
     <div data-aos="fade-up" data-aos-delay="100" class=" mt-[60px] md:mt-[80px] lg:mt-[100px]">
         <div class="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-x-[72px] md:gap-y-10 lg:grid-cols-3 lg:gap-x-[72px] lg:gap-y-12">
             <div class="flex flex-col gap-6">
-                <h2 class=" font-[montserrat] font-semibold text-2xl md:text-[28px] lg:text-[32px] text-[#4E4747]">
+                <h2 class=" font-montserrat font-semibold text-2xl md:text-[28px] lg:text-[32px] text-[#4E4747]">
                     {{ $t('employees.title') }}
                 </h2>
                 <p class=" font-fixel font-normal text-sm md:text-base text-[#2B2B2B]">
