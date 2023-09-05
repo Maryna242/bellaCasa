@@ -22,10 +22,10 @@
                     </div>
                     <div class="md:px-10 px-4 max-w-[442px] mx-auto md:max-w-full md:mx-[initial] my-auto">
                         <h2 class="text-[#4E4747] text-2xl pb-2 lg:text-[32px] md:text-[28px] font-semibold font-montserrat mt-auto">
-                            Заповніть форму
+                            {{ $t('popup.title') }}
                         </h2>
                         <p class="text-[#4E4747] text-lg font-medium font-fixel pb-10">
-                            і ми підберемо для Вас найкращий варіант
+                            {{ $t('popup.subtitle') }}
                         </p>
                         <form 
                             class="flex flex-col gap-4 w-full md:mb-12 mb-auto"
@@ -35,7 +35,7 @@
                                 <input 
                                     v-model="state.name" 
                                     type="text"
-                                    placeholder="Ваше ім’я"
+                                    :placeholder="$t('popup.name')"
                                     name="name"
                                     class="p-3 w-full rounded focus:border-[#728A9C] border border-[#DFDFE8] h-[50px] outline-none"
                                     :class="{
@@ -60,7 +60,7 @@
                                 <input 
                                     v-model="state.city" 
                                     type="text"
-                                    placeholder="Ваше місто"
+                                    :placeholder="$t('popup.city')"
                                     name="city"
                                     class="p-3 w-full rounded focus:border-[#728A9C] border border-[#DFDFE8] h-[50px] outline-none"
                                     :class="{
@@ -79,7 +79,7 @@
                                 <input 
                                     v-model="state.mail" 
                                     type="@mail"
-                                    placeholder="Пошта"
+                                    :placeholder="$t('popup.mail')"
                                     name="mail"
                                     class="p-3 w-full rounded focus:border-[#728A9C] border border-[#DFDFE8] h-[50px] outline-none"
                                     :class="{
@@ -98,7 +98,7 @@
                                 <textarea 
                                     v-model="state.text" 
                                     type="text"
-                                    placeholder="Якщо бажаєте - напишіть, що саме цікавить" 
+                                    :placeholder="$t('popup.text')" 
                                     rows="5" 
                                     name="text"
                                     class="p-3 w-full rounded focus:border-[#728A9C] border border-[#DFDFE8] р-агдд outline-none"
@@ -109,7 +109,7 @@
                                 type="submit"
                                 class="bg-[#F8B1AB] mt-[100px] border-2 border-[#F8B1AB] hover:bg-white hover:border-2 hover:border-[#F8B1AB] hover:text-[#F8B1AB] active:bg-white active:border-2 active:border-[#F28B82] active:text-[#F28B82] py-3 px-9 rounded text-white font-fixel transition-colors"
                             >
-                                Відправити повідомлення
+                            {{ $t('popup.button') }}
                             </button>
                         </form>
                     </div>
@@ -122,7 +122,7 @@
 </template>
 
 <script>
-import { reactive, computed } from "@nuxtjs/composition-api"
+import { reactive, computed, useContext } from "@nuxtjs/composition-api"
 import { useVuelidate } from '@vuelidate/core'
 import { required, helpers } from '@vuelidate/validators'
 import ThePhoneInput from '~/components/ThePhoneInput.vue';
@@ -137,6 +137,7 @@ export default {
         TheError
     },
     setup() {
+        const ctx = useContext()
         const state = reactive({
             name: '',
             telephone: '',
@@ -146,16 +147,16 @@ export default {
         })
         const rules = computed(() => ({
             name: {
-                required: helpers.withMessage("Ім'я обьявязкове до заповнення", required)
+                required: helpers.withMessage(ctx.i18n.t('message.name'), required)
             },
             telephone: {
-                required: helpers.withMessage("Телефон обьявязковий до заповнення", required)
+                required: helpers.withMessage(ctx.i18n.t('message.phone'), required)
             },
             city: {
-                required: helpers.withMessage("Місто обьявязкове до заповнення", required)
+                required: helpers.withMessage(ctx.i18n.t('message.city'), required)
             },
             mail: {
-                required: helpers.withMessage("Пошта обьявязкове до заповнення", required)
+                required: helpers.withMessage(ctx.i18n.t('message.mail'), required)
             },
         }))
 

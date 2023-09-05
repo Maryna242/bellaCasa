@@ -3,8 +3,9 @@
         <div class=" ">
             <p class="font-fixel sm:text-lg text-base font-medium text-[#4E4747] md:pl-[calc(15%+311px)] sm:pl-[calc(5%+245px)] pl-[146px] pb-5">
                 <span class="max-w-[425px] block">
-                    Більше натхнення та новин в сфері дизайну 
-                    в нашому <a href="https://www.instagram.com/salon_bella_casa" class="text-[#F8B1AB] hover:text-[#F28B82] transition-colors hover:border-[#F28B82] border-b border-[#F8B1AB]">Instagram</a> долучайся!
+                    {{ $t('instagram.title') }}
+                    <a href="https://www.instagram.com/salon_bella_casa" class="text-[#F8B1AB] hover:text-[#F28B82] transition-colors hover:border-[#F28B82] border-b border-[#F8B1AB]">Instagram</a> 
+                    {{ $t('instagram.span') }}
                 </span>
             </p>
         </div>

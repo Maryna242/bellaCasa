@@ -1,7 +1,7 @@
 <template>
     <div class=" lg:my-[140px] my-20 text-center flex flex-col  md:mx-auto" data-aos="fade-up" data-aos-delay="100">
         <h2 class="text-[#4E4747] font-montserrat font-semibold text-2xl md:text-[28px] lg:text-[32px]">
-            Наші результати в числах
+            {{ $t('results.title') }}
         </h2>
         <ul class="lg:mt-8 mt-5 grid grid-cols-2 md:grid-cols-4 md:gap-4 gap-8">
             <li v-for="(item, index) in ourResults"
@@ -35,22 +35,22 @@ export default {
                 {
                     title: '50 000',
                     symbol: '',
-                    description: 'Каталог тканин'
+                    description: this.$t('results.subtitle1')
                 },
                 {
                     title: '13',
                     symbol: '+',
-                    description: 'Років на ринку'
+                    description: this.$t('results.subtitle2')
                 },
                 {
                     title: '4 500',
                     symbol: '+',
-                    description: 'Реалізованих проектів'
+                    description: this.$t('results.subtitle3')
                 },
                 {
                     title: '80',
                     symbol: '%',
-                    description: 'Співпраця з архітекторами'
+                    description: this.$t('results.subtitle4')
                 }
             ]
         }

@@ -4,7 +4,7 @@
             <div class="flex mb-[150px] md:mb-[60px] lg:mb-20">
                 <div class=" max-w-[435px]">
                     <h2 class="text-white text-2xl md:text-[28px] lg:text-[32px] font-semibold font-montserrat pt-10 md:pt-[60px] lg:pt-20">
-                        6 кроків до штор вашої мрії
+                        {{ $t('steps.title') }}
                     </h2>
                     <ul class="flex flex-col gap-4 mt-5 md:mt-10 lg:mt-12">
                         <li v-for="(item,index) in ourSteps" 
@@ -32,22 +32,22 @@
             return {
                 ourSteps: [
                     {
-                        text: 'Консультація по телефону або в салоні, попередній розрахунок'
+                        text: this.$t('steps.text1')
                     },
                     {
-                        text: 'Виїзд нашого дизайнера декоратора на заміри'
+                        text: this.$t('steps.text2')
                     },
                     {
-                        text: 'Розрахунок кінцевої вартості'
+                        text: this.$t('steps.text3')
                     },
                     {
-                        text: 'Заключення договору'
+                        text: this.$t('steps.text4')
                     },
                     {
-                        text: 'Виробництво / пошив замовлення в строк 3-14 днів'
+                        text: this.$t('steps.text5')
                     },
                     {
-                        text: 'Доставка і монтаж виробу. Наші майстри найкращі'
+                        text: this.$t('steps.text6')
                     },
                 ]
             }

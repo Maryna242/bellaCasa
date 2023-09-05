@@ -83,13 +83,16 @@ export default {
     inject: true
   },
   i18n: {
+    legacy: false,
     locales: [
       {
         code: 'en',
+        iso: 'en-US',
         name: 'English',
       },
       {
         code: 'ua',
+        iso: 'uk-UA',
         name: 'Українська',
       },
     ],

@@ -57,7 +57,7 @@
                 class="btn-video"
                 @click="$emit('showVideo')"  
             >
-                <NuxtImg src="/img/Group_text.webp" width="125" height="125" alt="play" class=""/> 
+                <NuxtImg :src="btnImageUrl" width="125" height="125" alt="play" class=""/> 
             </button>
         </div>
     </div>
@@ -65,7 +65,7 @@
 
 <script>
 import ThePhoneInput from '~/components/ThePhoneInput.vue';
-import { reactive, computed } from "@nuxtjs/composition-api"
+import { reactive, computed, useContext } from "@nuxtjs/composition-api"
 import { useVuelidate } from '@vuelidate/core'
 import { required, helpers } from '@vuelidate/validators'
 import TheThanks from './TheThanks.vue';
@@ -79,17 +79,23 @@ export default {
         TheThanks,
         TheError
     },
+    computed: {
+        btnImageUrl() {
+            return this._i18n.localeProperties.code === 'ua' ? '/img/Group_text.webp' : '/img/Group_en.webp'
+        }
+    },
     setup() {
+        const ctx = useContext()
         const state = reactive({
             name: '',
             telephone: ''
         })
         const rules = computed(() => ({
             name: {
-                required: helpers.withMessage("Ім'я обьявязкове до заповнення", required)
+                required: helpers.withMessage(ctx.i18n.t('message.name'), required)
             },
             telephone: {
-                required: helpers.withMessage("Телефон обьявязковий до заповнення", required)
+                required: helpers.withMessage(ctx.i18n.t('message.phone'), required)
             },
         }))
 

@@ -1,19 +1,19 @@
 <template>
-    <div class=" w-full max-w-[1440px] mt-[60px] md:mt-[80px] lg:mt-[100px] mx-auto relative bg-[#0B3B60] before:content-[''] before:bg-mosaic before:z-10 before:absolute before:right-0 before:top-0 before:bottom-0 before:w-full before:max-w-[320px]  before:bg-cover before:bg-no-repeat">
+    <div data-aos="fade-up" data-aos-delay="100" class=" w-full max-w-[1440px] mt-[60px] md:mt-[80px] lg:mt-[100px] mx-auto relative bg-[#0B3B60] before:content-[''] before:bg-mosaic before:z-10 before:absolute before:right-0 before:top-0 before:bottom-0 before:w-full before:max-w-[320px]  before:bg-cover before:bg-no-repeat">
         <div class="md:px-8 px-4 max-w-[1240px] my-0 mx-auto pb-1 md:pb-3 pt-10 md:pt-[64px] relative z-10">
             <div class="grid lg:grid-cols-[150px,1fr] gap-10 "> 
                 <NuxtImg src="/img/logo.webp" width="150px" height="85px" alt="logo" class="w-auto h-auto max-w-[150px] self-start"/>
                 <div class="grid lg:gap-y-[64px] gap-10 lg:grid-cols-1 sm:grid-cols-2">
-                    <ul class="grid lg:grid-cols-3 md:grid-cols-1 lg:gap-x-[72px] gap-10">
+                    <ul class="grid lg:grid-cols-3 md:grid-cols-1 lg:gap-x-[60px] gap-10">
                         <li class=" font-fixel font-medium text-lg text-white">
                             <p class="font-fixel font-medium text-lg text-white md:mb-5 lg:mb-6">
-                                Наші салони:
+                                {{ $t('footer.title') }}
                             </p>
                             <p>
-                                м. Київ
+                                {{ $t('footer.city1') }}
                             </p>
                             <p>
-                                вул. Передславинська 55А
+                                {{ $t('footer.street1') }}
                             </p>
                             <a href="tel:+38 096 1353 553" class=" font-fixel font-normal text-[#DFDFE8]">
                                 +38 096 1353 553
@@ -21,10 +21,10 @@
                         </li>
                         <li class=" font-fixel font-medium text-lg text-white lg:mt-auto">
                             <p>
-                                м. Дніпро
+                                {{ $t('footer.city2') }}
                             </p>
                             <p>
-                                вул. Михайла Грушевського 12
+                                {{ $t('footer.street2') }}
                             </p>
                             <a href="tel:+38 097 2883 648" class=" font-fixel font-normal text-[#DFDFE8]">
                                 +38 097 2883 648
@@ -32,10 +32,10 @@
                         </li>
                         <li class=" font-fixel font-medium text-lg text-white lg:mt-auto">
                             <p>
-                                м. Кам’янське
+                                {{ $t('footer.city3') }}
                             </p>
                             <p>
-                                пр. Тараса Шевченка 20
+                                {{ $t('footer.street3') }}
                             </p>
                             <a href="tel:+38 097 2883 648" class=" font-fixel font-normal text-[#DFDFE8]">
                                 +38 097 2883 648
@@ -45,17 +45,19 @@
                     <ul class="grid lg:grid-cols-3 sm:grid-cols-1 lg:gap-x-[72px] gap-10 translate-y-0 lg:translate-y-0 sm:-translate-y-[125px]">    
                         <li class=" font-fixel font-medium text-lg text-white">
                             <p>
-                                Графік роботи:
+                                {{ $t('footer.time') }}
                             </p>
                             <p class=" font-fixel font-normal text-[#DFDFE8]">
-                                Пн - Пт 10:00 - 19:00
+                                {{ $t('footer.monday') }}
                                 <br/>
-                                Сб 10:00 - 17:00
+                                {{ $t('footer.saturday') }}
+                                <br/>
+                                {{ $t('footer.sunday') }}
                             </p>
                         </li>
                         <li class=" font-fixel font-medium text-lg text-white">
                             <p>
-                                Зв’язатися з нами:
+                                {{ $t('footer.contact') }}
                             </p>
                             <a href="mailto:bellacasa.kyiv@gmail.com" class=" font-fixel font-normal text-[#DFDFE8]">
                                 bellacasa.kyiv@gmail.com
@@ -63,7 +65,7 @@
                         </li>
                         <li class="font-fixel font-medium text-lg text-white flex flex-col sm:-order-last lg:order-1">
                             <p class=" mb-3 md:mb-6">
-                                Слідкуй за нами тут:
+                                {{ $t('footer.social') }}
                             </p>
                             <div class="flex gap-5">
                                 <a href="https://www.facebook.com/viktoriya.burbyga/" class="facebook-footer flex w-[88px] h-[88px] items-center border border-white rounded-full justify-center hover:bg-white transition-colors">
@@ -78,7 +80,7 @@
                 </div>
             </div>
             <p class=" font-fixel font-normal text-xs md:text-base text-[#DFDFE8] pt-[50px] sm:pt-[125px] lg:pt-[70px] flex justify-center">
-                © Салон штор Bella Casa, 2023
+                {{ $t('footer.paragraph') }}
             </p>
         </div>
     </div>

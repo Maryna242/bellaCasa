@@ -5,7 +5,7 @@
                 <h2 class=" font-montserrat font-semibold text-2xl md:text-[28px] lg:text-[32px] text-[#4E4747]">
                     {{ $t('employees.title') }}
                 </h2>
-                <p class=" font-fixel font-normal text-sm md:text-base text-[#2B2B2B]">
+                <p class=" font-fixel font-light text-sm md:text-base text-[#2B2B2B]">
                     {{ $t('employees.subtitle') }}
                 </p>
             </div>
@@ -15,7 +15,7 @@
             >
                 <li class="text-center font-fixel flex flex-col items-center">
                     <div class="flex sm:max-h-[340px] max-h-[215px] max-w-[343px]">
-                        <NuxtImg :src="item.url" alt="photo" class="object-cover object-top w-full h-auto" width="295" height="340"/>
+                        <NuxtImg :src="item.url" alt="photo" class="object-cover object-top w-full h-auto"/>
                     </div>
                     <div class=" mt-3 mb-1 font-medium text-lg text-[#2B2B2B]">
                         {{ item.name }}

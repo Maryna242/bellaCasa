@@ -3,10 +3,10 @@
         <div class="px-4 md:px-8 lg:px-0">
             <h2 class=" lg:flex lg:flex-col lg:gap-1 block lg:px-0 md:text-center font-montserrat text-2xl md:text-[28px] lg:text-[32px] lg:max-w-full font-semibold text-[#4E4747] mb-5 lg:mb-16">
                 <span>
-                    Наш світ штор.
+                    {{ $t('variants.title1') }}
                 </span>
                 <span>
-                    Вибір найкращих варіантів для вашого інтер'єру
+                    {{ $t('variants.title2') }}
                 </span>
             </h2>
             <the-variants-item
@@ -58,10 +58,9 @@ export default {
                         },
                     ],
                     initialInfo: {
-                        title: 'Автоматичні штори',
-                        paragraph: `Ми працюємо з усіма видами автоматичних систем. Наші замовники архітектори все 
-                                    більше надають переваги системі Розумний будинок.`,
-                        price: 'ціна від 4100 ₴ м / п',
+                        title: this.$t('variants.item.title1'),
+                        paragraph: this.$t('variants.item.paragraph1'),
+                        price: this.$t('variants.item.price1'),
                     }
                 },
                 {
@@ -86,10 +85,9 @@ export default {
                         },
                     ],
                     initialInfo: {
-                        title: 'Штори',
-                        paragraph: `Прямі штори - найпопулярніший вид портьєр. 
-                                    Завдяки правильному вибору тканини, вони виглядатимуть дуже дорого та порадують власника довговічністю.`,
-                        price: 'ціна від 700 ₴ м / п',
+                        title: this.$t('variants.item.title2'),
+                        paragraph: this.$t('variants.item.paragraph2'),
+                        price: this.$t('variants.item.price2'),
                     }
                 },
                 {
@@ -114,11 +112,9 @@ export default {
                         },
                     ],
                     initialInfo: {
-                        title: 'Римські штори',
-                        paragraph: `Чудовий вибір для стильних інтер'єрів. Ідеально рівні полотна легко 
-                                    піднімаються - це практичний і функціональний варіант, який навіть у однотонному кольорі виглядає дуже ефектно.
-                                    Карниз враховано у вартість.`,
-                        price: 'ціна від 1868 ₴ м / кв',
+                        title: this.$t('variants.item.title3'),
+                        paragraph: this.$t('variants.item.paragraph3'),
+                        price: this.$t('variants.item.price3'),
                     }
                 },
                 {
@@ -143,11 +139,9 @@ export default {
                         },
                     ],
                     initialInfo: {
-                        title: 'Дерев’яні жалюзі',
-                        paragraph: `Естетика. Дерев'яні жалюзі додають теплоти, шарму і природного вигляду до 
-                                    будь-якого інтер'єру. Вони створюють природну атмосферу та надають приміщенню 
-                                    елегантний і затишний вигляд.`,
-                        price: 'ціна від 3470 ₴ м / кв',
+                        title: this.$t('variants.item.title4'),
+                        paragraph: this.$t('variants.item.paragraph4'),
+                        price: this.$t('variants.item.price4'),
                     }
                 },
                 {
@@ -172,11 +166,9 @@ export default {
                         },
                     ],
                     initialInfo: {
-                        title: 'Рулонні штори',
-                        paragraph: `Цей тип штор вирізняється своєю сучасністю та функціональністю. Вони 
-                                    дозволяють точно регулювати проникнення світла і забезпечують високий рівень 
-                                    приватності.`,
-                        price: 'ціна від 510 ₴ м / кв',
+                        title: this.$t('variants.item.title5'),
+                        paragraph: this.$t('variants.item.paragraph5'),
+                        price: this.$t('variants.item.price5'),
                     }
                 },
                 {
@@ -194,10 +186,9 @@ export default {
                         }
                     ],
                     initialInfo: {
-                        title: 'Карнизи',
-                        paragraph: `Підберемо найкращі карнизи під ваші штори. Наприклад, дерев'яні 
-                                    карнизи надають приміщенню природного та теплого вигляду. `,
-                        price: 'ціна від 250 ₴ м / п',
+                        title: this.$t('variants.item.title6'),
+                        paragraph: this.$t('variants.item.paragraph6'),
+                        price: this.$t('variants.item.price6'),
                     }
                 },
                 {
@@ -210,10 +201,9 @@ export default {
                         }
                     ],
                     initialInfo: {
-                        title: 'Килимові покриття',
-                        paragraph: `Важливий елемент декору. Килими доступні в різних кольорах, візерунках і текстурах, 
-                                    що дозволяє вам підібрати варіант, який відповідає вашому інтер'єру та особистому смаку.`,
-                        price: 'ціна індивідуальна',
+                        title: this.$t('variants.item.title7'),
+                        paragraph: this.$t('variants.item.paragraph7'),
+                        price: this.$t('variants.item.price7'),
                     }
                 }
             ]

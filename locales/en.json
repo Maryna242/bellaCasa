@@ -25,6 +25,13 @@
         "text2": "Our company specializes in custom-made curtain production, and we also collaborate with renowned Ukrainian designers."
         
     },
+    "results": {
+        "title": "Our results in numbers",
+        "subtitle1": "Fabric catalog",
+        "subtitle2": "Years in the market",
+        "subtitle3": "Completed projects",
+        "subtitle4": "Collaboration with architects"
+    },
     "advantages": {
         "title": "Key advantages, or why we're the best",
         "subtitle1": "Experience",
@@ -65,12 +72,48 @@
         "button1": "Show more",
         "button2": "hide"
     },
+    "steps": {
+        "title": "6 Steps to your dream curtains",
+        "text1": "Phone or In-person consultation, preliminary estimate",
+        "text2": "Visit from our decorator designer for measurements",
+        "text3": "Final cost calculation",
+        "text4": "Contract signing",
+        "text5": "Production / tailoring of the order in 3-14 days",
+        "text6": "Delivery and installation. Our team are the best"
+    },
+    "variants": {
+        "title1": "Our world of curtains.",
+        "title2": "Choosing the best options for your interior",
+        "item": {
+            "title1": "Automatic curtains",
+            "paragraph1": "We work with all types of automatic systems. Our customers increasingly prefer the Smart Home system.",
+            "price1": "price starts at 4100 ₴ per meter",
+            "title2": "Curtains",
+            "paragraph2": "Straight curtains are the most popular type of drapery. With the right choice of fabric, they will look very luxurious and please the owner with their durability.",
+            "price2": "price starts at 700 ₴ per meter",
+            "title3": "Roman shades",
+            "paragraph3": "A wonderful choice for stylish interiors. Perfectly even fabric that easily lifts - a practical and functional option that even in a solid color looks very impressive. Curtain rod is included in the price.",
+            "price3": "price starts at 1868 ₴ per square meter",
+            "title4": "Wooden blinds",
+            "paragraph4": "Aesthetics. Wooden blinds add warmth, charm, and a natural look to any interior. They create a natural atmosphere and give the room an elegant and cozy appearance.",
+            "price4": "price starts at 3470 ₴ per square meter",
+            "title5": "Roller shades",
+            "paragraph5": "This type of curtains stands out for its modernity and functionality. They allow precise control of light penetration and provide a high level of privacy.",
+            "price5": "price starts at 510 ₴ per square meter",
+            "title6": "Curtain rods",
+            "paragraph6": "We will select the best curtain rods for your curtains. For example, wooden curtain rods give the room a natural and warm look.",
+            "price6": "price starts at 250 ₴ per meter",
+            "title7": "Carpet coverings",
+            "paragraph7": "An essential décor element. Carpets are available in various colors, patterns, and textures, allowing you to choose an option that matches your interior and personal taste.",
+            "price7": "price is individual"
+        }
+    },
     "questions": {
         "title": "Frequently asked questions from our clients",
         "subtitle1": "How can I order curtains?",
         "paragraph1": "You can order curtains by contacting our team via phone or email, or even better, by visiting our showroom.",
         "subtitle2": "How long does it take for the curtains to be made?",
-        "paragraph12": "Typically, it takes 3-5 days to make curtains. We always meet the discussed deadlines for your convenience.",
+        "paragraph2": "Typically, it takes 3-5 days to make curtains. We always meet the discussed deadlines for your convenience.",
         "subtitle3": "Do you install the curtains?",
         "paragraph3": "Yes, we provide professional curtain installation services. Our experts will ensure the curtains are properly installed to look flawless!",
         "subtitle4": "What if I don't understand design at all, how do I order curtains?",
@@ -93,7 +136,8 @@
         "time": "Working hours:",
         "monday": "Mon - Fri: 10:00 AM - 7:00",
         "saturday": "Sat: 10:00 AM - 5:00 PM",
-        "sunday": "Sun: Closed"
+        "sunday": "Sun: Closed",
+        "contact": "Contact us:"
     },
 	"theBestOffers": {
 		"title": "Happy customers adore these models",
@@ -165,7 +209,48 @@
         "name": "Your name",
         "city": "City",
         "mail": "Email",
-        "text": "If you wish, please write what specifically interests you"
+        "text": "If you wish, please write what specifically interests you",
+        "button": "Send a message"
+    },
+    "instagram": {
+        "title": "More inspiration and design news in our",
+        "span": "join us!"
+    },
+    "footer": {
+        "title": "Our salons:",
+        "city1": "Kyiv",
+        "street1": "55A Peredslavynska street",
+        "city2": "Dnipro",
+        "street2": "12 Mykhaila Hrushevskoho street",
+        "city3": "Kamyanske",
+        "street3": "20 Tarasa Shevchenka avenue",
+        "time": "Working hours:",
+        "monday": "Mon - Fri: 10:00 AM - 7:00 PM",
+        "saturday": "Sat: 10:00 AM - 5:00 PM",
+        "sunday": "Sun: Closed",
+        "contact": "Contact us:",
+        "social": "Follow us here:",
+        "paragraph": "© Bella Casa Curtain Salon, 2023"
+    },
+    "popup": {
+        "title": "Fill out the form",
+        "subtitle": "and we will find the best option for you",
+        "name": "Your name",
+        "city":"City",
+        "mail":"Email",
+        "text":"If you wish, please write what specifically interests you",
+        "button":"Send a message"
+    },
+    "thanks": {
+        "title1": "You're welcome!",
+        "title2":" We have received your contact information.",
+        "subtitle": "Expect a call from our decorator."
+    },
+    "message": {
+        "name": "Name is mandatory to fill in",
+        "phone": "Phone is mandatory to fill in",
+        "city": "City is mandatory to fill in",
+        "mail": "Email is mandatory to fill in"
     }
 }
 

@@ -21,12 +21,12 @@
                 </div>
                 <div class="flex flex-col mt-auto">
                     <h2 class="text-[28px] font-semibold font-montserrat text-[#4E4747] mb-3">
-                        Дякую!
+                        {{ $t('thanks.title1') }}
                         <br/>
-                        Ми отримали Ваші контакти.
+                        {{ $t('thanks.title2') }}
                     </h2>
                     <p class=" text-lg text-[#4E4747] font-fixel font-medium">
-                        Очікуйте дзвінок від нашого декоратора
+                        {{ $t('thanks.subtitle') }}
                     </p>
                 </div>
                 <div class="flex justify-end pb-5 mb-auto pt-[50px]">

@@ -65,12 +65,16 @@
                         </a>
                     </li>
                     <li class="hidden sm:block">
-                        <a href="javascript:void(0)" class="hover:text-[#F8B1AB] before:content-[''] after:border-r after:border-white">
-                            UA 
-                        </a>
-                        <a href="javascript:void(0)" class="hover:text-[#F8B1AB] pl-1">
-                            EN
-                        </a>
+                        <NuxtLink to="/"
+                            :class="{ 'text-[#F8B1AB]': currentLanguage === 'ua' }"
+                            class="hover:text-[#F8B1AB] before:content-[''] after:border-r after:border-white">
+                                UA 
+                        </NuxtLink>
+                        <NuxtLink to="/en" 
+                            :class="{ 'text-[#F8B1AB]': currentLanguage === 'en' }"
+                            class="hover:text-[#F8B1AB] pl-1">
+                                EN
+                        </NuxtLink>
                     </li>
                 </ul>
                 <button
@@ -99,38 +103,52 @@
             <div v-if="showMobileMenu" class=" absolute top-0 left-0 right-0 pt-[100px] !bg-[#0B3B60]">
                 <nav>
                     <ul class="flex flex-col gap-8 pb-10 items-center text-center gap-x-9 font-semibold font-fixel text-white flex-wrap cursor-pointer ">
-                        <li class="hover:border-b hover:border-white">
-                            <a href="#">
+                        <li class="hover:border-b hover:border-white border-b border-[#0B3B60]">
+                            <a href="javascript:void(0)"
+                            @click.prevent="scrollToSection('#projects-section')"
+                            >
                                 {{ $t('header.list1') }}
                             </a>
                         </li>
-                        <li class="hover:border-b hover:border-white">
-                            <a href="#">
+                        <li class="hover:border-b hover:border-white border-b border-[#0B3B60]">
+                            <a href="javascript:void(0)"
+                            @click.prevent="scrollToSection('#variants-section')"
+                            >
                                 {{ $t('header.list2') }}
                             </a>
                         </li>
-                        <li class="hover:border-b hover:border-white">
-                            <a href="#">
+                        <li class="hover:border-b hover:border-white border-b border-[#0B3B60]">
+                            <a href="javascript:void(0)"
+                            @click.prevent="scrollToSection('#advantages-section')"
+                            >
                                 {{ $t('header.list3') }}
                             </a>
                         </li>
-                        <li class="hover:border-b hover:border-white">
-                            <a href="#">
+                        <li class="hover:border-b hover:border-white border-b border-[#0B3B60]">
+                            <a href="javascript:void(0)"
+                            @click.prevent="scrollToSection('#customers-section')"
+                            >
                                 {{ $t('header.list4') }}
                             </a>
                         </li>
-                        <li class="hidden lg:flex hover:border-b hover:border-white">
-                            <a href="#">
+                        <li class="hidden lg:flex hover:border-b hover:border-white border-b border-[#0B3B60]">
+                            <a href="javascript:void(0)"
+                            @click.prevent="scrollToSection('#contacts-section')"  
+                            >
                                 {{ $t('header.list5') }}
                             </a>
                         </li>
                         <li class="block sm:hidden">
-                            <a href="#" class="hover:text-[#F8B1AB] before:content-[''] after:border-r after:border-white">
+                            <NuxtLink to="/"
+                                :class="{ 'text-[#F8B1AB]': currentLanguage === 'ua' }"
+                                class="hover:text-[#F8B1AB] before:content-[''] after:border-r after:border-white">
                                 UA 
-                            </a>
-                            <a href="#" class="hover:text-[#F8B1AB] pl-1">
+                            </NuxtLink>
+                            <NuxtLink to="/en" 
+                                :class="{ 'text-[#F8B1AB]': currentLanguage === 'en' }"
+                                class="hover:text-[#F8B1AB] pl-1">
                                 EN
-                            </a>
+                            </NuxtLink>
                         </li>
                     </ul>
                 </nav>
@@ -148,12 +166,15 @@
                     // '!bg-[#0B3B60]': this.showMobileMenu,
                     '!bg-[#0B3B61]/60': this.bg,
                 }
-            }
+            },
+            currentLanguage() {
+                return this.$i18n.locale;
+            },
         },
         data(){
             return {
                 showMobileMenu: false,
-                bg: false
+                bg: false,
             }
         },
         mounted() {
@@ -174,7 +195,7 @@
                     behavior: 'smooth',
                     block: 'start'
                 });
-            }
+            },
         }
     }
 </script>

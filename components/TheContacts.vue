@@ -17,8 +17,8 @@
                         <span class="font-fixel font-normal text-[#4E4747]">
                             {{ item.street }}
                         </span>
-                        <a v-if="item.map" :href="item.mapLink" class="font-fixel text-sm md:text-base font-normal text-[#757575] flex cursor-pointer border-b border-white/0 hover:text-[#4E4747] hover:border-b hover:border-[#4E4747] hover:max-w-[186px]">
-                            {{ item.map }} <NuxtImg src="/img/arrow-up-right.webp" alt="img" width="24px" height="24px"/>
+                        <a v-if="item.map" :href="item.mapLink" class="arrow font-fixel text-sm md:text-base font-normal text-[#757575] flex cursor-pointer border-b border-white/0 hover:text-[#4E4747] hover:border-b hover:border-[#4E4747] hover:max-w-[186px]">
+                            {{ item.map }} 
                         </a>
 
                         <a v-if="item.telephone" :href="`tel:${item.phoneLink}`" class="font-fixel text-sm md:text-base font-normal text-[#4E4747]">
@@ -43,7 +43,7 @@
                 </div>
                 <div class="flex flex-col justify-start mt-2 my-contacts-callback">
                     <span class=" font-fixel font-medium text-lg text-[#2B2B2B]">
-                        Зв’язатись з нами:
+                        {{$t('contacts.contact')}}
                     </span>
                     <a href="mailto:bellacasa.kyiv@gmail.com">
                         bellacasa.kyiv@gmail.com
@@ -130,7 +130,31 @@ export default {
             }
         }
     }
-       
+    .arrow{
+    position: relative;
+    &::before{
+        content: "";
+        display: block;
+        mask-image: url('~/static/img/arrow-up-right.webp');
+        width: 24px;
+        height: 24px;
+        mask-size: contain;
+        background: #757575;
+        mask-repeat: no-repeat;
+        transition: background 0.150s cubic-bezier(0.4, 0, 0.2, 1);
+        order: 1;
+    }
+    &:hover {
+        &::before {
+            background: #4E4747;
+        }
+    }
+    &:active{
+        &::before{
+            background: #4E4747;
+        }
+    }
+}
     
     .instagram{
         &::before{

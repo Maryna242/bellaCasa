@@ -89,7 +89,7 @@
                         type="submit"
                         class="bg-[#F8B1AB] mt-[100px] border-2 border-[#F8B1AB] hover:bg-white hover:border-2 hover:border-[#F8B1AB] hover:text-[#F8B1AB] active:bg-white active:border-2 active:border-[#F28B82] active:text-[#F28B82] py-3 px-9 rounded text-white font-fixel transition-colors"
                     >
-                        Відправити повідомлення
+                        {{ $t('shape.button') }}
                     </button>
                 </form>
             </div>
@@ -99,7 +99,7 @@
 
 <script>
 import ThePhoneInput from '~/components/ThePhoneInput.vue';
-import { reactive, computed } from "@nuxtjs/composition-api"
+import { reactive, computed, useContext } from "@nuxtjs/composition-api"
 import { useVuelidate } from '@vuelidate/core'
 import { required, helpers } from '@vuelidate/validators'
 import TheThanks from './TheThanks.vue';
@@ -113,6 +113,7 @@ import axios from 'axios';
         TheError
     },
     setup() {
+        const ctx = useContext()
         const state = reactive({
             name: '',
             telephone: '',
@@ -122,16 +123,16 @@ import axios from 'axios';
         })
         const rules = computed(() => ({
             name: {
-                required: helpers.withMessage("Ім'я обьявязкове до заповнення", required)
+                required: helpers.withMessage(ctx.i18n.t('message.name'), required)
             },
             telephone: {
-                required: helpers.withMessage("Телефон обьявязковий до заповнення", required)
+                required: helpers.withMessage(ctx.i18n.t('message.phone'), required)
             },
             city: {
-                required: helpers.withMessage("Місто обьявязкове до заповнення", required)
+                required: helpers.withMessage(ctx.i18n.t('message.city'), required)
             },
             mail: {
-                required: helpers.withMessage("Пошта обьявязкове до заповнення", required)
+                required: helpers.withMessage(ctx.i18n.t('message.mail'), required)
             },
         }))
 
