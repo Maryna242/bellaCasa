@@ -1,1 +1,10 @@
 @import '~/assets/styles/fonts';
+
+.wow {
+    visibility: hidden !important;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    &.animated {
+        visibility: visible !important;
+    }
+}

@@ -1,13 +1,14 @@
 <template>
     <div class="flex flex-col bg-[#F9F9FB]" @scroll="onScroll">
-        <!-- <the-main-animation /> -->
+        <the-main-animation />
         <Header />
         <Intro
             @successSend="showThanks = true"
             @errorSend="showError = true"  
         />
-        
-        <the-subtitle/>
+        <client-only>
+            <the-subtitle/>
+        </client-only>
         <the-advantages/>
         <the-projects :width="width"/>
         <the-steps/>
@@ -85,8 +86,6 @@ export default {
             new AOS.init({ 
                 disable: window.innerWidth < 640,
                 // offset: 200,
-                duration: 600,
-                easing: 'ease-in-out-cubic',
                 once: true
             })
         }
