@@ -251,6 +251,11 @@
         "phone": "Phone is mandatory to fill in",
         "city": "City is mandatory to fill in",
         "mail": "Email is mandatory to fill in"
+    },
+    "errors": {
+        "title1": "Something",
+        "title2": "it went wrong",
+        "subtitle": "Try again or call us"
     }
 }
 
