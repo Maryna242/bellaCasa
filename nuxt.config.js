@@ -2,7 +2,7 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'server',
   buildDir: 'nuxt-dist',
-  modern: 'server',
+  // modern: 'server',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'bellaCasa',
@@ -23,16 +23,7 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '~/assets/styles/index.scss',
-    'animate.css/animate.css',
   ],
-
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
-
-  purgeCSS: {
-    safelist: ["aos-init", "aos-animate", "data-aos-delay", "data-aos-duration", "fade-up", "zoom-in"],
-  },
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -72,6 +63,16 @@ export default {
             cacheGroups: {}
         }
     },
+    postcss: {
+      postcssOptions: {
+        plugins: {
+          // Добавьте плагин 'postcss-import' для обработки импортов CSS
+          'postcss-import': true,
+          // Другие плагины PostCSS
+          // ...
+        },
+      }
+    },
   },
 
   tailwindcss: {
@@ -83,11 +84,14 @@ export default {
     viewer: true,
   },
 
+
+  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     {
       src: '~/plugins/lightbox.js',
       ssr: false
-    }
+    },
+    { src: '~/plugins/wow.js.js', ssr: false },
   ],
   image: {
     inject: true
