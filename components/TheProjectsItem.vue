@@ -29,6 +29,11 @@
                             :src="slide.url"
                             :alt="`${index}`" 
                             class="w-full object-cover"
+                            width="505"
+                            height="310"
+                            :placeholder="[505, 310, 25, 50]" 
+                            densities="x1 x2"
+                            loading="lazy"
                             @click="openLightBox(index)"
                         />
                     </swiper-slide>
@@ -58,7 +63,14 @@
                         class="flex !max-h-[90px] lg:!w-[85px] lg:mb-5 mr-5 lg:mr-0 z-50"
                     >
                         <NuxtImg
-                            :src="slide.url" :alt="`${index}`"  class="w-full object-cover"
+                            :src="slide.url"
+                            :alt="`${index}`" 
+                            class="w-full object-cover"
+                            width="85"
+                            height="90"
+                            :placeholder="[85, 90, 25, 50]" 
+                            densities="x1 x2"
+                            loading="lazy"
                             @click="onClickSecondSwiper(index)"
                         />
                     </swiper-slide>

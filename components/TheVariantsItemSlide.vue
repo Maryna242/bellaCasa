@@ -14,7 +14,16 @@
                 type="video/mp4"
             />
         </video>
-        <NuxtImg v-if="!showVideo" :src="slide.url" :alt="`${index}`" class=" w-full object-cover"/>
+        <NuxtImg
+            v-if="!showVideo"
+            :src="slide.url"
+            :alt="`${index}`" 
+            class=" w-full object-cover" 
+            width="390" height="380"
+            :placeholder="[390, 380, 25, 50]"
+            densities="x1 x2"
+            loading="lazy"
+        />
         <button 
             v-if="slide.type === 'video' && !showVideo" 
             href="#" 

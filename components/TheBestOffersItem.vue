@@ -37,10 +37,17 @@
                 @inited="inited"
             >
                 <template #default="scope">
-                    <NuxtImg v-for="src in scope.images" :src="src" :key="src" />
+                    <NuxtImg
+                        v-for="src in scope.images"
+                        :src="src"
+                        :key="src"
+                        :placeholder="[366, 151, 25, 50]" 
+                        densities="x1 x2"
+                    />
                     {{scope.options}}
                 </template>
             </viewer>
+            
         </div>
     </div>
 </template>
@@ -57,6 +64,11 @@ export default{
         item:{
             type: Object,
             required: true,
+        }
+    },
+    computed: {
+        isShowViewer() {
+            return this.$viewer.isShown
         }
     },
     methods: {

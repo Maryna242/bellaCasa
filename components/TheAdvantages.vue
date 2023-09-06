@@ -3,7 +3,7 @@
         <div class="max-w-[1440px] my-0 mx-auto">
             <div class="flex lg:mb-[120px] md:mb-[80px] mb-[60px] bg-[#0B3B60] relative md:pt-[176px] pt-[186px] lg:pt-0 before:content-[''] before:bg-bottom  before:bg-mosaic-mob md:before:bg-[initial] md:before:bg-mosaic md:before:top-0 md:before:left-[initial] md:before:bg-cover before:absolute before:right-0 before:top-0 before:bottom-0 before:w-full md:before:max-w-[250px] before:bg-no-repeat before:bg-contain ">
                 <div class="flex lg:w-1/4 w-[180px] h-[240px] -top-[67px] absolute lg:static lg:h-auto">
-                    <NuxtImg src="/img/photo_2023-06-27_20-01-58.webp" class="object-cover" width="357px" height="619px" alt="img"/>
+                    <NuxtImg src="/img/photo_2023-06-27_20-01-58.webp" class="object-cover" width="357px" height="619px" alt="img" :placeholder="[357, 619, 25, 50]" densities="x1 x2"/>
                 </div>
                 <div class=" flex-col lg:px-[58px] md:px-8 px-4 relative lg:w-3/4 flex">
                     <h2 class="text-white lg:text-[32px] md:text-[28px] text-2xl font-montserrat font-semibold z-10 lg:pt-[80px] md:translate-y-[calc(-100%-10px)] lg:translate-y-0 md:pl-[170px] lg:pl-0">

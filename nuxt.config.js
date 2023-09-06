@@ -1,7 +1,8 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'server',
-
+  buildDir: 'nuxt-dist',
+  modern: 'server',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'bellaCasa',
@@ -61,7 +62,16 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: [({ isLegacy }) => isLegacy && 'axios']
+    transpile: [({ isLegacy }) => isLegacy && 'axios'],
+    optimization: {
+        minimize: true,
+        splitChunks: {
+            chunks: 'all',
+            automaticNameDelimiter: '.',
+            name: true,
+            cacheGroups: {}
+        }
+    },
   },
 
   tailwindcss: {
