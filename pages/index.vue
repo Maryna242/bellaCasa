@@ -17,8 +17,7 @@
         <the-contacts/>
         <the-best-offers :width="width"/>
         <the-consultation
-            @successSend="showThanks = true"  
-            @errorSend="showError = true"  
+            @showPopup="showFormPopup = true"
         />
         <the-history/>
         <the-text/>
@@ -41,6 +40,14 @@
                 @close="showError = false"
             />
         </transition> 
+        <transition name="fade-popup">
+            <the-popup
+                v-if="showFormPopup"
+                @close="showFormPopup = false"
+                @successSend="showThanks = true"
+                @errorSend="showError = true"
+            />
+        </transition>
     </div>
 </template>
 
@@ -56,7 +63,8 @@ export default {
         return {
             width: 0,
             showThanks: false,
-            showError: false
+            showError: false,
+            showFormPopup: false,
         }
     },
     mounted() {

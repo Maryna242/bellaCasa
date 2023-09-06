@@ -1,5 +1,5 @@
 <template>
-    <div data-aos="fade-up" data-aos-delay="100" class=" w-full max-w-[1440px] mt-[60px] md:mt-[80px] lg:mt-[120px] mx-auto">
+    <div class=" w-full max-w-[1440px] mt-[60px] md:mt-[80px] lg:mt-[120px] mx-auto">
         <div class=" max-w-[1240px] my-0 mx-auto px-4 md:px-8 lg:px-[104px]">
             <div class="flex flex-col md:flex-row gap-5 lg:gap-[126px]">
                 <div class="lg:max-w-[400px] md:max-w-[340px]">
@@ -101,7 +101,7 @@
 import ThePhoneInput from '~/components/ThePhoneInput.vue';
 import { reactive, computed, useContext } from "@nuxtjs/composition-api"
 import { useVuelidate } from '@vuelidate/core'
-import { required, helpers } from '@vuelidate/validators'
+import { required, helpers, email } from '@vuelidate/validators'
 import TheThanks from './TheThanks.vue';
 import TheError from './TheError.vue';
 import axios from 'axios';
@@ -132,7 +132,8 @@ import axios from 'axios';
                 required: helpers.withMessage(ctx.i18n.t('message.city'), required)
             },
             mail: {
-                required: helpers.withMessage(ctx.i18n.t('message.mail'), required)
+                required: helpers.withMessage(ctx.i18n.t('message.mailRequied'), required),
+                email: helpers.withMessage(ctx.i18n.t('message.email'), email),
             },
         }))
 
@@ -140,19 +141,29 @@ import axios from 'axios';
         return { state, v$ }
     },
     methods: {
+        clearForm() {
+            this.state.name = ''
+            this.state.telephone = ''
+            this.state.city = ''
+            this.state.mail = ''
+            this.state.text = ''
+            this.v$.$reset()
+        },
         async onSubmit() {
             this.v$.$touch();
             if (this.v$.$error) {
                 return
             }
             try {
-                await axios.post('https://api.telegram.org/bot6659606247:AAFBCNDr-azeA77gj4bFGhhIoDAzkrGtsbY/sendMessage', {
-                    chat_id: '-930274697',
-                    parse_mode: 'html',
-                    text: `Имя отправителя: ${this.state.name}, Номер телефона: ${this.state.telephone}, Місто: ${this.state.city}, Пошта: ${this.state.mail}, Коментарі: ${this.state.text}`
+                await axios.post('/api/submit-form', {
+                    name: this.state.name,
+                    phone: this.state.telephone,
+                    city: this.state.city,
+                    email: this.state.mail,
+                    message: this.state.text,
                 })
                 this.$emit('successSend')
-                console.log('submit');
+                this.clearForm()
                 
             } catch (error) {
                 this.$emit('errorSend')
