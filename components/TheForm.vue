@@ -112,20 +112,23 @@ export default {
         }
     },
     methods:{
+        clearForm() {
+            this.state.name = ''
+            this.state.telephone = ''
+            this.v$.$reset()
+        },
         async onSubmit() {
             this.v$.$touch();
             if (this.v$.$error) {
                 return
             }
             try {
-                await axios.post('https://api.telegram.org/bot6659606247:AAFBCNDr-azeA77gj4bFGhhIoDAzkrGtsbY/sendMessage', {
-                    chat_id: '-930274697',
-                    parse_mode: 'html',
-                    text: `Имя отправителя: ${this.state.name}, Номер телефона: ${this.state.telephone}`
+                await axios.post('/api/submit-form', {
+                    name: this.state.name,
+                    phone: this.state.telephone,
                 })
                 this.$emit('successSend')
-                console.log('submit');
-                
+                this.clearForm()
             } catch (error) {
                 this.$emit('errorSend')
                 console.error(error)

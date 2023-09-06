@@ -16,14 +16,13 @@
         "button": "Request a сall",
         "addres": "Showrooms: Kyiv, Dnipro, Kamyanske"
     },
-    "subtitle":{
+    "subtitle": {
         "title": "Revive your home with our exquisite curtains: welcome to our showroom!"
     },
     "description": {
         "title": "Unique interior solutions",
         "text1": "Bella Casa is one of the leading companies in the Ukrainian market for designer curtains and unique interior solutions.",
         "text2": "Our company specializes in custom-made curtain production, and we also collaborate with renowned Ukrainian designers."
-        
     },
     "results": {
         "title": "Our results in numbers",
@@ -139,14 +138,14 @@
         "sunday": "Sun: Closed",
         "contact": "Contact us:"
     },
-	"theBestOffers": {
-		"title": "Happy customers adore these models",
-		"subtitle": "Curtain set",
+    "theBestOffers": {
+        "title": "Happy customers adore these models",
+        "subtitle": "Curtain set",
         "price": "Price for curtains",
         "text": "We can confidently say that Bella Casa is all about the individual approach. That's why we're looking forward to welcoming you to our showroom, where our top specialists will fulfill your wishes!",
         "span5-7": "Made to order: 5-7 days",
         "spanKS": "Curtain rod KS",
-        "paragraph":{
+        "paragraph": {
             "span1": "Turkey fabric",
             "span2": "Size (w/h) - 3 х 2,75 meters",
             "span3": "Netherlands fabric",
@@ -156,7 +155,7 @@
             "span7": "Germany fabric",
             "span8": "Size (w/h) - 3 х 2,75 meters"
         }
-	},
+    },
     "consultation": {
         "title1": "Design, Comfort, Quality.",
         "title2": "Your perfect blend in our showroom!",
@@ -236,21 +235,22 @@
         "title": "Fill out the form",
         "subtitle": "and we will find the best option for you",
         "name": "Your name",
-        "city":"City",
-        "mail":"Email",
-        "text":"If you wish, please write what specifically interests you",
-        "button":"Send a message"
+        "city": "City",
+        "mail": "Email",
+        "text": "If you wish, please write what specifically interests you",
+        "button": "Send a message"
     },
     "thanks": {
         "title1": "You're welcome!",
-        "title2":" We have received your contact information.",
+        "title2": " We have received your contact information.",
         "subtitle": "Expect a call from our decorator."
     },
     "message": {
         "name": "Name is mandatory to fill in",
         "phone": "Phone is mandatory to fill in",
         "city": "City is mandatory to fill in",
-        "mail": "Email is mandatory to fill in"
+        "mailRequied": "Email is mandatory to fill in",
+        "email": "Email must be in the format example@abc.com"
     },
     "errors": {
         "title1": "Something",
@@ -258,4 +258,3 @@
         "subtitle": "Try again or call us"
     }
 }
-

@@ -1,6 +1,6 @@
 <template> 
     <div 
-        class="w-full  bg-black/30 z-50 fixed top-0 left-0 right-0 bottom-0"
+        class="w-full  bg-black/30 z-[100] fixed top-0 left-0 right-0 bottom-0"
         @click="close"
     >
         <div class=" md:rounded-xl overflow-auto max-h-screen max-w-[912px] w-full my-0 mx-auto fixed md:top-1/2 md:left-1/2 md:bottom-[initial] md:-translate-x-1/2 md:-translate-y-1/2 left-0 top-0 bottom-0 h-full md:h-auto">
@@ -42,7 +42,6 @@ export default{
     name: 'TheThanks',
     methods: {
         close() {
-            console.log('close');
             this.$emit('close')
         },
     }

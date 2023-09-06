@@ -18,29 +18,15 @@
                 </button>
             </div>
         </div>
-        <transition name="fade-popup">
-            <the-popup
-                v-if="showPopup"
-                @close="showPopup = false"
-                @successSend="$emit('successSend')"
-                @errorSend="$emit('errorSend')"
-            />
-        </transition>
     </div>
 </template>
 
 <script>
 export default {
     name: 'TheConsultation',
-    
-    data(){
-        return{
-            showPopup: false
-        }
-    },
     methods:{
         onPopup(){
-            this.showPopup = true
+            this.$emit('showPopup')
         }
     }
 }
