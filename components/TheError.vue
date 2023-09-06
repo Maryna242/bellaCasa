@@ -21,12 +21,12 @@
                 </div>
                 <div class="flex flex-col mt-auto">
                     <h2 class="text-[28px] font-semibold font-montserrat text-[#4E4747] mb-3">
-                        Щось
+                        {{ $t('errors.title1') }}
                         <br/>
-                        пішло не так
+                        {{ $t('errors.title2') }}
                     </h2>
                     <p class=" text-lg text-[#4E4747] font-fixel font-medium">
-                        Спробуйте ще
+                        {{ $t('errors.subtitle') }}
                     </p>
                 </div>
                 <div class="flex justify-end pb-5 mb-auto pt-[50px]">
