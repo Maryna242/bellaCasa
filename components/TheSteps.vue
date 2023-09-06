@@ -2,7 +2,7 @@
     <div data-aos="fade-up" data-aos-delay="100" class="w-full p-2 max-w-[1440px] relative my-0 mx-auto bg-[#0B3B60] before:content-[''] before:bg-bottom before:bg-mosaic-mob md:before:bg-[initial] md:before:bg-mosaic md:before:bg-cover md:before:top-0 md:before:left-[initial] before:z-10 before:absolute before:right-0 before:top-0 before:bottom-0 before:w-full md:before:max-w-[295px]  before:bg-contain before:bg-no-repeat after:content-[''] after:bg-big-logo after:w-[94px] after:h-[114px] md:after:w-[158px] md:after:h-[191px] lg:after:w-[223px] lg:after:h-[269px] after:bg-contain after:absolute after:right-[25px] after:bottom-[45px] lg:after:right-[100px] lg:after:bottom-20 after:z-10">
         <div class="max-w-[1240px] my-0 mx-auto px-4 md:px-8 lg:px-[106px]">
             <div class="flex mb-[150px] md:mb-[60px] lg:mb-20">
-                <div class=" max-w-[435px]">
+                <div class=" ">
                     <h2 class="text-white text-2xl md:text-[28px] lg:text-[32px] font-semibold font-montserrat pt-10 md:pt-[60px] lg:pt-20">
                         {{ $t('steps.title') }}
                     </h2>

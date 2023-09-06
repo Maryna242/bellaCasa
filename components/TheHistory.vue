@@ -27,8 +27,8 @@
                             :src="item.url"
                             alt="history"
                             class="w-full object-cover"
-                            width="417"
-                            height="575" 
+                            width="830"
+                            height="1150" 
                             :placeholder="[417, 575, 25, 50]" 
                             densities="x1 x2"
                         />
