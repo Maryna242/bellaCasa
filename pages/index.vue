@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col bg-[#F9F9FB]" @scroll="onScroll">
-        <the-main-animation />
+        <!-- <the-main-animation /> -->
         <Header />
         <Intro
             @successSend="showThanks = true"

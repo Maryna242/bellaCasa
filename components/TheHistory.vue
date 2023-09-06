@@ -22,7 +22,16 @@
                                 type="video/mp4"
                             />
                         </video>
-                        <NuxtImg v-if="!showVideo" :src="item.url" alt="history" class="w-full object-cover"/>
+                        <NuxtImg
+                            v-if="!showVideo"
+                            :src="item.url"
+                            alt="history"
+                            class="w-full object-cover"
+                            width="417"
+                            height="575" 
+                            :placeholder="[417, 575, 25, 50]" 
+                            densities="x1 x2"
+                        />
                     </div>
                     <button
                         v-if="item.type === 'video' && !showVideo"
