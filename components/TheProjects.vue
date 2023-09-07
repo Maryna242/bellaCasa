@@ -85,6 +85,290 @@ export default {
     data() {
         return {
             per_page: 4,
+            photo_slide: [
+                {
+                    images:[
+                        {
+                            url:'/img/6_screen/Projects1/project_img/1.webp'
+                        },
+                        {
+                            url:'/img/6_screen/Projects1/project_img/2.webp'
+                        },
+                        {
+                            url:'/img/6_screen/Projects1/project_img/3.webp'
+                        },
+                        {
+                            url:'/img/6_screen/Projects1/project_img/4.webp'
+                        },
+                        {
+                            url:'/img/6_screen/Projects1/project_img/5.webp'
+                        },
+                        {
+                            url:'/img/6_screen/Projects1/project_img/6.webp'
+                        },
+                        {
+                            url:'/img/6_screen/Projects1/project_img/7.webp'
+                        },
+                        {
+                            url:'/img/6_screen/Projects1/project_img/8.webp'
+                        },
+                        {
+                            url:'/img/6_screen/Projects1/project_img/8.webp'
+                        },
+                    ]
+                },
+                {
+                    images:[
+                        {
+                            url:'/img/6_screen/Projects2/project_img/1.webp'
+                        },
+                        {
+                            url:'/img/6_screen/Projects2/project_img/2.webp'
+                        },
+                        {
+                            url:'/img/6_screen/Projects2/project_img/3.webp'
+                        },
+                        {
+                            url:'/img/6_screen/Projects2/project_img/4.webp'
+                        },
+                        {
+                            url:'/img/6_screen/Projects2/project_img/5.webp'
+                        },
+                        {
+                            url:'/img/6_screen/Projects2/project_img/6.webp'
+                        },
+                        {
+                            url:'/img/6_screen/Projects2/project_img/7.webp'
+                        },
+                        {
+                            url:'/img/6_screen/Projects2/project_img/8.webp'
+                        },
+                        {
+                            url:'/img/6_screen/Projects2/project_img/9.webp'
+                        },
+                        {
+                            url:'/img/6_screen/Projects2/project_img/10.webp'
+                        },
+                        {
+                            url:'/img/6_screen/Projects2/project_img/11.webp'
+                        },
+
+                    ]
+                },
+                {
+                    images:[
+                        {
+                            url: '/img/6_screen/Projects3/project_img/1.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects3/project_img/2.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects3/project_img/3.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects3/project_img/4.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects3/project_img/5.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects3/project_img/6.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects3/project_img/7.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects3/project_img/8.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects3/project_img/9.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects3/project_img/10.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects3/project_img/11.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects3/project_img/12.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects3/project_img/13.webp'
+                        },
+                    ]
+                },
+                {
+                    images:[
+                        {
+                            url: '/img/6_screen/Projects4/project_img/1.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects4/project_img/2.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects4/project_img/3.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects4/project_img/4.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects4/project_img/5.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects4/project_img/6.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects4/project_img/7.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects4/project_img/8.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects4/project_img/9.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects4/project_img/10.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects4/project_img/11.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects4/project_img/12.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects4/project_img/13.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects4/project_img/14.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects4/project_img/15.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects4/project_img/16.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects4/project_img/17.webp'
+                        },
+                    ]
+                },
+                {
+                    images:[
+                        {
+                            url: '/img/6_screen/Projects5/project_img/1.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects5/project_img/2.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects5/project_img/3.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects5/project_img/4.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects5/project_img/5.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects5/project_img/6.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects5/project_img/7.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects5/project_img/8.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects5/project_img/9.webp'
+                        },
+                    ]
+                },
+                {
+                    images:[
+                        {
+                            url: '/img/6_screen/Projects6/project_img/1.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects6/project_img/2.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects6/project_img/3.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects6/project_img/4.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects6/project_img/5.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects6/project_img/6.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects6/project_img/7.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects6/project_img/8.webp'
+                        },
+                    ]
+                },
+                {
+                    images:[
+                        {
+                            url: '/img/6_screen/Projects7/project_img/1.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects7/project_img/2.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects7/project_img/3.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects7/project_img/4.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects7/project_img/5.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects7/project_img/6.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects7/project_img/7.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects7/project_img/8.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects7/project_img/9.webp'
+                        },
+                    ]
+                },
+                {
+                    images:[
+                        {
+                            url: '/img/6_screen/Projects8/project_img/1.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects8/project_img/2.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects8/project_img/3.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects8/project_img/4.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects8/project_img/5.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects8/project_img/6.webp'
+                        },
+                        {
+                            url: '/img/6_screen/Projects8/project_img/7.webp'
+                        },
+                    ]
+                }
+            ],
             items: [
                 {
                     photo:[
