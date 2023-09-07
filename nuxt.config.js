@@ -16,7 +16,8 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/img/big_logo.webp' }
+      { rel: 'icon', type: 'image/x-icon', href: '/img/big_logo.webp' },
+      { rel: 'preload', type: 'video/mp4', as: 'video', href: '/video/first_screen_video.mp4' }
     ]
   },
 
@@ -49,6 +50,15 @@ export default {
     '@nuxt/image',
     'nuxt-purgecss',
     'nuxt-i18n',
+    '@nuxtjs/robots',
+  ],
+  robots: [
+      {
+          UserAgent: '*'
+      },
+      {
+          Disallow: '/'
+      },
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
