@@ -6,12 +6,9 @@
             </h2>
             <NuxtImg 
                 src="/img/img_left.webp" 
-                width="1010" 
-                height="840" 
+                width="603" 
+                height="504" 
                 alt="img" 
-                :placeholder="[505, 420, 25, 50]" 
-                quality="85" 
-                densities="x1 x2" 
             />
         </div>
         <div class=" p-2 flex flex-col">
