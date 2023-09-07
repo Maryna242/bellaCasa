@@ -1,6 +1,9 @@
-export default {
+import { defineNuxtConfig } from '@nuxt/bridge'
+
+export default defineNuxtConfig({
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'server',
+  bridge: false,
+  target: 'static',
   buildDir: 'nuxt-dist',
   // modern: 'server',
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -133,6 +136,6 @@ export default {
     { path: '/api', handler: '~/api/submit-form.js' }
   ],
   
-}
+})
 
   

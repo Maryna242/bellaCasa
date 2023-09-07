@@ -55,9 +55,13 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 import TheMainAnimation from '../components/TheMainAnimation.vue'
+import TheDescription from '../components/TheDescription.vue'
 
 export default {
-  components: { TheMainAnimation },
+  components: {
+        TheMainAnimation,
+        TheDescription,
+    },
     name: 'IndexPage',
     data() {
         return {
