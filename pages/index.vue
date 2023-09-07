@@ -6,9 +6,7 @@
             @successSend="showThanks = true"
             @errorSend="showError = true"  
         />
-        <client-only>
-            <the-subtitle/>
-        </client-only>
+        <the-subtitle/>
         <the-advantages/>
         <the-projects :width="width"/>
         <the-steps/>

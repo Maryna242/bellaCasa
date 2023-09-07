@@ -77,8 +77,6 @@
                 </swiper>
             </div>
         </div>
-        <!-- <div class="fixed top-0 left-0 right-0 bottom-0 z-[2000] bg-slate-400"></div> -->
-            <!-- this component will only be rendered on client-side -->
         <LightBox
             v-if="visible"
             :media="media"
