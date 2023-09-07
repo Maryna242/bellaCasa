@@ -48,7 +48,7 @@
                 </button>
             </div>
             <p class="flex text-white text-sm gap-1 md:ml-[50px]">
-                <NuxtImg src="/img/map-pin.webp" width="24px" height="24px" alt="map-pin"/>
+                <NuxtImg src="/img/map-pin.webp" width="12" height="12" alt="map-pin"/>
                 {{ $t('form.addres') }}
             </p>
         </form>
