@@ -1,8 +1,5 @@
-// import { defineNuxtConfig } from '@nuxt/bridge'
-
 export default {
   // Target: https://go.nuxtjs.dev/config-target
-  // bridge: false,
   target: 'static',
   buildDir: 'nuxt-dist',
   // modern: 'server',
