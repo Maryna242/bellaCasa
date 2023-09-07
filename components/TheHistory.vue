@@ -29,7 +29,6 @@
                             class="w-full object-cover"
                             width="830"
                             height="1150" 
-                            :placeholder="[417, 575, 25, 50]" 
                             densities="x1 x2"
                         />
                     </div>

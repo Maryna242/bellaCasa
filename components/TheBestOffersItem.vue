@@ -41,7 +41,8 @@
                         v-for="src in scope.images"
                         :src="src"
                         :key="src"
-                        :placeholder="[366, 151, 25, 50]" 
+                        width="732"
+                        height="302"
                         densities="x1 x2"
                     />
                     {{scope.options}}

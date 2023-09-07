@@ -1,6 +1,6 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'server',
+  target: 'static',
   buildDir: 'nuxt-dist',
   // modern: 'server',
   // Global page headers: https://go.nuxtjs.dev/config-head

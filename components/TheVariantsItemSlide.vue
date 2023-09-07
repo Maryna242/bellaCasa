@@ -21,7 +21,6 @@
             class=" w-full object-cover" 
             width="780" 
             height="760"
-            :placeholder="[390, 380, 25, 50]"
             densities="x1 x2"
             loading="lazy"
         />

@@ -20,7 +20,6 @@
                     class="w-full h-auto"
                     width="480"
                     height="480"
-                    :placeholder="[240, 240, 25, 50]"
                 />
             </div>
         </div>
@@ -30,7 +29,6 @@
             class=" absolute top-0 md:left-[15%] sm:left-[5%] -left-[18px] lg:w-[291px] sm:w-[229px] w-[152px]"
             width="580"
             height="1160"
-            :placeholder="[290, 580, 25, 50]"
             
         />
         <p class=" font-fixel font-extrabold text-[66px] text-[#DFDFE8] lg:pr-[100px] ml-auto text-end sm:pt-0 pt-[44px]">

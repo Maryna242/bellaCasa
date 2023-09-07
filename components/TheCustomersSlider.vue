@@ -16,7 +16,6 @@
                     :alt="`${index}`"
                     width="800" 
                     height="960" 
-                    :placeholder="[400, 480, 25,50]"
                     class=" h-full w-full object-cover relative" />
             </div>
                 <button 

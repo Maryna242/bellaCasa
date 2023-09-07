@@ -60,7 +60,7 @@
                     </li>
                     <li class="">
                         <a href="tel:+38 096 1353 553" class="flex hover:text-[#F8B1AB]">
-                            <NuxtImg src="/img/smartphone.webp" width="24px" height="24px"/>
+                            <NuxtImg src="/img/smartphone.webp" width="24" height="24"/>
                             +38 096 1353 553
                         </a>
                     </li>

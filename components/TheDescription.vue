@@ -9,7 +9,6 @@
                 width="1010" 
                 height="840" 
                 alt="img" 
-                :placeholder="[505, 420, 25, 50]" 
                 quality="85" 
                 densities="x1 x2" 
             />
@@ -27,7 +26,6 @@
                         width="500" 
                         height="740" 
                         alt="img" 
-                        :placeholder="[250, 370, 25, 50]" 
                         densities="x1 x2"
                     />
                 </div>
@@ -37,7 +35,6 @@
                         width="500" 
                         height="740" 
                         alt="img" 
-                        :placeholder="[250, 370, 25, 50]" 
                         densities="x1 x2"
                     />
                 </div>
