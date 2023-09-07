@@ -2,7 +2,7 @@
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
-  bridge: false,
+  // bridge: false,
   target: 'static',
   buildDir: 'nuxt-dist',
   // modern: 'server',
