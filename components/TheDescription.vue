@@ -25,8 +25,6 @@
                         width="500" 
                         height="740" 
                         alt="img" 
-                        :placeholder="[250, 370, 25, 50]" 
-                        densities="x1 x2"
                     />
                 </div>
                 <div>
@@ -35,8 +33,6 @@
                         width="500" 
                         height="740" 
                         alt="img" 
-                        :placeholder="[250, 370, 25, 50]" 
-                        densities="x1 x2"
                     />
                 </div>
             </div>
