@@ -1,5 +1,5 @@
 <template>
-    <div data-aos="fade-up" data-aos-delay="100" class="w-full max-w-[1440px] my-0 mx-auto">
+    <div class="w-full max-w-[1440px] my-0 mx-auto">
          <div class="max-w-[1240px] my-0 mx-auto px-[105px] max-[1024px]:px-8 max-[640px]:px-4">
             <div class="my-history ">
                 <div
