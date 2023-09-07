@@ -4,7 +4,7 @@
             <h2 class=" max-w-[400px] font-montserrat text-[24px] md:text-[28px] lg:text-[32px] font-semibold text-[#4E4747]">
                 {{$t('description.title')}}
             </h2>
-            <NuxtImg src="/img/map-pin.webp" width="12" height="12" alt="map-pin"/>
+            <NuxtImg src="/img/img_left.webp" width="12" height="12" alt="map-pin"/>
             <NuxtImg 
                 src="/img/img_left.webp" 
                 width="603" 
