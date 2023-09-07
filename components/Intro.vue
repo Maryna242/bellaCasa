@@ -23,19 +23,16 @@
                 @errorSend="$emit('errorSend')"
             />
         </div>
-        <client-only>
-            <!-- this component will only be rendered on client-side -->
-            <LightBox
-                v-if="visible"
-                :media="media"
-                :show-caption="false"
-                @onClosed="handleHide"
-            >
-                <template slot="footer">
-                    <div class=" !h-0 !p-0"></div>
-                </template>
-            </LightBox>
-        </client-only>
+        <LightBox
+            v-if="visible"
+            :media="media"
+            :show-caption="false"
+            @onClosed="handleHide"
+        >
+            <template slot="footer">
+                <div class=" !h-0 !p-0"></div>
+            </template>
+        </LightBox>
         
     </div>
 </template>
