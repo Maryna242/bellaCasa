@@ -102,15 +102,6 @@ export default {
         const v$ = useVuelidate(rules, state)
         return { state, v$ }
     },
-    data(){
-        return{
-            item:{
-                video:'/video/Bella Casa_v2.mp4',
-                type:'video'
-            },
-            showVideo: false,
-        }
-    },
     methods:{
         clearForm() {
             this.state.name = ''

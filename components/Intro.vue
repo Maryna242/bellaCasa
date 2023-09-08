@@ -54,7 +54,7 @@ export default {
                     type: 'video',
                     sources: [
                     {
-                        src: '/video/Bella Casa_v2.mp4',
+                        src: '/video/Bella_Casa_v2.mp4',
                         type: 'video/mp4'
                     }
                     ],
