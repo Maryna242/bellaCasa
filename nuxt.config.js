@@ -129,9 +129,9 @@ export default {
       },
     },
   },
-  serverMiddleware: [
-    { path: '/api', handler: '~/api/submit-form.php' }
-  ],
+  // serverMiddleware: [
+  //   { path: '/api', handler: '~/api/submit-form.php' }
+  // ],
   
 }
 
