@@ -61,10 +61,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         if (isset($_POST['email']) && !empty($_POST['email'])) {
-            $txt .= "Email: " . urlencode('<a href="mailto:' . strip_tags(trim(urlencode($_POST['email']))) . '">' . strip_tags(trim(urlencode($_POST['email']))) . '</a>') . "%0A";
+            $txt .= "Email: " . '<a href="mailto:' . trim($_POST['email']) . '">' . trim($_POST['email']) . '</a>' . "%0A";
         }
         if (isset($_POST['message']) && !empty($_POST['message'])) {
-            $txt .= "Сообщение:" . strip_tags(trim(urlencode($_POST['message']))) . "%0A";
+            $txt .= "Сообщение: " . strip_tags(trim(urlencode($_POST['message']))) . "%0A";
         }
     
         $textSendStatus = @file_get_contents('https://api.telegram.org/bot'. TOKEN .'/sendMessage?chat_id=' . CHATID . '&parse_mode=html&text=' . $txt); 
