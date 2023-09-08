@@ -123,7 +123,7 @@ export default {
                 return
             }
             try {
-                await axios.post('/api/submit-form', {
+                await axios.post('/api/submit-form.php', {
                     name: this.state.name,
                     phone: this.state.telephone,
                 })
