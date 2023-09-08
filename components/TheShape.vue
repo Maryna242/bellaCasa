@@ -159,8 +159,8 @@ import axios from 'axios';
                 form.append('name', this.state.name);
                 form.append('phone', this.state.telephone);
                 form.append('city', this.state.city);
-                form.append('email', this.state.email);
-                form.append('message', this.state.message);
+                form.append('email', this.state.mail);
+                form.append('message', this.state.text);
                 await axios.post('/api/submit-form.php', form)
                 this.$emit('successSend')
                 this.clearForm()
