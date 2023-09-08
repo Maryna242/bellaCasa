@@ -123,10 +123,10 @@ export default {
                 return
             }
             try {
-                await axios.post('/api/submit-form.php', {
-                    name: this.state.name,
-                    phone: this.state.telephone,
-                })
+                const form = new FormData();
+                form.append('name', this.state.name);
+                form.append('phone', this.state.telephone);
+                await axios.post('/api/submit-form.php', form)
                 this.$emit('successSend')
                 this.clearForm()
             } catch (error) {
