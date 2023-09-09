@@ -26,7 +26,7 @@ import TheCustomersSlider from './TheCustomersSlider.vue'
                     {
                         url: '/img/customers_1.webp',
                         type: 'video',
-                        review: ''
+                        video: '/img/16_screen/1.mp4'
                     },
                     {
                         url: '/img/customers_2.webp',

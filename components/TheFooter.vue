@@ -6,7 +6,6 @@
                     src="/img/logo.webp" 
                     width="300" 
                     height="170" 
-                    :placeholder="[150, 85, 25, 50]"
                     alt="logo" 
                     class="w-auto h-auto max-w-[150px] self-start"
                 />

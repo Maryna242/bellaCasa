@@ -23,19 +23,16 @@
                 @errorSend="$emit('errorSend')"
             />
         </div>
-        <client-only>
-            <!-- this component will only be rendered on client-side -->
-            <LightBox
-                v-if="visible"
-                :media="media"
-                :show-caption="false"
-                @onClosed="handleHide"
-            >
-                <template slot="footer">
-                    <div class=" !h-0 !p-0"></div>
-                </template>
-            </LightBox>
-        </client-only>
+        <LightBox
+            v-if="visible"
+            :media="media"
+            :show-caption="false"
+            @onClosed="handleHide"
+        >
+            <template slot="footer">
+                <div class=" !h-0 !p-0"></div>
+            </template>
+        </LightBox>
         
     </div>
 </template>
@@ -57,7 +54,7 @@ export default {
                     type: 'video',
                     sources: [
                     {
-                        src: '/video/Bella Casa_v2.mp4',
+                        src: '/video/Bella_Casa_v2.mp4',
                         type: 'video/mp4'
                     }
                     ],

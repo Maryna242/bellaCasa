@@ -10,27 +10,10 @@
                 v-for="(item, index) in slides"
                 :key="index"
             >
-            <div class=" h-[480px] flex">
-                <NuxtImg 
-                    :src="item.url" 
-                    :alt="`${index}`"
-                    width="800" 
-                    height="960" 
-                    :placeholder="[400, 480, 25,50]"
-                    class=" h-full w-full object-cover relative" />
-            </div>
-                <button 
-                    v-if="item.type === 'video'" 
-                    href="#" 
-                    class="play top-0 right-1/2 translate-x-1/2 translate-y-[150%] flex w-[115px] h-[115px] items-center rounded-full justify-center absolute transition-colors"
-                 />
-                <div
-                    v-if="item.review"
-                    class="union absolute bg-[#F5F5F5] rounded-[32px] bottom-5 px-3 py-4 lg:max-w-[360px] left-[15px] right-[15px]"
-                    :class="index % 2 === 0 ? 'union-rotate' : ''"
-                >
-                    <span class="text-[15px] font-fixel font-light !text-[#000000]" v-html="item.review" />
-                </div>
+                <the-customers-slider-slide
+                    :item="item"
+                    :index="index"
+                />
             </swiper-slide>
             <div class="flex items-center flex-row-reverse gap-[30px] justify-center">
                 <div class="flex gap-[10px] p-2 justify-center">
@@ -96,7 +79,7 @@ export default {
     data() {
         return {
             swiper: null,
-            currIndex: 0
+            currIndex: 0,
         }
     },
     methods: {
@@ -104,22 +87,6 @@ export default {
             this.swiper = swiper;
             this.currIndex = swiper.activeIndex;
         },
-        // slideNext() {
-        //     if (this.currIndex === this.slides.length - 3) {
-        //         this.currIndex = 0
-        //     } else {
-        //         this.currIndex += 1
-        //     }
-        //     this.swiper?.slideTo(this.currIndex) 
-        // },
-        // slidePrev() {
-        //     if (this.currIndex === 0) {
-        //         this.currIndex = this.slides.length - 2
-        //     } else {
-        //         this.currIndex -= 1
-        //     }
-        //     this.swiper?.slideTo(this.currIndex) 
-        // }
     }
 }
 </script>

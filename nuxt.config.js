@@ -1,6 +1,6 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'server',
+  target: 'static',
   buildDir: 'nuxt-dist',
   // modern: 'server',
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -129,9 +129,9 @@ export default {
       },
     },
   },
-  serverMiddleware: [
-    { path: '/api', handler: '~/api/submit-form.js' }
-  ],
+  // serverMiddleware: [
+  //   { path: '/api', handler: '~/api/submit-form.php' }
+  // ],
   
 }
 

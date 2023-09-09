@@ -36,10 +36,10 @@
                     {{ $t('contacts.paragraph') }}
                 </p>
                 <div class="my-contacts-photofirst flex max-h-[400px]">
-                    <NuxtImg src="/img/Rectangle_left.webp" class=" w-full object-cover" alt="img" width="400px" height="400px" :placeholder="[400, 400, 25, 50]" densities="x1 x2"/>
+                    <NuxtImg src="/img/Rectangle_left.webp" class=" w-full object-cover" alt="img" width="400px" height="400px" densities="x1 x2"/>
                 </div>
                 <div class="my-contacts-photosecond flex max-h-[400px]">
-                    <NuxtImg src="/img/Rectangle_right.webp" class=" w-full object-cover" alt="img" width="400px" height="400px" :placeholder="[400, 400, 25, 50]" densities="x1 x2"/>
+                    <NuxtImg src="/img/Rectangle_right.webp" class=" w-full object-cover" alt="img" width="400px" height="400px" densities="x1 x2"/>
                 </div>
                 <div class="flex flex-col justify-start mt-2 my-contacts-callback">
                     <span class=" font-fixel font-medium text-lg text-[#2B2B2B]">

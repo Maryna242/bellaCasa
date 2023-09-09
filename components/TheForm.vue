@@ -102,15 +102,6 @@ export default {
         const v$ = useVuelidate(rules, state)
         return { state, v$ }
     },
-    data(){
-        return{
-            item:{
-                video:'/video/Bella Casa_v2.mp4',
-                type:'video'
-            },
-            showVideo: false,
-        }
-    },
     methods:{
         clearForm() {
             this.state.name = ''
@@ -123,10 +114,10 @@ export default {
                 return
             }
             try {
-                await axios.post('/api/submit-form', {
-                    name: this.state.name,
-                    phone: this.state.telephone,
-                })
+                const form = new FormData();
+                form.append('name', this.state.name);
+                form.append('phone', this.state.telephone);
+                await axios.post('/api/submit-form.php', form)
                 this.$emit('successSend')
                 this.clearForm()
             } catch (error) {

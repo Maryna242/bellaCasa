@@ -9,7 +9,6 @@
                         width="714" 
                         height="1238" 
                         alt="img" 
-                        :placeholder="[357, 619, 25, 50]" 
                         densities="x1 x2"
                     />
                 </div>
