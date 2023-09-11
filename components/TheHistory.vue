@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full max-w-[1440px] my-0 mx-auto">
+    <div class="w-full max-w-[1440px] my-0 mx-auto" id="history-section">
          <div class="max-w-[1240px] my-0 mx-auto px-[105px] max-[1024px]:px-8 max-[640px]:px-4">
             <div class="my-history ">
                 <div
@@ -41,16 +41,16 @@
                 <h2 class=" my-history-title font-montserrat font-semibold max-[640px]:text-2xl max-[768px]:text-[28px] text-[32px] text-[#4E4747] mb-6">
                     {{ $t('history.title') }}
                 </h2>
-                <p class="my-history-text-1 mb-6 font-fixel font-light text-[#2B2B2B] md:text-sm text-[15px]">
+                <p class="my-history-text-1 mb-6 font-fixel font-normal text-[#2B2B2B] text-sm md:text-[15px]">
                     {{ $t('history.paragraph1') }}
                 </p>
-                <p class="my-history-text-2 mb-6 font-fixel font-light text-[#2B2B2B] md:text-sm text-[15px]">
+                <p class="my-history-text-2 mb-6 font-fixel font-normal text-[#2B2B2B] text-sm md:text-[15px]">
                     {{ $t('history.paragraph2') }}
                 </p>
-                <p class="my-history-text-3 mb-6 font-fixel font-light text-[#2B2B2B] md:text-sm text-[15px]">
+                <p class="my-history-text-3 mb-6 font-fixel font-normal text-[#2B2B2B] text-sm md:text-[15px]">
                     {{ $t('history.paragraph3') }}
                 </p>
-                <p class="my-history-text-4 mb-6 font-fixel font-light text-[#2B2B2B] md:text-sm text-[15px]">
+                <p class="my-history-text-4 mb-6 font-fixel font-normal text-[#2B2B2B] text-sm md:text-[15px]">
                     {{ $t('history.paragraph4') }}
                 </p>
                 <p class="my-history-text-5 text-end font-medium text-lg mt-0">

@@ -1,5 +1,5 @@
 <template>
-    <div data-aos="fade-up" data-aos-delay="100" class=" w-full max-w-[1440px] mt-[60px] md:mt-[80px] lg:mt-[100px] mx-auto relative bg-[#0B3B60] before:content-[''] before:bg-mosaic before:z-10 before:absolute before:right-0 before:top-0 before:bottom-0 before:w-full before:max-w-[320px]  before:bg-cover before:bg-no-repeat">
+    <div data-aos="fade-up" data-aos-delay="100" class=" w-full mt-[60px] md:mt-[80px] lg:mt-[100px] mx-auto relative bg-[#0B3B60] before:content-[''] before:bg-mosaic before:z-10 before:absolute before:right-0 before:top-0 before:bottom-0 before:w-full before:max-w-[320px]  before:bg-cover before:bg-no-repeat">
         <div class="md:px-8 px-4 max-w-[1240px] my-0 mx-auto pb-1 md:pb-3 pt-10 md:pt-[64px] relative z-10">
             <div class="grid lg:grid-cols-[150px,1fr] gap-10 "> 
                 <NuxtImg 
@@ -21,7 +21,7 @@
                             <p>
                                 {{ $t('footer.street1') }}
                             </p>
-                            <a href="tel:+38 096 1353 553" class=" font-fixel font-normal text-[#DFDFE8]">
+                            <a href="tel:+38 096 1353 553" class=" font-fixel font-normal hover:text-white text-[#DFDFE8]">
                                 +38 096 1353 553
                             </a>
                         </li>
@@ -32,7 +32,7 @@
                             <p>
                                 {{ $t('footer.street2') }}
                             </p>
-                            <a href="tel:+38 097 2883 648" class=" font-fixel font-normal text-[#DFDFE8]">
+                            <a href="tel:+38 097 2883 648" class=" font-fixel font-normal hover:text-white text-[#DFDFE8]">
                                 +38 097 2883 648
                             </a>
                         </li>
@@ -43,7 +43,7 @@
                             <p>
                                 {{ $t('footer.street3') }}
                             </p>
-                            <a href="tel:+38 097 2883 648" class=" font-fixel font-normal text-[#DFDFE8]">
+                            <a href="tel:+38 097 2883 648" class=" font-fixel font-normal hover:text-white text-[#DFDFE8]">
                                 +38 097 2883 648
                             </a>
                         </li>
@@ -65,7 +65,7 @@
                             <p>
                                 {{ $t('footer.contact') }}
                             </p>
-                            <a href="mailto:bellacasa.kyiv@gmail.com" class=" font-fixel font-normal text-[#DFDFE8]">
+                            <a href="mailto:bellacasa.kyiv@gmail.com" class=" font-fixel font-normal text-[#DFDFE8] border-b border-white/0 hover:border-b hover:border-white list-animate">
                                 bellacasa.kyiv@gmail.com
                             </a>
                         </li>
@@ -147,47 +147,13 @@
             }
         }
     }
-    // .my-footer {
-    //     display: grid;
-    //     grid-template-columns: repeat(4, 1fr);
-    //     // gap: 25px 20px;
-    //     grid-template-areas: 'photo photo title title'
-    //         'photo block-1 block-2 block-3'
-    //         'block-4 block-4 block-5 block-6';
-    //     // @media (max-width: 1024px) {
-    //     //     grid-template-columns: 1fr 1fr;
-    //     //     gap: 20px;
-    //     //     grid-template-areas: "title description"
-    //     //     "contact-1 photofirst"
-    //     //     'contact-2 photofirst'
-    //     //     'contact-3 photofirst'
-    //     //     'contact-4 photosecond'
-    //     //     'callback photosecond'
-    //     //     'socials photosecond';
-    //     // }
-    //     &-title {
-    //         grid-area: title;
-    //     }
-    //     &-photo {
-    //         grid-area: photo;
-    //     }
-    //     &-block-1 {
-    //         grid-area: block-1;
-    //     }
-    //     &-block-2 {
-    //         grid-area: block-2;
-    //     }
-    //     &-block-3 {
-    //         grid-area: block-3;
-    //     }
-    //     &-block-4 {
-    //         grid-area: block-4;
-    //     }
-    //     &-block-5 {
-    //         grid-area: block-5;
-    //     }
-    //     &-block-6 {
-    //         grid-area: block-6;
-    //     }
-    // }
+    .list-animate{
+        border-bottom: 1px solid transparent; /* Начнем с невидимой границы */
+        transition: border-bottom 0.3s ease-in; /* Время анимации и кривая анимации (можете настроить по своему усмотрению) */
+    &:hover{
+        .list-animate{
+            border-bottom: 1px solid white; /* Цвет границы при наведении */
+        }
+    }
+}
 </style>

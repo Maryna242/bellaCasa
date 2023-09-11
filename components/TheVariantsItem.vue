@@ -12,7 +12,7 @@
                 <h3 class="font-fixel text-[32px] text-[#4E4747] font-extralight">
                     {{ info.title }}
                 </h3>
-                <p class="font-fixel text-[15px] text-[#2B2B2B] font-light border-b pb-5 max-w-[400px]">
+                <p class="font-fixel text-[15px] text-[#2B2B2B] font-normal border-b pb-5 max-w-[400px]">
                     {{ info.paragraph }}
                 </p>
                 <span class="font-fixel text-[#2B2B2B] font-medium text-lg">

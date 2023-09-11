@@ -7,7 +7,7 @@
             <span class="font-fixel font-medium text-[#4E4747] md:text-lg text-base">
                 {{ info.subtitle }}
             </span>
-            <p class="font-fixel text-[#2B2B2B] text-[15px] font-light pt-3">
+            <p class="font-fixel text-[#2B2B2B] text-[15px] font-normal pt-3">
                 {{ info.paragraph }} 
             </p>
         </div>
@@ -17,6 +17,7 @@
                     :space-between="1"
                     :navigation="{nextEl: '.item-next', prevEl: '.item-prev'}"
                     class="relative"
+                    :thumbs="{ swiper: secondSwiper }"
                     @slideChange="onFirstSliderChange"
                     @swiper="onFirstSwiper"
                 >
@@ -28,7 +29,7 @@
                         <NuxtImg
                             :src="slide.url"
                             :alt="`${index}`" 
-                            class="w-full object-cover"
+                            class="w-full object-cover transition cursor-pointer hover-zoom"
                             width="1010"
                             height="620"
                             densities="x1 x2"
@@ -53,13 +54,16 @@
                     :direction="swiperDirection"
                     class=" overflow-hidden max-h-[310px] h-full max-w-full"
                     :slidesPerView="3"
+                    :space-between="20"
+                    centeredSlides
+                    centeredSlidesBounds
                     @swiper="onSecondSwiper"
                     @slideChange="onSecondSliderChange"
                 >
                     <swiper-slide
                         v-for="(slide, index) in photo"
                         :key="`slide-${index}`"
-                        class="flex !max-h-[90px] lg:!w-[85px] lg:mb-5 mr-5 lg:mr-0 z-50"
+                        class="flex !max-h-[90px] z-50 cursor-pointer borrowing"
                     >
                         <NuxtImg
                             :src="slide.url"
@@ -69,7 +73,6 @@
                             height="180"
                             densities="x1 x2"
                             loading="lazy"
-                            @click="onClickSecondSwiper(index)"
                         />
                     </swiper-slide>
                 </swiper>
@@ -92,11 +95,11 @@
 </template>
 
 <script>
-import { Navigation } from 'swiper'
-import { Swiper, SwiperSlide, SwiperCore  } from 'swiper-vue2';
+import { Navigation, Thumbs } from 'swiper'
+import { Swiper, SwiperSlide, SwiperCore } from 'swiper-vue2';
 import 'swiper/swiper-bundle.css'
 
-SwiperCore.use([Navigation]);
+SwiperCore.use([Navigation, Thumbs]);
 export default {
     name: 'TheProjectsItem',
     props:{
@@ -137,19 +140,25 @@ export default {
             firstSwiper: null,
             secondSwiper: null,
             startAt: 0,
+            firstLoad: true,
+            activeSlideIndex: 0,
         };
     },
     methods: {
         onFirstSliderChange(e) {
-            if (this.secondSwiper) {
+            console.log(e);
+            if (this.secondSwiper && !this.firstLoad) {
                 this.secondSwiper.slideTo(e.activeIndex)
             }
+            this.firstLoad = false
             this.activeSlideIndex = e.activeIndex;
         },
         onSecondSliderChange(e) {
-            if (this.firstSwiper) {
+            console.log(e);
+            if (this.firstSwiper && !this.firstLoad) {
                 this.firstSwiper.slideTo(e.activeIndex);
             }
+            this.firstLoad = false
             this.activeSlideIndex = e.activeIndex;
         },
         onFirstSwiper(swiper) {
@@ -157,9 +166,6 @@ export default {
         },
         onSecondSwiper(swiper) {
             this.secondSwiper = swiper;
-        },
-        onClickSecondSwiper(index) {
-            this.firstSwiper?.slideTo(index)
         },
         handleHide() {
             this.visible = false
@@ -203,6 +209,36 @@ export default {
         &:hover{
             &::before {
                 background: #FFF;
+            }
+        }
+    }
+    .hover-zoom{
+        transition: transform 0.5s ease, filter 0.5s ease; 
+        &:hover{
+            transform: scale(1.1);
+            
+        }
+    }
+    .borrowing{
+        position: relative;
+        z-index: 1;
+        transition: filter 0.3s ease;
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     width: 100%;
+        //     height: 100%;
+        //     background-color: rgba(0, 0, 0, 0.2); /* Цвет затемнения */
+        //     opacity: 0; /* Начальная прозрачность */
+        //     transition: opacity 0.3s ease; /* Плавная анимация */
+        //     z-index: 0;
+        // }
+        &:hover{
+            filter: brightness(70%);
+            &::before{
+                opacity: 1;
             }
         }
     }

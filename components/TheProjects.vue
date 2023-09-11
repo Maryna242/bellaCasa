@@ -29,6 +29,7 @@
                 v-else
                 class="overflow-hidden max-w-full"
                 :slidesPerView="1"
+                autoHeight
                 :navigation="{nextEl: '.custom-next', prevEl: '.custom-prev'}"
             >
                 <swiper-slide
@@ -41,7 +42,7 @@
                         :info="item.information"
                     />
                 </swiper-slide>
-                <div class="flex gap-[10px] lg:justify-center justify-end">
+                <div class="flex gap-[10px] lg:justify-center justify-end mt-5">
                     <div
                         :id="`custom-prev`"
                         class="custom-prev hover:bg-[#D9D9D9] active:bg-[#BCBCBC] cursor-pointer flex w-[50px] h-[50px] items-center border rounded-full justify-center -scale-x-100"
@@ -53,10 +54,10 @@
                 </div>
             </swiper>
             <button 
-                class="md:block my-0 mx-auto bg-white hidden max-w-[213px] py-3 px-9 rounded text-[#F8B1AB] font-fixel font-semibold border-2 border-[#F8B1AB] transition colors hover:bg-[#F8B1AB] hover:text-white active:bg-[#F28B82] active:text-white"
+                class="md:block my-0 mx-auto bg-white hidden max-w-[213px] py-3 px-9 rounded text-[#F8B1AB] font-fixel border-2 border-[#F8B1AB] transition colors hover:bg-[#F8B1AB] hover:text-white active:bg-[#F28B82] active:text-white"
                 @click="showMore"
             >
-                    {{per_page < items.length ? $t('projects.button1') : $t('projects.button2') }}
+                {{per_page < items.length ? $t('projects.button1') : $t('projects.button2') }}
             </button>
         </div>
     </div>

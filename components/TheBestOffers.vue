@@ -93,7 +93,7 @@ export default {
                     text4:this.$t('theBestOffers.span5-7'),
                     text5:this.$t('theBestOffers.price'),
                     price:'4218 ₴',
-                    url: '/img/img_left1.webp'
+                    url: '/img/bestoffers/1.JPG'
                 },
                 {
                     title: this.$t('theBestOffers.subtitle'),
@@ -103,7 +103,7 @@ export default {
                     text4:this.$t('theBestOffers.span5-7'),
                     text5:this.$t('theBestOffers.price'),
                     price:'8958 ₴',
-                    url: '/img/Rectangle_12.webp'
+                    url: '/img/bestoffers/2.JPG'
                 },
                 {
                     title: this.$t('theBestOffers.subtitle'),
@@ -113,7 +113,7 @@ export default {
                     text4:this.$t('theBestOffers.span5-7'),
                     text5:this.$t('theBestOffers.price'),
                     price:'5682 ₴',
-                    url: '/img/img_right1.webp'
+                    url: '/img/bestoffers/3.jpeg'
                 },
                 {
                     title: this.$t('theBestOffers.subtitle'),
@@ -123,7 +123,7 @@ export default {
                     text4:this.$t('theBestOffers.span5-7'),
                     text5:this.$t('theBestOffers.price'),
                     price:'11478 ₴',
-                    url: '/img/Rectangle-12.webp'
+                    url: '/img/bestoffers/4.JPG'
                 },
             ]
         }

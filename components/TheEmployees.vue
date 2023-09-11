@@ -5,7 +5,7 @@
                 <h2 class=" font-montserrat font-semibold text-2xl md:text-[28px] lg:text-[32px] text-[#4E4747]">
                     {{ $t('employees.title') }}
                 </h2>
-                <p class=" font-fixel font-light text-sm md:text-base text-[#2B2B2B]">
+                <p class=" font-fixel font-normal text-sm md:text-base text-[#2B2B2B]">
                     {{ $t('employees.subtitle') }}
                 </p>
             </div>
@@ -23,13 +23,13 @@
                             height="680"
                         />
                     </div>
-                    <div class=" mt-3 mb-1 font-medium text-lg text-[#2B2B2B]">
+                    <div class=" mt-3 mb-1 font-semibold text-lg text-[#2B2B2B]">
                         {{ item.name }}
                     </div>
-                    <div class=" border-b pb-3 border-[#D9D9D9] font-light text-[15px] text-[#2B2B2B]">
+                    <div class=" border-b pb-3 border-[#D9D9D9] text-[15px] text-[#2B2B2B]">
                         {{ item.title }}
                     </div>
-                    <div class="mt-2 font-light text-[#4E4747] text-[15px]">
+                    <div class="mt-2  text-[#4E4747] text-[15px]">
                         {{ item.city }}
                     </div>
                 </li>

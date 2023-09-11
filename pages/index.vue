@@ -1,14 +1,15 @@
 <template>
     <div class="flex flex-col bg-[#F9F9FB]" @scroll="onScroll">
         <the-main-animation />
-        <Header />
+        <Header :introHeight="introHeight" />
         <Intro
+            ref="intro"
             @successSend="showThanks = true"
             @errorSend="showError = true"  
         />
         <the-subtitle/>
         <the-advantages/>
-        <the-projects :width="width"/>
+        <lazy-the-projects :width="width"/>
         <the-steps/>
         <the-variants/>
         <the-questions/>
@@ -63,10 +64,12 @@ export default {
             showThanks: false,
             showError: false,
             showFormPopup: false,
+            introHeight: 900,
         }
     },
     mounted() {
         this.updateWidth()
+        this.introHeight = this.$refs.intro.$el?.getBoundingClientRect()?.height
         window.addEventListener('resize', this.updateWidth)
         this.aosInit()
     },
