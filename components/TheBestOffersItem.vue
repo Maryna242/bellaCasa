@@ -6,7 +6,7 @@
         <span class="lg:text-lg text-base text-[#2B2B2B] font-fixel font-medium">
             {{ item.title }}
         </span>
-        <ul class="p-2 font-fixel text-[15px] font-light text-[#2B2B2B] castom-list">
+        <ul class="p-2 font-fixel text-[15px] font-normal text-[#2B2B2B] castom-list">
             <li>
                 {{ item.text1 }}
             </li>
@@ -20,7 +20,7 @@
                 {{ item.text4 }}
             </li>
         </ul>
-        <p class="font-fixel text-[15px] font-light text-[#2B2B2B] pb-4">
+        <p class="font-fixel text-[15px] font-normal  text-[#2B2B2B] pb-4">
             {{ item.text5 }}
             <span class="font-montserrat text-[#0B3B60] font-semibold lg:text-2xl">
                 {{ item.price }}
@@ -28,38 +28,25 @@
         </p>
         <div 
             class="flex md:max-w-[368px] relative hover:after:content-[''] hover:after:absolute hover:after:top-0 hover:after:right-0 hover:after:bottom-0 hover:after:left-0 hover:after:bg-[#00000033]/20 hover:after:transition-opacity hover:before:content-[''] hover:before:absolute hover:before:-translate-y-1/2 hover:before:-translate-x-1/2 hover:before:top-[50%] hover:before:left-[50%] hover:before:bg-search hover:before:w-[24px] hover:before:h-[24px] hover:before:bg-cover hover:before:z-10 cursor-pointer" 
-            @click="show"
+            @click="previewImgObject"
         >
-            <viewer 
-                class="viewer" 
-                ref="viewer"
-                :images="[item.url]"
-                @inited="inited"
-            >
-                <template #default="scope">
-                    <NuxtImg
-                        v-for="src in scope.images"
-                        :src="src"
-                        :key="src"
-                        width="732"
-                        height="302"
-                        densities="x1 x2"
-                    />
-                    {{scope.options}}
-                </template>
-            </viewer>
-            
+            <NuxtImg
+                :src="item.url"
+                width="732"
+                height="302"
+                format="webp"
+            />
         </div>
     </div>
 </template>
 <script>
 import 'viewerjs/dist/viewer.css'
-import { component as Viewer } from "v-viewer"
+import { api as viewerApi } from "v-viewer"
 
 export default{
     name: 'TheBestOffersItem',
     components: {
-        Viewer,
+        // Viewer,
     },
     props:{
         item:{
@@ -68,8 +55,12 @@ export default{
         }
     },
     computed: {
-        isShowViewer() {
-            return this.$viewer.isShown
+        sourceImageObjects() {
+            return [{
+                'src': this.item.url,
+                'data-source': this.item.url
+                // 'data-source': require('~/static/img/Rectangle_12.webp')
+            }]
         }
     },
     methods: {
@@ -81,7 +72,17 @@ export default{
         },
         show () {
             this.$viewer.show()
-        }
+        },
+        previewImgObject () {
+        // Or you can just import the api method and call it.
+        const $viewer = viewerApi({
+          options: {
+            toolbar: true,
+            url: 'data-source',
+          },
+          images: this.sourceImageObjects
+        })
+      }
     }
 }
 </script>

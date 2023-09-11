@@ -18,9 +18,7 @@
                             <span class="font-display font-medium text-lg text-white">
                                 {{ item.title }}
                             </span>
-                            <p class="font-display text-sm md:text-base font-normal text-[#728A9C]">
-                                {{ item.text }}
-                            </p>
+                            <p class="with-emoji font-display text-sm md:text-base font-normal text-[#728A9C]" v-html="item.text" />
                         </li>
                     </ul>
                 </div>
@@ -64,3 +62,13 @@ export default {
     }
 }
 </script>
+
+<style lang="scss">
+.with-emoji {
+    >svg {
+        width: 15px;
+        height: 15px;
+        display: inline;
+    }
+}
+</style>

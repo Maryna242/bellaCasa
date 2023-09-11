@@ -11,7 +11,7 @@
             </h3>
             <div class="flex justify-center mt-5 md:mt-3 lg:mt-[18px] lg:mb-20 md:mb-11 mb-20">
                 <button 
-                    class="bg-[#F8B1AB] py-3 px-9 rounded text-white font-fixel font-semibold border-2 border-[#F8B1AB] hover:bg-white hover:text-[#F8B1AB] active:border-[#F28B82] active:bg-white active:text-[#F28B82] transition colors"
+                    class="bg-[#F8B1AB] py-3 px-9 rounded text-white font-fixel border-2 border-[#F8B1AB] hover:bg-white hover:text-[#F8B1AB] active:border-[#F28B82] active:bg-white active:text-[#F28B82] transition colors"
                     @click="onPopup"
                     >
                     {{ $t('consultation.button') }}

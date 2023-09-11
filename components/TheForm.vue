@@ -47,7 +47,7 @@
                 {{ $t('form.button') }}
                 </button>
             </div>
-            <p class="flex text-white text-sm gap-1 md:ml-[50px]">
+            <p class="flex text-white text-sm gap-1 md:ml-[54px]">
                 <NuxtImg src="/img/map-pin.webp" width="24px" height="24px" alt="map-pin"/>
                 {{ $t('form.addres') }}
             </p>
@@ -57,7 +57,7 @@
                 class="btn-video"
                 @click="$emit('showVideo')"  
             >
-                <NuxtImg :src="btnImageUrl" width="125" height="125" alt="play" class=""/> 
+                <NuxtImg :src="btnImageUrl" width="125" height="125" alt="play" class="rotate-text"/> 
             </button>
         </div>
     </div>
@@ -155,6 +155,17 @@ export default {
         &::before{
             background: #F28B82;
         }
+    }
+}
+.rotate-text{
+    animation: spin 15s infinite linear;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }
 </style>

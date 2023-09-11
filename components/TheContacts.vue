@@ -8,7 +8,7 @@
                 <template v-for="(item, index) in ourContacts">
                     <div
                         :key="index"
-                        class="flex flex-col"
+                        class="flex flex-col items-start"
                         :class="`my-contacts-${item.class}`"
                     >
                         <span class="font-fixel text-lg text-[#2B2B2B] font-medium">
@@ -17,11 +17,11 @@
                         <span class="font-fixel font-normal text-[#4E4747]">
                             {{ item.street }}
                         </span>
-                        <a v-if="item.map" :href="item.mapLink" class="arrow font-fixel text-sm md:text-base font-normal text-[#757575] flex cursor-pointer border-b border-white/0 hover:text-[#4E4747] hover:border-b hover:border-[#4E4747] hover:max-w-[186px]">
+                        <a v-if="item.map" :href="item.mapLink" class="arrow font-fixel text-sm md:text-base font-normal text-[#757575] flex cursor-pointer border-b border-white/0 hover:text-[#4E4747] hover:border-b hover:border-[#4E4747] map-animate">
                             {{ item.map }} 
                         </a>
 
-                        <a v-if="item.telephone" :href="`tel:${item.phoneLink}`" class="font-fixel text-sm md:text-base font-normal text-[#4E4747]">
+                        <a v-if="item.telephone" :href="`tel:${item.phoneLink}`" class="font-fixel text-sm md:text-base font-normal hover:text-black text-[#4E4747]">
                             {{ item.telephone }}
                         </a>
                         <span v-if="item.content" class="font-fixel text-sm md:text-base font-normal text-[#4E4747]">
@@ -41,11 +41,13 @@
                 <div class="my-contacts-photosecond flex max-h-[400px]">
                     <NuxtImg src="/img/Rectangle_right.webp" class=" w-full object-cover" alt="img" width="400px" height="400px" densities="x1 x2"/>
                 </div>
-                <div class="flex flex-col justify-start mt-2 my-contacts-callback">
+                <div class="flex flex-col justify-start items-start mt-2 my-contacts-callback">
                     <span class=" font-fixel font-medium text-lg text-[#2B2B2B]">
                         {{$t('contacts.contact')}}
                     </span>
-                    <a href="mailto:bellacasa.kyiv@gmail.com">
+                    <a href="mailto:bellacasa.kyiv@gmail.com"
+                        class="text-[#4E4747] border-b border-white/0 hover:border-b hover:border-[#4E4747] email-animate"
+                    >
                         bellacasa.kyiv@gmail.com
                     </a>
                 </div>
@@ -178,7 +180,25 @@ export default {
             }
         }
     }
-        
+    .email-animate{
+            border-bottom: 1px solid transparent; /* Начнем с невидимой границы */
+            transition: border-bottom 0.3s ease-in; /* Время анимации и кривая анимации (можете настроить по своему усмотрению) */
+        &:hover{
+            .email-animate{
+                border-bottom: 1px solid #4E4747; /* Цвет границы при наведении */
+            }
+        }
+    }
+    .map-animate{
+        border-bottom: 1px solid transparent; 
+        transition: border-bottom 0.3s ease-in;
+        &:hover{
+            .email-animate{
+                border-bottom: 1px solid #4E4747; /* Цвет границы при наведении */
+            }
+        }
+    }
+    
     
     .my-contacts {
         display: grid;

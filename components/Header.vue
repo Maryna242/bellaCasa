@@ -1,12 +1,11 @@
 <!-- Please remove this file from your project -->
 <template>
     <header
-        class="w-full fixed max-w-[1440px] right-1/2 translate-x-1/2 z-50"
+        class="w-full absolute right-1/2 translate-x-1/2 z-50"
         :class="headerClasses"
     >
         <div class="max-w-[1240px] my-0 mx-auto p-2 md:px-[32px] px-4 z-10 relative">
             <nav class="flex lg:justify-between py-4 items-center flex-wrap">
-                <p></p>
                 <ul class="hidden lg:flex gap-x-9 font-semibold font-fixel text-white flex-wrap cursor-pointer ">
                     <li class="hover:border-b hover:border-white border-b border-white/0">
                         <a 
@@ -28,7 +27,7 @@
                     <li class="hover:border-b hover:border-white border-b border-white/0">
                         <a 
                             href="javascript:void(0)"   
-                            @click.prevent="scrollToSection('#advantages-section')"
+                            @click.prevent="scrollToSection('#history-section')"
                         >
                         {{ $t('header.list3') }}
                         </a>
@@ -42,13 +41,9 @@
                         </a>
                     </li>
                 </ul>
-                <span class="lg:px-4 ">
-                    <NuxtImg 
-                        src="/img/logo_white.webp" 
-                        alt="logo" 
-                        class="w-[73px] h-[41px] md:w-[90px] md:h-[50px]"
-                    />
-                </span>
+                <span class="lg:px-4 logo cursor-pointer"
+                    @click.prevent="scrollToSection('#main-section')"
+                />
                 <ul class="font-fixel flex gap-x-[34px] text-white font-semibold ml-auto lg:ml-0">
                     <li class="hidden lg:flex border-b border-white/0 hover:border-b hover:border-white">
                         <a 
@@ -119,7 +114,7 @@
                         </li>
                         <li class="hover:border-b hover:border-white border-b border-[#0B3B60]">
                             <a href="javascript:void(0)"
-                            @click.prevent="scrollToSection('#advantages-section')"
+                            @click.prevent="scrollToSection('#history-section')"
                             >
                                 {{ $t('header.list3') }}
                             </a>
@@ -160,11 +155,17 @@
 <script>
     export default {
         name: 'NuxtHeader',
+        props: {
+            introHeight: {
+                type: Number,
+                required: true,
+            }
+        },
         computed: {
             headerClasses() {
                 return {
                     // '!bg-[#0B3B60]': this.showMobileMenu,
-                    '!bg-[#0B3B61]/60': this.bg,
+                    'header-fixed': this.bg,
                 }
             },
             currentLanguage() {
@@ -178,14 +179,14 @@
             }
         },
         mounted() {
-            this.bg = window.scrollY > 100
+            this.bg = window.scrollY > this.introHeight
             window.addEventListener('scroll', () => {
-                this.bg = window.scrollY > 100
+                this.bg = window.scrollY > this.introHeight
             })
         },
         beforeDestroy() {
             window.removeEventListener('scroll', () => {
-                this.bg = window.scrollY > 100
+                this.bg = window.scrollY > this.introHeight
             })
         },
         methods: {
@@ -207,5 +208,56 @@
 .fade-enter, .fade-leave-to{
     transform: translateY(-100%);
     opacity: 0;
+}
+.logo{
+    &::before{
+    content: "";
+    display: block;
+    mask-image: url('~/static/img/logo_white.webp');
+    width: 90px;
+    height: 51px;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    background: #FFF;
+    transition: background 0.150s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &:hover {
+        &::before {
+            background: #F8B1AB;
+        }
+    }
+    &:active{
+        &::before{
+            background: #F28B82;
+        }
+    }
+}
+ul li {
+    border-bottom: 1px solid transparent; /* Начнем с невидимой границы */
+    transition: border-bottom 0.3s ease-in; /* Время анимации и кривая анимации (можете настроить по своему усмотрению) */
+    &:hover{
+        ul li{
+            border-bottom: 1px solid white; /* Цвет границы при наведении */
+        }
+    }
+}
+.header-fixed {
+    position: fixed;
+    animation: headerShow .3s ease-in-out;
+    animation-fill-mode: forwards;
+    nav {
+        padding: 5px 0;
+    }
+}
+
+@keyframes headerShow {
+    0% {
+        transform: translate(50%, -100%);
+        background: transparent;
+    }
+    100% {
+        transform: translate(50%, 0);
+        background: rgba(#0B3B61, .7);
+    }
 }
 </style>

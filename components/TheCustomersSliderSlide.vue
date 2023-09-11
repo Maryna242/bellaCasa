@@ -35,7 +35,7 @@
             class="union absolute bg-[#F5F5F5] rounded-[32px] bottom-5 px-3 py-4 lg:max-w-[360px] left-[15px] right-[15px]"
             :class="index % 2 === 0 ? 'union-rotate' : ''"
         >
-            <span class="text-[15px] font-fixel font-light !text-[#000000]" v-html="item.review" />
+            <span class="text-[15px] font-fixel !text-[#000000]" v-html="item.review" />
         </div>
     </div>
 </template>

@@ -3,7 +3,7 @@
         <div class=" max-w-[1240px] my-0 mx-auto px-4 md:px-8 lg:px-[104px]">
             <div class="flex flex-col md:flex-row gap-5 lg:gap-[126px]">
                 <div class="lg:max-w-[400px] md:max-w-[340px]">
-                    <h3 class=" font-fixel font-extralight text-xl md:text-[28px] lg:text-[32px] md:leading-10 text-[#2B2B2B]">
+                    <h3 class=" font-fixel font-light text-xl md:text-[28px] lg:text-[32px] md:leading-10 text-[#2B2B2B]">
                         {{ $t('shape.title') }}
                     </h3>
                 </div>
@@ -81,7 +81,7 @@
                             :placeholder="$t('shape.text')" 
                             rows="5" 
                             name="text"
-                            class="p-3 w-full rounded focus:border-[#728A9C] border border-[#DFDFE8] р-агдд outline-none"
+                            class="p-3 w-full rounded focus:border-[#728A9C] border border-[#DFDFE8] outline-none"
                         
                         />
                     </div>
