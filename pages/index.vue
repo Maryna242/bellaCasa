@@ -28,19 +28,19 @@
         <the-instagram/>
         <the-footer/>  
         <transition name="fade-popup">
-            <the-thanks
+            <lazy-the-thanks
                 v-if="showThanks"
                 @close="showThanks = false"
             />
         </transition> 
         <transition name="fade-popup">
-            <the-error
+            <lazy-the-error
                 v-if="showError"
                 @close="showError = false"
             />
         </transition> 
         <transition name="fade-popup">
-            <the-popup
+            <lazy-the-popup
                 v-if="showFormPopup"
                 @close="showFormPopup = false"
                 @successSend="showThanks = true"

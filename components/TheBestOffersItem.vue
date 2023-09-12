@@ -27,7 +27,7 @@
             </span>
         </p>
         <div 
-            class="flex md:max-w-[368px] relative hover:after:content-[''] hover:after:absolute hover:after:top-0 hover:after:right-0 hover:after:bottom-0 hover:after:left-0 hover:after:bg-[#00000033]/20 hover:after:transition-opacity hover:before:content-[''] hover:before:absolute hover:before:-translate-y-1/2 hover:before:-translate-x-1/2 hover:before:top-[50%] hover:before:left-[50%] hover:before:bg-search hover:before:w-[24px] hover:before:h-[24px] hover:before:bg-cover hover:before:z-10 cursor-pointer" 
+            class="flex md:max-w-[368px] relative after:content-[''] after:absolute after:top-0 after:right-0 after:bottom-0 after:left-0 after:bg-transparent hover:after:bg-[#00000033]/20 after:transition-colors before:transition-opacity before:content-[''] before:absolute before:-translate-y-1/2 before:-translate-x-1/2 before:top-[50%] before:left-[50%] before:opacity-0 before:bg-search before:w-[24px] before:h-[24px] before:bg-cover hover:before:z-10 cursor-pointer hover:before:opacity-100" 
             @click="previewImgObject"
         >
             <NuxtImg

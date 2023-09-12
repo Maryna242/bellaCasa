@@ -183,6 +183,7 @@ export default {
             content: "";
             display: block;
             mask-image: url('~/static/img/chevron-right.webp');
+            mask-repeat: no-repeat;
             width: 24px;
             height: 24px;
             background: #D9D9D9;
@@ -200,6 +201,7 @@ export default {
             content: "";
             display: block;
             mask-image: url('~/static/img/chevron-right.webp');
+            mask-repeat: no-repeat;
             width: 24px;
             height: 24px;
             background: #D9D9D9;
@@ -222,19 +224,7 @@ export default {
     .borrowing{
         position: relative;
         z-index: 1;
-        transition: filter 0.3s ease;
-        // &::before {
-        //     content: "";
-        //     position: absolute;
-        //     top: 0;
-        //     left: 0;
-        //     width: 100%;
-        //     height: 100%;
-        //     background-color: rgba(0, 0, 0, 0.2); /* Цвет затемнения */
-        //     opacity: 0; /* Начальная прозрачность */
-        //     transition: opacity 0.3s ease; /* Плавная анимация */
-        //     z-index: 0;
-        // }
+        transition: filter 0.3s ease !important;
         &:hover{
             filter: brightness(70%);
             &::before{

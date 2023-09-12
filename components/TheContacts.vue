@@ -115,6 +115,7 @@ export default {
         content: "";
         display: block;
         mask-image: url('~/static/img/facebook.webp');
+        mask-repeat: no-repeat;
         width: 13.5px;
         height: 26px;
         mask-size: contain;
@@ -138,6 +139,7 @@ export default {
         content: "";
         display: block;
         mask-image: url('~/static/img/arrow-up-right.webp');
+        mask-repeat: no-repeat;
         width: 24px;
         height: 24px;
         mask-size: contain;
@@ -160,14 +162,15 @@ export default {
     
     .instagram{
         &::before{
-        content: "";
-        display: block;
-        mask-image: url('~/static/img/instagram.webp');
-        width: 28px;
-        height: 28px;
-        background: #F8B1AB;
-        mask-size: contain;
-        transition: background 0.150s cubic-bezier(0.4, 0, 0.2, 1);
+            content: "";
+            display: block;
+            mask-image: url('~/static/img/instagram.webp');
+            mask-repeat: no-repeat;
+            width: 28px;
+            height: 28px;
+            background: #F8B1AB;
+            mask-size: contain;
+            transition: background 0.150s cubic-bezier(0.4, 0, 0.2, 1);
         }
         &:hover {
             &::before {

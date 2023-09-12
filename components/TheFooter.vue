@@ -103,6 +103,7 @@
             content: "";
             display: block;
             mask-image: url('~/static/img/facebook.webp');
+            mask-repeat: no-repeat;
             width: 13.5px;
             height: 26px;
             mask-size: contain;
@@ -126,14 +127,12 @@
             content: "";
             display: block;
             mask-image: url('~/static/img/instagram.webp');
+            mask-repeat: no-repeat;
             width: 28px;
             height: 28px;
             background: #FFF;
             mask-size: contain;
             transition: background 0.150s cubic-bezier(0.4, 0, 0.2, 1);
-            &:hover{
-                background: #F8B1AB;
-            }
         }
         
         &:hover {
@@ -150,10 +149,10 @@
     .list-animate{
         border-bottom: 1px solid transparent; /* Начнем с невидимой границы */
         transition: border-bottom 0.3s ease-in; /* Время анимации и кривая анимации (можете настроить по своему усмотрению) */
-    &:hover{
-        .list-animate{
-            border-bottom: 1px solid white; /* Цвет границы при наведении */
+        &:hover{
+            .list-animate{
+                border-bottom: 1px solid white; /* Цвет границы при наведении */
+            }
         }
     }
-}
 </style>

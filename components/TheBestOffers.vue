@@ -137,6 +137,7 @@ export default {
         content: "";
         display: block;
         mask-image: url('~/static/img/arrow-right.webp');
+        mask-repeat: no-repeat;
         width: 34px;
         height: 24px;
         background: #D9D9D9;
