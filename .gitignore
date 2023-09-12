@@ -89,3 +89,5 @@ sw.*
 
 # Vim swap files
 *.swp
+
+static/video/Bella_Casa_v2.mp4
