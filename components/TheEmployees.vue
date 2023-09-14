@@ -18,7 +18,7 @@
                         <NuxtImg
                             :src="item.url"
                             alt="photo"
-                            class="object-cover object-top w-full h-auto"
+                            class="object-cover object-top w-full h-auto hover-zoom"
                             width="590"
                             height="680"
                         />
@@ -79,3 +79,12 @@ export default {
     }
 }
 </script>
+<style lang="scss">
+.hover-zoom{
+    transition: transform 0.5s ease, filter 0.5s ease; 
+    &:hover{
+        transform: scale(1.1);
+        
+    }
+}
+</style>

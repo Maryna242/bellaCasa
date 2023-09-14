@@ -81,7 +81,7 @@ export default {
                             url: '/img/8_screen/2_curtains/5.webp'
                         },
                         {
-                            url: '/img/8_screen/2_curtains/6_1080 X 1080 (2).webp'
+                            url: '/img/8_screen/2_curtains/6675.JPG'
                         },
                     ],
                     initialInfo: {

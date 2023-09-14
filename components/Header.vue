@@ -3,6 +3,7 @@
     <header
         class="w-full absolute right-1/2 translate-x-1/2 z-50"
         :class="headerClasses"
+        v-click-outside="closeMobileMenu"
     >
         <div class="max-w-[1240px] my-0 mx-auto p-2 md:px-[32px] px-4 z-10 relative">
             <nav class="flex lg:justify-between py-4 items-center flex-wrap">
@@ -126,7 +127,7 @@
                                 {{ $t('header.list4') }}
                             </a>
                         </li>
-                        <li class="hidden lg:flex hover:border-b hover:border-white border-b border-[#0B3B60]">
+                        <li class="hover:border-b hover:border-white border-b border-[#0B3B60]">
                             <a href="javascript:void(0)"
                             @click.prevent="scrollToSection('#contacts-section')"  
                             >
@@ -153,8 +154,13 @@
 </template>
 
 <script>
+
+import vClickOutside from 'v-click-outside'
     export default {
         name: 'NuxtHeader',
+        directives: {
+            clickOutside: vClickOutside.directive
+        },
         props: {
             introHeight: {
                 type: Number,
@@ -196,6 +202,11 @@
                     behavior: 'smooth',
                     block: 'start'
                 });
+                this.closeMobileMenu()
+
+            },
+            closeMobileMenu() {
+                this.showMobileMenu = false; // Закрываем мобильное меню
             },
         }
     }

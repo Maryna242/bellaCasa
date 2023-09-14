@@ -9,7 +9,7 @@ export default {
         },
         backgroundImage:{
             'mosaic': "url('~/static/img/orn3.webp')",
-            'mosaic-mob': "url('~/static/img/orn3mob.webp')",
+            'mosaic-mob': "url('~/static/img/orn3mobile.webp')",
             'qoute': "url('~/static/img/q_icon.webp')",
             'big-logo': "url('~/static/img/big_logo.webp')",
             'search': "url('~/static/img/search.webp')",

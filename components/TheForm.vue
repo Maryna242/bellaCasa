@@ -13,44 +13,47 @@
             <p class="text-white font-fixel font-medium text-center">
                 {{ $t('form.title') }}
             </p>
-            <div class="gap-2 grid sm:grid-cols-3 grid-cols-1 py-3  max-w-[690px] align-top mx-auto">
-                <div class="flex flex-col">
-                    <input
-                        v-model="state.name" 
-                        type="text"
-                        :placeholder=" $t('form.placeholderName')"
-                        name="name"
-                        class="p-3 rounded focus:border-[#728A9C] border border-[#DFDFE8] h-[50px] outline-none"
-                        :class="{
-                            '!border-[#F43F30]': v$.name.$error,
-                        }"
-                        @input="v$.name.$touch()"
+            <div class="max-w-[690px] mx-auto">
+                <div class="gap-2 grid sm:grid-cols-3 grid-cols-1 py-3 align-top">
+                    <div class="flex flex-col">
+                        <input
+                            v-model="state.name" 
+                            type="text"
+                            :placeholder=" $t('form.placeholderName')"
+                            name="name"
+                            class="p-3 rounded focus:border-[#728A9C] border border-[#DFDFE8] h-[50px] outline-none"
+                            :class="{
+                                '!border-[#F43F30]': v$.name.$error,
+                            }"
+                            @input="v$.name.$touch()"
+                        >
+                        <span
+                            v-if="v$.name.$error"
+                            class=" text-[#F43F30] text-xs font-fixel mt-1"
+                        >
+                            {{ v$.name.$errors[0].$message }}
+                        </span>
+                    </div>
+                    
+                    <the-phone-input
+                        v-model="state.telephone"
+                        :error="v$.telephone.$error"
+                        :error-message="v$.telephone.$error ? v$.telephone.$errors[0].$message : ''"
+                        @input="v$.telephone.$touch()"
+                    />
+                    <button
+                        type="submit"
+                        class="bg-[#F8B1AB] p-3 rounded border-2 border-[#F8B1AB] text-white font-fixel hover:bg-white hover:border-2 hover:border-[#F8B1AB] hover:text-[#F8B1AB] active:bg-white active:border-2 active:border-[#F28B82] active:text-[#F28B82] h-[50px]"
                     >
-                    <span
-                        v-if="v$.name.$error"
-                        class=" text-[#F43F30] text-xs font-fixel mt-1"
-                    >
-                        {{ v$.name.$errors[0].$message }}
-                    </span>
+                    {{ $t('form.button') }}
+                    </button>
                 </div>
-                
-                <the-phone-input
-                    v-model="state.telephone"
-                    :error="v$.telephone.$error"
-                    :error-message="v$.telephone.$error ? v$.telephone.$errors[0].$message : ''"
-                    @input="v$.telephone.$touch()"
-                />
-                <button
-                    type="submit"
-                    class="bg-[#F8B1AB] p-3 rounded border-2 border-[#F8B1AB] text-white font-fixel hover:bg-white hover:border-2 hover:border-[#F8B1AB] hover:text-[#F8B1AB] active:bg-white active:border-2 active:border-[#F28B82] active:text-[#F28B82] h-[50px]"
-                >
-                {{ $t('form.button') }}
-                </button>
+                <p class="flex text-white text-sm gap-1">
+                    <NuxtImg src="/img/map-pin.webp" width="24px" height="24px" alt="map-pin"/>
+                    {{ $t('form.addres') }}
+                </p>
             </div>
-            <p class="flex text-white text-sm gap-1 md:ml-[54px]">
-                <NuxtImg src="/img/map-pin.webp" width="24px" height="24px" alt="map-pin"/>
-                {{ $t('form.addres') }}
-            </p>
+            
         </form>
         <div class=" md:mt-12">
             <button 
@@ -125,6 +128,7 @@ export default {
                 console.error(error)
             }
         },
+
     }
 }
 </script>
