@@ -21,6 +21,7 @@
             class=" w-full object-cover" 
             width="780" 
             height="760"
+            format="webp"
             densities="x1 x2"
             loading="lazy"
         />
