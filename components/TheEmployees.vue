@@ -14,11 +14,11 @@
             :key="index"
             >
                 <li class="text-center font-fixel flex flex-col items-center">
-                    <div class="flex sm:max-h-[340px] max-h-[215px] max-w-[343px]">
+                    <div class="flex sm:max-h-[340px] max-h-[215px] max-w-[343px] overflow-hidden">
                         <NuxtImg
                             :src="item.url"
                             alt="photo"
-                            class="object-cover object-top w-full h-auto hover-zoom"
+                            class="object-cover object-top w-full h-auto transition hover-zoom"
                             width="590"
                             height="680"
                         />
