@@ -54,6 +54,7 @@ export default {
     'nuxt-purgecss',
     'nuxt-i18n',
     '@nuxtjs/robots',
+    '@nuxtjs/gtm',
   ],
   robots: [
       {
@@ -63,6 +64,9 @@ export default {
           Allow: '/'
       },
   ],
+  gtm: {
+    id: 'GTM-MXST5CHJ',
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
