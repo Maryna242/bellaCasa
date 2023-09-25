@@ -20,6 +20,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/img/big_logo.webp' },
       { rel: 'preload', type: 'video/mp4', as:'video', href: '/video/first_screen_video.mp4' },
       { rel: 'alternate', hreflang: 'uk-UA', href: 'https://salon-bellacasa.com/' },
+      { rel: 'canonical', href: 'https://salon-bellacasa.com/' },
       { rel: 'alternate', hreflang: 'en-US', href: 'https://salon-bellacasa.com/en' }
     ]
   },
