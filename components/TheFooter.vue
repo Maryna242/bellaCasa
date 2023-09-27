@@ -21,7 +21,7 @@
                             <p>
                                 {{ $t('footer.street1') }}
                             </p>
-                            <a href="tel:+38 096 1353 553" class=" font-fixel font-normal hover:text-white text-[#DFDFE8]">
+                            <a href="tel:+380961353553" class=" font-fixel font-normal hover:text-white text-[#DFDFE8]">
                                 +38 096 1353 553
                             </a>
                         </li>
@@ -32,7 +32,7 @@
                             <p>
                                 {{ $t('footer.street2') }}
                             </p>
-                            <a href="tel:+38 097 2883 648" class=" font-fixel font-normal hover:text-white text-[#DFDFE8]">
+                            <a href="tel:+380679714864" class=" font-fixel font-normal hover:text-white text-[#DFDFE8]">
                                 +38 067 9714 864
                             </a>
                         </li>
@@ -43,7 +43,7 @@
                             <p>
                                 {{ $t('footer.street3') }}
                             </p>
-                            <a href="tel:+38 097 2883 648" class=" font-fixel font-normal hover:text-white text-[#DFDFE8]">
+                            <a href="tel:+380972883648" class=" font-fixel font-normal hover:text-white text-[#DFDFE8]">
                                 +38 097 2883 648
                             </a>
                         </li>
