@@ -33,7 +33,7 @@
                                 {{ $t('footer.street2') }}
                             </p>
                             <a href="tel:+38 097 2883 648" class=" font-fixel font-normal hover:text-white text-[#DFDFE8]">
-                                +38 097 2883 648
+                                +38 067 9714 864
                             </a>
                         </li>
                         <li class=" font-fixel font-medium text-lg text-white lg:mt-auto">
