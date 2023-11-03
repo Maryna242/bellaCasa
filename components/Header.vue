@@ -63,7 +63,7 @@
                     <li class="hidden sm:block">
                         <NuxtLink to="/"
                             :class="{ 'text-[#F8B1AB]': currentLanguage === 'ua' }"
-                            class="hover:text-[#F8B1AB] before:content-[''] after:border-r after:border-white">
+                            class="hover:text-[#F8B1AB] after:border-r after:border-white">
                                 UA 
                         </NuxtLink>
                         <NuxtLink to="/en" 
@@ -137,7 +137,7 @@
                         <li class="block sm:hidden">
                             <NuxtLink to="/"
                                 :class="{ 'text-[#F8B1AB]': currentLanguage === 'ua' }"
-                                class="hover:text-[#F8B1AB] before:content-[''] after:border-r after:border-white">
+                                class="hover:text-[#F8B1AB] after:border-r after:border-white">
                                 UA 
                             </NuxtLink>
                             <NuxtLink to="/en" 

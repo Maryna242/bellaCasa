@@ -118,6 +118,8 @@ export default {
   },
   i18n: {
     legacy: false,
+    detectBrowserLanguage: false,
+    defaultLocale: 'ua',
     locales: [
       {
         code: 'en',
@@ -130,7 +132,6 @@ export default {
         name: 'Українська',
       },
     ],
-    defaultLocale: 'ua',
     vueI18n: {
       fallbackLocale: 'ua',
       messages: {

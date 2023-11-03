@@ -29,7 +29,7 @@
                         <NuxtImg
                             :src="slide.url"
                             :alt="`${index}`" 
-                            class="w-full object-cover transition cursor-pointer hover-zoom"
+                            class="w-full object-cover transition cursor-pointer hover-zoom h-full"
                             width="1010"
                             height="620"
                             densities="x1 x2"
