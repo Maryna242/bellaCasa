@@ -10,44 +10,56 @@
                     class="w-auto h-auto max-w-[150px] self-start"
                 />
                 <div class="grid lg:gap-y-[64px] gap-10 lg:grid-cols-1 sm:grid-cols-2">
-                    <ul class="grid lg:grid-cols-3 md:grid-cols-1 lg:gap-x-[60px] gap-10">
-                        <li class=" font-fixel font-medium text-lg text-white">
-                            <p class="font-fixel font-medium text-lg text-white md:mb-5 lg:mb-6">
-                                {{ $t('footer.title') }}
-                            </p>
-                            <p>
-                                {{ $t('footer.city1') }}
-                            </p>
-                            <p>
-                                {{ $t('footer.street1') }}
-                            </p>
-                            <a href="tel:+380961353553" class=" font-fixel font-normal hover:text-white text-[#DFDFE8]">
-                                +38 096 1353 553
-                            </a>
-                        </li>
-                        <li class=" font-fixel font-medium text-lg text-white lg:mt-auto">
-                            <p>
-                                {{ $t('footer.city2') }}
-                            </p>
-                            <p>
-                                {{ $t('footer.street2') }}
-                            </p>
-                            <a href="tel:+380679714864" class=" font-fixel font-normal hover:text-white text-[#DFDFE8]">
-                                +38 067 9714 864
-                            </a>
-                        </li>
-                        <li class=" font-fixel font-medium text-lg text-white lg:mt-auto">
-                            <p>
-                                {{ $t('footer.city3') }}
-                            </p>
-                            <p>
-                                {{ $t('footer.street3') }}
-                            </p>
-                            <a href="tel:+380972883648" class=" font-fixel font-normal hover:text-white text-[#DFDFE8]">
-                                +38 097 2883 648
-                            </a>
-                        </li>
-                    </ul>
+                    <div class=" lg:contents block">
+                        <ul class="grid lg:grid-cols-3 md:grid-cols-1 lg:gap-x-[60px] gap-10 mb-10 lg:mb-0">
+                            <li class=" font-fixel font-medium text-lg text-white">
+                                <p class="font-fixel font-medium text-lg text-white md:mb-2 lg:mb-3">
+                                    {{ $t('footer.title1') }}
+                                </p>
+                                <a href="tel:+380956711087" class=" font-fixel font-normal hover:text-white text-[#DFDFE8]">
+                                    +38 095 6711 087
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="grid lg:grid-cols-3 md:grid-cols-1 lg:gap-x-[60px] gap-10">
+                            <li class=" font-fixel font-medium text-lg text-white">
+                                <p class="font-fixel font-medium text-lg text-white md:mb-5 lg:mb-6">
+                                    {{ $t('footer.title') }}
+                                </p>
+                                <p>
+                                    {{ $t('footer.city1') }}
+                                </p>
+                                <p>
+                                    {{ $t('footer.street1') }}
+                                </p>
+                                <a href="tel:+380961353553" class=" font-fixel font-normal hover:text-white text-[#DFDFE8]">
+                                    +38 096 1353 553
+                                </a>
+                            </li>
+                            <li class=" font-fixel font-medium text-lg text-white lg:mt-auto">
+                                <p>
+                                    {{ $t('footer.city2') }}
+                                </p>
+                                <p>
+                                    {{ $t('footer.street2') }}
+                                </p>
+                                <a href="tel:+380679714864" class=" font-fixel font-normal hover:text-white text-[#DFDFE8]">
+                                    +38 067 9714 864
+                                </a>
+                            </li>
+                            <li class=" font-fixel font-medium text-lg text-white lg:mt-auto">
+                                <p>
+                                    {{ $t('footer.city3') }}
+                                </p>
+                                <p>
+                                    {{ $t('footer.street3') }}
+                                </p>
+                                <a href="tel:+380972883648" class=" font-fixel font-normal hover:text-white text-[#DFDFE8]">
+                                    +38 097 2883 648
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                     <ul class="grid lg:grid-cols-3 sm:grid-cols-1 lg:gap-x-[72px] gap-10 translate-y-0 lg:translate-y-0 sm:-translate-y-[125px]">    
                         <li class=" font-fixel font-medium text-lg text-white">
                             <p>
