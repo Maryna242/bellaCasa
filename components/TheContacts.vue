@@ -85,7 +85,7 @@ export default {
                     telephone:'+38 067 9714 864',
                     phoneLink:'+380679714864',
                     map:this.$t('contacts.map'),
-                    mapLink: 'https://goo.gl/maps/gC6U9MmdghQSXMyJA',
+                    mapLink: 'https://maps.app.goo.gl/iWtS7YHP6g7ybRR59',
                     class: 'contact-2'
                 },
                 {
