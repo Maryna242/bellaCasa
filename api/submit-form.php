@@ -42,33 +42,46 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // if (!empty($_POST['name']) && !empty($_POST['phone'])) {
         
         // Если не пустые, то валидируем эти поля и сохраняем и добавляем в тело сообщения. Минимально для теста так:
-        $txt = "Заявка с сайта" . "%0A";
+        $txt = "Заявка с сайта" . "\n";
         
         if (isset($_POST['name']) && !empty($_POST['name'])) {
-            $txt .= "Имя отправителя: " . strip_tags(trim(urlencode($_POST['name']))) . "%0A";
+            $txt .= "Имя отправителя: " . strip_tags(trim($_POST['name'])) . "\n";
         }
         
         // Номер телефона
         // if (isset($_POST['phone']) && !empty($_POST['phone'])) {
-        //     $txt .= "Телефон: " . strip_tags(trim(urlencode($_POST['phone']))) . "%0A";
+        //     $txt .= "Телефон: " . strip_tags(trim($_POST['phone'])) . "\n";
         // }
         if (isset($_POST['phone']) && !empty($_POST['phone'])) {
-            $txt .= "Телефон link: " . urlencode('<a href="' . processPhoneNumber($_POST['phone']) . '">' . processPhoneNumber($_POST['phone']) . '</a>') . "%0A";
+            $phone = processPhoneNumber($_POST['phone']);
+            $txt .= "Телефон link: " . '<a href="' . $phone . '">' . $phone . '</a>' . "\n";
         }
 
         if (isset($_POST['city']) && !empty($_POST['city'])) {
-            $txt .= "Город: " . strip_tags(trim(urlencode($_POST['city']))) . "%0A";
+            $txt .= "Город: " . strip_tags(trim($_POST['city'])) . "\n";
         }
 
         if (isset($_POST['email']) && !empty($_POST['email'])) {
-            $txt .= "Email: " . '<a href="mailto:' . trim($_POST['email']) . '">' . trim($_POST['email']) . '</a>' . "%0A";
+            $txt .= "Email: " . '<a href="mailto:' . trim($_POST['email']) . '">' . trim($_POST['email']) . '</a>' . "\n";
         }
         if (isset($_POST['message']) && !empty($_POST['message'])) {
-            $txt .= "Сообщение: " . strip_tags(trim(urlencode($_POST['message']))) . "%0A";
+            $txt .= "Сообщение: " . strip_tags(trim($_POST['message'])) . "\n";
         }
-    
-        $textSendStatus = @file_get_contents('https://api.telegram.org/bot'. TOKEN .'/sendMessage?chat_id=' . CHATID . '&parse_mode=html&text=' . $txt); 
-    
+
+        // Отправляем через curl (а не file_get_contents), т.к. на части хостингов
+        // fopen-обёртки для https отключены (allow_url_fopen) или недоступны сертификаты.
+        $textCurl = curl_init();
+        curl_setopt($textCurl, CURLOPT_URL, 'https://api.telegram.org/bot' . TOKEN . '/sendMessage');
+        curl_setopt($textCurl, CURLOPT_POST, true);
+        curl_setopt($textCurl, CURLOPT_POSTFIELDS, [
+            'chat_id' => CHATID,
+            'parse_mode' => 'html',
+            'text' => $txt,
+        ]);
+        curl_setopt($textCurl, CURLOPT_RETURNTRANSFER, true);
+        $textSendStatus = curl_exec($textCurl);
+        $textCurlError = curl_error($textCurl);
+
         if ( isset(json_decode($textSendStatus)->{'ok'}) && json_decode($textSendStatus)->{'ok'} ) {
             if (!empty($_FILES['files']['tmp_name'])) {
             
@@ -101,21 +114,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
                 curl_setopt($curl, CURLOPT_POSTFIELDS, $postContent);
                 $fileSendStatus = curl_exec($curl);
-                curl_close($curl);
                 $files = glob($path.'*');
                 foreach($files as $file){
                     if(is_file($file))
                     unlink($file);
                 }
             }
-            echo 1;
+            http_response_code(200);
+            echo json_encode(['success' => true]);
         } else {
-            echo 0;
             $log = date('Y-m-d H:i:s') . ' неудалось отправить форму: ';
+            $log .= ' curl_error=' . $textCurlError . ' response=' . $textSendStatus . ' ';
             file_put_contents(__DIR__ . '/log.txt', $log . $txt . PHP_EOL, FILE_APPEND);
 
-            // 
-            // echo json_decode($textSendStatus);
+            http_response_code(502);
+            echo json_encode(['success' => false, 'error' => 'telegram_send_failed']);
         }
     // } else {
     //     echo 0;

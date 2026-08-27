@@ -140,9 +140,10 @@ export default {
       },
     },
   },
-  // serverMiddleware: [
-  //   { path: '/api', handler: '~/api/submit-form.php' }
-  // ],
+  serverMiddleware: [
+    // Локально проксирует /api/* в php -S localhost:8000 -t api
+    { path: '/api', handler: '~/api/dev-proxy.js' }
+  ],
   
 }
 
